@@ -15,7 +15,7 @@ export function Experience() {
         <SectionHeader
           label="Expérience"
           title={<>20 ans de <span className="gradient-text">terrain</span></>}
-          subtitle="De la banque à la grande distribution, des systèmes critiques et des équipes qui durent."
+          subtitle="Banque, énergie, retail, secteur public — des systèmes critiques cloud-native pour les plus grands."
         />
       </SectionReveal>
 
@@ -58,7 +58,7 @@ export function Experience() {
                       <div className="text-xs text-[#94A3B8] font-mono mt-4 mb-3 sm:hidden">
                         {exp.period}
                       </div>
-                      <ul className="space-y-2">
+                      <ul className="space-y-2 mb-4">
                         {exp.highlights.map((h, j) => (
                           <li key={j} className="flex items-start gap-3 text-sm text-[#94A3B8]">
                             <span className="text-[#6366F1] mt-0.5">▸</span>
@@ -66,6 +66,12 @@ export function Experience() {
                           </li>
                         ))}
                       </ul>
+                      {"stack" in exp && exp.stack && (
+                        <div className="pt-3 border-t border-[rgba(255,255,255,0.06)]">
+                          <div className="text-xs text-[#94A3B8] mb-2 uppercase tracking-wider">Stack</div>
+                          <p className="text-xs font-mono text-[#6366F1]">{exp.stack as string}</p>
+                        </div>
+                      )}
                     </div>
                   </motion.div>
                 )}
