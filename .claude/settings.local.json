@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.linkedin.com)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:techpassionsharing.com)",
+      "WebFetch(domain:www.malt.fr)",
+      "WebFetch(domain:fr.linkedin.com)",
+      "WebFetch(domain:www.slideshare.net)",
+      "WebFetch(domain:www.riadh-mnasri.com)",
+      "Bash(npx create-next-app@latest *)"
+    ]
+  }
+}
