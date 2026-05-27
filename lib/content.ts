@@ -5,6 +5,7 @@ export const CONTENT = {
     subtitle: "AI-Driven Solutions · Cloud Native · Java & Kotlin Expert",
     tagline: "20 ans d'ingénierie. Des architectures cloud-native qui transforment.\nL'IA au service de votre business.",
     badges: [
+      "🤖 Anthropic Certified",
       "Java ☑ Certifié",
       "Kotlin ☑ Certifié",
       "Spring ☑ Certifié",
