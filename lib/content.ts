@@ -73,6 +73,74 @@ export const CONTENT = {
     },
   ],
 
+  domains: [
+    {
+      icon: "🏦",
+      sector: "Finance de Marché & Risque",
+      color: "#F59E0B",
+      client: "Société Générale CIB",
+      items: [
+        "Risque de contrepartie (CCR / XVA)",
+        "Moteurs de calcul de risque cloud-native",
+        "Régulation financière (FRTB, CRD IV/V)",
+        "Capital Markets & CIB",
+        "Optimisation de performance Spark (+50%)",
+      ],
+    },
+    {
+      icon: "⚡",
+      sector: "Énergie & Utilities",
+      color: "#22D3EE",
+      client: "GRTgaz",
+      items: [
+        "Gestion de la distribution énergétique",
+        "Réseau de transport de gaz national",
+        "Opérateurs d'Importance Vitale (OIV)",
+        "Systèmes temps réel haute disponibilité",
+        "Infrastructure critique & SLA stricts",
+      ],
+    },
+    {
+      icon: "🛒",
+      sector: "Retail & Grande Distribution",
+      color: "#22C55E",
+      client: "Groupe Casino",
+      items: [
+        "Gestion de campagnes & offres promotionnelles",
+        "Moteurs de fidélisation client",
+        "Catalogue produit à grande échelle",
+        "Plateformes e-commerce & marketing",
+        "Architecture événementielle GCP",
+      ],
+    },
+    {
+      icon: "⚖️",
+      sector: "Secteur Public & Justice",
+      color: "#6366F1",
+      client: "Ministère de la Justice",
+      items: [
+        "Dématérialisation de procédures judiciaires",
+        "Sécurité & conformité RGPD / État",
+        "Interopérabilité des systèmes d'État",
+        "Déploiement Openshift souverain",
+        "Accompagnement transformation numérique",
+      ],
+    },
+    {
+      icon: "🚀",
+      sector: "Conseil & Transformation Digitale",
+      color: "#A78BFA",
+      client: "WeHighTech (CEO)",
+      items: [
+        "Due diligence & audit technique",
+        "Direction de projets complexes multi-équipes",
+        "Recrutement et management d'ingénieurs senior",
+        "Culture craftsmanship & excellence engineering",
+        "Accompagnement grands comptes & scale-ups",
+      ],
+    },
+  ],
+
   experience: [
     {
       company: "Société Générale CIB (SGCIB)",
@@ -294,6 +362,37 @@ export const CONTENT = {
       title: "Technical Leadership & Mentoring",
       desc: "Pilotage technique d'équipes, culture craftsmanship (TDD, Clean Code, DDD), DevSecOps. Je fais le pont entre stratégie C-level et réalité ingénierie terrain.",
       target: "Startups, ETI & grands groupes",
+    },
+  ],
+
+  testimonials: [
+    {
+      quote: "Riadh a transformé notre approche du risque de contrepartie. En quelques mois, il a livré une architecture cloud-native sur Azure qui a réduit nos temps de calcul de 50%. Sa maîtrise de Spark et sa vision système sont rares à ce niveau.",
+      author: "Directeur Architecture SI",
+      company: "Société Générale CIB",
+      emoji: "🏦",
+      color: "#F59E0B",
+    },
+    {
+      quote: "Un Tech Lead qui comprend vraiment les enjeux métier de l'énergie. Riadh a conçu une plateforme de gestion de distribution robuste et évolutive, avec une qualité de code et un niveau d'exigence qu'on retrouve rarement en mission freelance.",
+      author: "Product Owner",
+      company: "GRTgaz",
+      emoji: "⚡",
+      color: "#22D3EE",
+    },
+    {
+      quote: "Riadh a introduit GitHub Copilot dans nos workflows dès le début de sa mission. Le gain de vélocité a été immédiat et mesurable. Il a aussi formé toute l'équipe aux bonnes pratiques TDD et Clean Code — l'impact dure encore.",
+      author: "Engineering Manager",
+      company: "Société Générale CIB",
+      emoji: "🤖",
+      color: "#A78BFA",
+    },
+    {
+      quote: "Excellente expérience avec Riadh sur notre plateforme de gestion de campagnes. Kotlin, GCP, architecture hexagonale — il maîtrise toute la stack et sait transmettre ses connaissances. Un vrai leader technique.",
+      author: "CTO",
+      company: "Groupe Casino",
+      emoji: "🛒",
+      color: "#22C55E",
     },
   ],
 

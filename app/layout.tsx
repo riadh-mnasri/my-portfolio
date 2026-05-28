@@ -28,11 +28,14 @@ export const metadata: Metadata = {
     "microservices architect paris",
     "ai integration java",
     "freelance tech lead paris",
+    "risque de contrepartie",
+    "finance de marche java",
+    "tech lead société générale",
   ],
-  authors: [{ name: "Riadh MNASRI", url: "https://riadh-mnasri.com" }],
-  metadataBase: new URL("https://riadh-mnasri.com"),
+  authors: [{ name: "Riadh MNASRI", url: "https://riadh-mnasri.pro" }],
+  metadataBase: new URL("https://riadh-mnasri.pro"),
   alternates: {
-    canonical: "https://riadh-mnasri.com",
+    canonical: "https://riadh-mnasri.pro",
   },
   robots: {
     index: true,
@@ -43,7 +46,7 @@ export const metadata: Metadata = {
     title: "Riadh MNASRI — Senior Tech Lead & Architect | AI · Cloud Native · Java",
     description:
       "20+ ans Java/Kotlin · Cloud Native AWS/Azure/GCP · Executive MBA Polytechnique · Certifié Kotlin, Spring, Java. Freelance Paris 750€/j.",
-    url: "https://riadh-mnasri.com",
+    url: "https://riadh-mnasri.pro",
     siteName: "Riadh MNASRI",
     locale: "fr_FR",
     type: "website",
@@ -57,6 +60,29 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Riadh MNASRI",
+  url: "https://riadh-mnasri.pro",
+  jobTitle: "Senior Tech Lead & Architect",
+  description: "Senior Tech Lead & Architect freelance spécialisé Java/Kotlin, Cloud Native, AI Integration. 20+ ans d'expérience. Executive MBA École Polytechnique.",
+  sameAs: [
+    "https://www.linkedin.com/in/riadhmnasri",
+    "https://github.com/riadh-mnasri",
+    "https://www.malt.fr/profile/riadhmnasri",
+    "https://x.com/riadhmnasri",
+  ],
+  address: { "@type": "PostalAddress", addressLocality: "Paris", addressCountry: "FR" },
+  knowsAbout: ["Java", "Kotlin", "Spring Boot", "Cloud Native", "AWS", "Azure", "GCP", "Microservices", "AI Integration", "Apache Spark", "Kubernetes"],
+  alumniOf: { "@type": "CollegeOrUniversity", name: "École Polytechnique" },
+  hasCredential: [
+    { "@type": "EducationalOccupationalCredential", name: "Claude Code 101", credentialCategory: "Certification", recognizedBy: { "@type": "Organization", name: "Anthropic" } },
+    { "@type": "EducationalOccupationalCredential", name: "Kotlin Certified Developer", recognizedBy: { "@type": "Organization", name: "JetBrains" } },
+    { "@type": "EducationalOccupationalCredential", name: "Spring Certified Professional", recognizedBy: { "@type": "Organization", name: "VMware" } },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -67,6 +93,12 @@ export default function RootLayout({
       lang="fr"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-[#0A0A0F] text-[#F1F5F9]">
         {children}
         <FloatingCTA />

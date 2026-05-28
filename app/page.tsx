@@ -10,6 +10,7 @@ import { Experience } from "@/components/sections/Experience";
 import { Education } from "@/components/sections/Education";
 import { Projects } from "@/components/sections/Projects";
 import { Certifications } from "@/components/sections/Certifications";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { Services } from "@/components/sections/Services";
 import { Contact } from "@/components/sections/Contact";
 
@@ -28,6 +29,7 @@ export default function Home() {
         <Education />
         <Projects />
         <Certifications />
+        <Testimonials />
         <Services />
         <Contact />
       </main>
