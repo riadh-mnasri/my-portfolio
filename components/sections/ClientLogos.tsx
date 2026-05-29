@@ -6,7 +6,6 @@ const clients = [
   { name: "GRTgaz", abbr: "GRTgaz", icon: "⚡", color: "#F97316" },
   { name: "Groupe Casino", abbr: "Casino", icon: "🛒", color: "#22C55E" },
   { name: "Ministère de la Justice", abbr: "Justice", icon: "⚖️", color: "#6366F1" },
-  { name: "École Polytechnique", abbr: "Polytechnique", icon: "🏛️", color: "#F59E0B" },
 ];
 
 // Duplicated for seamless infinite loop
