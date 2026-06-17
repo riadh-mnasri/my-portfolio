@@ -12,7 +12,7 @@ export function Services() {
         <SectionHeader
           label="Services"
           title={<>Ce que je peux faire <span className="gradient-text">pour vous</span></>}
-          subtitle="Disponible en mission freelance à Paris et en remote. TJM : 750€/jour."
+          subtitle="Disponible en mission freelance à Paris et en remote. TJM : 700€/jour."
         />
       </SectionReveal>
 
@@ -43,7 +43,7 @@ export function Services() {
             border: "1px solid rgba(99,102,241,0.25)",
           }}
         >
-          <div className="text-5xl font-bold gradient-text mb-2">750€ / jour</div>
+          <div className="text-5xl font-bold gradient-text mb-2">700€ / jour</div>
           <p className="text-[#94A3B8] mb-6 text-lg">
             Tarif journalier moyen · Paris & Remote · Disponible dès maintenant
           </p>

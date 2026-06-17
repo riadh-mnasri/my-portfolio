@@ -189,7 +189,7 @@ export function Contact() {
                 <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
                 Disponible pour missions
               </div>
-              <div className="text-[#6366F1] font-bold text-lg">750€ / jour</div>
+              <div className="text-[#6366F1] font-bold text-lg">700€ / jour</div>
             </div>
           </div>
         </SectionReveal>

@@ -116,7 +116,7 @@ export function Hero() {
               </a>
               <a href={links.malt} target="_blank" rel="noopener noreferrer"
                 className="px-7 py-3 rounded-xl font-semibold text-[#22D3EE] glass border border-[rgba(34,211,238,0.25)] hover:border-[rgba(34,211,238,0.5)] transition-all text-sm flex items-center gap-1.5">
-                Malt · 750€/j <ExternalLink size={12} />
+                Malt · 700€/j <ExternalLink size={12} />
               </a>
             </motion.div>
 

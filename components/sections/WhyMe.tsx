@@ -107,7 +107,7 @@ export function WhyMe() {
               Prêt à transformer votre stack ?
             </p>
             <p className="text-[#94A3B8] text-sm">
-              Disponible pour missions freelance · Paris & Remote · 750€/j
+              Disponible pour missions freelance · Paris & Remote · 700€/j
             </p>
           </div>
           <a href="#contact"
