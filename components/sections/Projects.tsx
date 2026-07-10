@@ -18,7 +18,7 @@ export function Projects() {
         />
       </SectionReveal>
 
-      {/* LinkedIn Posts — insights AI & Architecture */}
+      {/* LinkedIn Posts - insights AI & Architecture */}
       <SectionReveal>
         <div className="flex items-center gap-3 mb-6">
           <MessageSquare size={20} className="text-[#6366F1]" />

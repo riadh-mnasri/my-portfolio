@@ -32,7 +32,7 @@ const differentiators = [
     tag: "AI-Ready dès J+1",
     title: "L'IA dans vos pipelines, maintenant",
     body: "Certifié Anthropic (Claude Code, Subagents), pionnier de l'intégration GitHub Copilot & Claude en contexte enterprise. J'intègre l'IA dans vos workflows de développement de façon sécurisée, maîtrisée et immédiatement actionnable.",
-    kpis: ["Claude Code 101 — Anthropic 2026", "GitHub Copilot en production", "Architecture Agent-Ready"],
+    kpis: ["Claude Code 101 - Anthropic 2026", "GitHub Copilot en production", "Architecture Agent-Ready"],
   },
 ];
 

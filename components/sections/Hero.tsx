@@ -180,12 +180,12 @@ export function Hero() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src="/riadh-photo.jpg"
-                    alt="Riadh MNASRI — Senior Tech Lead & Architect"
+                    alt="Riadh MNASRI - Senior Tech Lead & Architect"
                     className="w-full h-full object-cover object-center"
                   />
                 </div>
 
-                {/* Polytechnique badge — floating bottom right */}
+                {/* Polytechnique badge - floating bottom right */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0 }}
                   animate={{ opacity: 1, scale: 1 }}

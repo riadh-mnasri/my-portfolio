@@ -15,7 +15,7 @@ export function Experience() {
         <SectionHeader
           label="Expérience"
           title={<>20 ans de <span className="gradient-text">terrain</span></>}
-          subtitle="Banque, énergie, retail, secteur public — des systèmes critiques cloud-native pour les plus grands."
+          subtitle="Banque, énergie, retail, secteur public : des systèmes critiques cloud-native pour les plus grands."
         />
       </SectionReveal>
 

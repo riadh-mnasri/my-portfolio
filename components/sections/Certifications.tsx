@@ -19,12 +19,12 @@ export function Certifications() {
         />
       </SectionReveal>
 
-      {/* Featured — Anthropic AI certs */}
+      {/* Featured - Anthropic AI certs */}
       <SectionReveal>
         <div className="flex items-center gap-3 mb-5">
           <div className="px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest"
             style={{ background: "rgba(167,139,250,0.1)", color: "#A78BFA", border: "1px solid rgba(167,139,250,0.25)" }}>
-            🤖 IA & Anthropic — 2026
+            🤖 IA & Anthropic - 2026
           </div>
         </div>
       </SectionReveal>
@@ -66,7 +66,7 @@ export function Certifications() {
         </div>
       </SectionReveal>
 
-      {/* All other certs — compact grid */}
+      {/* All other certs - compact grid */}
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-16">
         {others.map((cert, i) => (
           <SectionReveal key={cert.name} delay={i * 0.05}>

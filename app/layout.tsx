@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   verification: {
     google: "KAv0oEIcvHbps_v7thzdNDWrU_Bns-e7_OQF8TZ5Tk0",
   },
-  title: "Riadh MNASRI — Senior Tech Lead & Architect | Cloud Native · AI · Java · Paris",
+  title: "Riadh MNASRI - Senior Tech Lead & Architect | Cloud Native · AI · Java · Paris",
   description:
     "Senior Tech Lead & Architect freelance à Paris. 20+ ans d'expérience Java/Kotlin, Cloud Native (AWS, Azure, GCP), AI Integration. Executive MBA École Polytechnique. Certifié Java, Spring, Kotlin. Disponible pour missions.",
   keywords: [
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, "max-snippet": -1 },
   },
   openGraph: {
-    title: "Riadh MNASRI — Senior Tech Lead & Architect | AI · Cloud Native · Java",
+    title: "Riadh MNASRI - Senior Tech Lead & Architect | AI · Cloud Native · Java",
     description:
       "20+ ans Java/Kotlin · Cloud Native AWS/Azure/GCP · Executive MBA Polytechnique · Certifié Kotlin, Spring, Java. Freelance Paris 700€/j.",
     url: "https://riadh-mnasri.pro",
@@ -58,13 +58,13 @@ export const metadata: Metadata = {
         url: "/riadh-photo.jpg",
         width: 512,
         height: 512,
-        alt: "Riadh MNASRI — Senior Tech Lead & Architect",
+        alt: "Riadh MNASRI - Senior Tech Lead & Architect",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Riadh MNASRI — Senior Tech Lead & Architect",
+    title: "Riadh MNASRI - Senior Tech Lead & Architect",
     description: "20+ ans Java/Kotlin · Cloud Native · AI · Polytechnique · Freelance Paris",
     creator: "@riadhmnasri",
     site: "@riadhmnasri",

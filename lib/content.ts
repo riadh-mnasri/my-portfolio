@@ -22,20 +22,20 @@ export const CONTENT = {
 
   about: {
     bio: [
-      "J'aide les organisations à transformer leur dette technique en actifs scalables et haute performance. Migration Cloud-Native (AWS, Azure, GCP), intégration de l'IA, sécurisation des architectures Microservices — j'assure que la technologie propulse la croissance plutôt que de la freiner.",
+      "J'aide les organisations à transformer leur dette technique en actifs scalables et haute performance. Migration Cloud-Native (AWS, Azure, GCP), intégration de l'IA, sécurisation des architectures Microservices : j'assure que la technologie propulse la croissance plutôt que de la freiner.",
       "20 ans d'excellence ingénierie combinés à une vision stratégique (Executive Master @ École Polytechnique). Certifié Kotlin, Java et Spring, pionnier de l'intégration de l'IA (GitHub Copilot, Claude) dans les workflows de développement.",
       "Actuellement Tech Lead @ Société Générale CIB sur un moteur de risque de contrepartie cloud-native. Disponible pour missions freelance à Paris et en remote.",
     ],
     timeline: [
-      { year: "2026", event: "Claude Code 101 & Subagents — Anthropic Certified" },
-      { year: "2024", event: "Executive MBA — Stratège de la Transformation Numérique, École Polytechnique" },
+      { year: "2026", event: "Claude Code 101 & Subagents - Anthropic Certified" },
+      { year: "2024", event: "Executive MBA - Stratège de la Transformation Numérique, École Polytechnique" },
       { year: "2024", event: "Tech Lead Java Spark Azure AI @ Société Générale CIB" },
       { year: "2022", event: "Tech Lead Fullstack Java Angular AWS @ GRTgaz" },
       { year: "2021", event: "Lead Backend Java Kotlin GCP @ Groupe Casino" },
       { year: "2020", event: "Tech Lead Full Stack @ Ministère de la Justice" },
-      { year: "2020", event: "Kotlin Certified Developer — JetBrains" },
+      { year: "2020", event: "Kotlin Certified Developer - JetBrains" },
       { year: "2017", event: "CEO WeHighTech · Spring Certified Professional" },
-      { year: "2007", event: "Sun Certified Java Programmer — Oracle" },
+      { year: "2007", event: "Sun Certified Java Programmer - Oracle" },
       { year: "2004", event: "Diplôme Ingénieur Informatique" },
     ],
   },
@@ -151,7 +151,7 @@ export const CONTENT = {
         "Architecture cloud-native sur Azure & Kubernetes pour un moteur de risque de contrepartie",
         "50% de réduction du temps de traitement via optimisation algorithmique et Spark tuning",
         "30% d'accélération du cycle de dev grâce à l'intégration de GitHub Copilot et d'outils AI",
-        "Culture TDD/BDD et Clean Code — réduction significative des bugs en production",
+        "Culture TDD/BDD et Clean Code : réduction significative des bugs en production",
         "CI/CD automatisé (GitHub/Jenkins) en environnement hautement régulé",
       ],
       stack: "Java · Spring Boot · Apache Spark · Azure · Kubernetes · Kafka · AI · Jenkins",
@@ -177,7 +177,7 @@ export const CONTENT = {
       highlights: [
         "Conception et développement d'une plateforme de gestion de distribution énergétique",
         "Architecture microservices avec Axon Framework et programmation réactive (Reactor)",
-        "CI/CD sur AWS avec Terraform — Infrastructure as Code",
+        "CI/CD sur AWS avec Terraform - Infrastructure as Code",
         "Mentoring développeurs, code review, pair programming, TDD",
       ],
       stack: "Java 17 · Kotlin · Spring Boot · Axon · Reactor · Angular · AWS · Terraform · Kafka",
@@ -213,7 +213,7 @@ export const CONTENT = {
   projects: [
     {
       title: "kotlin-training",
-      desc: "Samples pédagogiques Kotlin — utilisé pour formations et BBL",
+      desc: "Samples pédagogiques Kotlin - utilisé pour formations et BBL",
       tags: ["Kotlin", "Formation"],
       url: "https://github.com/riadh-mnasri/kotlin-training",
     },
@@ -231,7 +231,7 @@ export const CONTENT = {
     },
     {
       title: "kata-java8",
-      desc: "Coding dojo — exercices Java 8 Streams, Lambda, Optional",
+      desc: "Coding dojo - exercices Java 8 Streams, Lambda, Optional",
       tags: ["Java", "TDD", "Kata"],
       url: "https://github.com/riadh-mnasri/kata-java8",
     },
@@ -249,7 +249,7 @@ export const CONTENT = {
   linkedinPosts: [
     {
       title: "AI Agents & l'avenir du rôle de Tech Lead",
-      excerpt: "20 ans que je vois passer des révolutions. Aujourd'hui, la vraie bascule ce sont les Agents IA — autonomes, capables d'agir sur vos systèmes. Ce qui change pour les ingénieurs seniors...",
+      excerpt: "20 ans que je vois passer des révolutions. Aujourd'hui, la vraie bascule ce sont les Agents IA : autonomes, capables d'agir sur vos systèmes. Ce qui change pour les ingénieurs seniors...",
       tags: ["AI Agents", "Architecture", "Leadership"],
       reactions: 14,
     },
@@ -317,14 +317,14 @@ export const CONTENT = {
   ],
 
   community: [
-    { icon: "🏛️", name: "École Polytechnique", desc: "Executive Master — Promo 7 Stratège du Numérique" },
+    { icon: "🏛️", name: "École Polytechnique", desc: "Executive Master - Promo 7 Stratège du Numérique" },
     { icon: "🤖", name: "Anthropic Certified", desc: "Claude Code 101 · Introduction to Subagents" },
-    { icon: "☕", name: "JUG Paris", desc: "Java User Group — Membre actif" },
+    { icon: "☕", name: "JUG Paris", desc: "Java User Group - Membre actif" },
     { icon: "🥪", name: "Brown Bag Lunch", desc: "Speaker & formateur (Kotlin, Java, FP...)" },
     { icon: "🐙", name: "GitHub", desc: "110 repos · Arctic Code Vault Contributor" },
-    { icon: "✍️", name: "Blog Technique", desc: "techpassionsharing.com — Spark, Terraform, Kotlin" },
+    { icon: "✍️", name: "Blog Technique", desc: "techpassionsharing.com - Spark, Terraform, Kotlin" },
     { icon: "💼", name: "LinkedIn", desc: "7 459 abonnés · Veille AI & Architecture" },
-    { icon: "♟️", name: "Chess Club CEBC", desc: "Bois-Colombes — Accompagnement jeunes joueurs" },
+    { icon: "♟️", name: "Chess Club CEBC", desc: "Bois-Colombes - Accompagnement jeunes joueurs" },
   ],
 
   services: [
@@ -364,14 +364,14 @@ export const CONTENT = {
       color: "#22D3EE",
     },
     {
-      quote: "Riadh a introduit GitHub Copilot dans nos workflows dès le début de sa mission. Le gain de vélocité a été immédiat et mesurable. Il a aussi formé toute l'équipe aux bonnes pratiques TDD et Clean Code — l'impact dure encore.",
+      quote: "Riadh a introduit GitHub Copilot dans nos workflows dès le début de sa mission. Le gain de vélocité a été immédiat et mesurable. Il a aussi formé toute l'équipe aux bonnes pratiques TDD et Clean Code - l'impact dure encore.",
       author: "Engineering Manager",
       company: "Société Générale CIB",
       emoji: "🤖",
       color: "#A78BFA",
     },
     {
-      quote: "Excellente expérience avec Riadh sur notre plateforme de gestion de campagnes. Kotlin, GCP, architecture hexagonale — il maîtrise toute la stack et sait transmettre ses connaissances. Un vrai leader technique.",
+      quote: "Excellente expérience avec Riadh sur notre plateforme de gestion de campagnes. Kotlin, GCP, architecture hexagonale - il maîtrise toute la stack et sait transmettre ses connaissances. Un vrai leader technique.",
       author: "CTO",
       company: "Groupe Casino",
       emoji: "🛒",

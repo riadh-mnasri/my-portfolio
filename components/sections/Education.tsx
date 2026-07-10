@@ -28,7 +28,7 @@ const education = [
     school: "École Polytechnique",
     logo: "🎓",
     degree: "Certification",
-    field: "Digital Business — Act on the Digital World",
+    field: "Digital Business - Act on the Digital World",
     promo: "",
     year: "2023",
     highlight: false,
@@ -38,7 +38,7 @@ const education = [
     url: "https://www.polytechnique.edu/executive-education",
   },
   {
-    school: "EMI — École Mohammadia d'Ingénieurs",
+    school: "EMI - École Mohammadia d'Ingénieurs",
     logo: "⚙️",
     degree: "Diplôme d'Ingénieur",
     field: "Génie Informatique",

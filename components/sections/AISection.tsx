@@ -19,8 +19,8 @@ const impacts = [
 ];
 
 const timeline = [
-  { year: "2026", event: "Certifié Claude Code 101 — Anthropic", color: "#A78BFA" },
-  { year: "2026", event: "Certifié Introduction to Subagents — Anthropic", color: "#A78BFA" },
+  { year: "2026", event: "Certifié Claude Code 101 - Anthropic", color: "#A78BFA" },
+  { year: "2026", event: "Certifié Introduction to Subagents - Anthropic", color: "#A78BFA" },
   { year: "2025", event: "Formation Claude Code @ SFEIR Institute", color: "#6366F1" },
   { year: "2024", event: "Pionnier GitHub Copilot en production @ SGCIB (+30% vélocité)", color: "#22D3EE" },
   { year: "2024", event: "Architecture Agent-Ready sur systèmes Java enterprise", color: "#22D3EE" },
@@ -59,7 +59,7 @@ export function AISection() {
 
       <div className="grid lg:grid-cols-2 gap-8 mb-12">
 
-        {/* Left — Impact metrics + tools */}
+        {/* Left - Impact metrics + tools */}
         <div className="space-y-6">
 
           {/* Impact cards */}
@@ -126,7 +126,7 @@ export function AISection() {
           </SectionReveal>
         </div>
 
-        {/* Right — Timeline AI journey */}
+        {/* Right - Timeline AI journey */}
         <SectionReveal delay={0.15}>
           <div className="rounded-2xl p-6 h-full"
             style={{ background: "rgba(17,17,24,0.6)", border: "1px solid rgba(167,139,250,0.12)" }}>
@@ -153,7 +153,7 @@ export function AISection() {
         </SectionReveal>
       </div>
 
-      {/* Bottom — LinkedIn AI posts highlight */}
+      {/* Bottom - LinkedIn AI posts highlight */}
       <SectionReveal delay={0.2}>
         <div className="rounded-2xl p-6"
           style={{
