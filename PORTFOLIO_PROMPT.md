@@ -1,4 +1,4 @@
-# PROMPT ULTIME — Portfolio de Riadh MNASRI
+# PROMPT ULTIME : Portfolio de Riadh MNASRI
 
 ---
 
@@ -13,7 +13,7 @@ qu'il faut travailler avec Riadh. Chaque pixel, chaque mot, chaque animation a u
 
 ---
 
-## IDENTITÉ — QUI EST RIADH
+## IDENTITÉ : QUI EST RIADH
 
 **Riadh MNASRI** est un architecte logiciel senior et lead developer freelance à Paris.
 
@@ -21,12 +21,12 @@ qu'il faut travailler avec Riadh. Chaque pixel, chaque mot, chaque animation a u
 - **Certifications** : Java Certified Professional, Spring Certified Professional, Kotlin Certified Developer
 - **TJM Malt** : 750 €/jour
 - **Clients** : Galeries Lafayette, Enedis, BforBank, Société Générale, Manpower, WeHighTech
-- **Communauté** : speaker JUG, Devoxx, BBL, Meetup Paris — contributeur open-source (Arctic Code Vault)
+- **Communauté** : speaker JUG, Devoxx, BBL, Meetup Paris, contributeur open-source (Arctic Code Vault)
 - **Auteur** : blog technique [techpassionsharing.com](https://techpassionsharing.com), présentations SlideShare
 - **Langues** : Français natif, Anglais C1 (TOEIC 835/990)
 
 **Ce qui le différencie :**
-Riadh n'est pas juste un développeur — c'est un **artisan du code**, un **transmetteur de savoir**
+Riadh n'est pas juste un développeur : c'est un **artisan du code**, un **transmetteur de savoir**
 et un **leader technique** qui conjugue excellence craft, vision architecture et partage communautaire.
 
 ---
@@ -69,16 +69,16 @@ Gradient    : linear-gradient(135deg, #6366F1 0%, #22D3EE 100%)
 - Typographie grande, aérée, audacieuse
 
 ### Ton éditorial
-- **Confiant sans arrogance** — les faits parlent d'eux-mêmes
-- **Humain et accessible** — passionné, communauté, pédagogie
-- **Précis et quantifié** — 20 ans, 750€/jour, 1 200 vues, 110 repos
-- **Bilingue FR/EN** — le portfolio doit switcher instantanément (i18n)
+- **Confiant sans arrogance** : les faits parlent d'eux-mêmes
+- **Humain et accessible** : passionné, communauté, pédagogie
+- **Précis et quantifié** : 20 ans, 750€/jour, 1 200 vues, 110 repos
+- **Bilingue FR/EN** : le portfolio doit switcher instantanément (i18n)
 
 ---
 
 ## ARCHITECTURE DES SECTIONS
 
-### 1. HERO — L'accroche qui stoppe le scroll
+### 1. HERO : L'accroche qui stoppe le scroll
 
 Layout : Plein écran, centré verticalement
 Background : Canvas Three.js avec particules connectées animées
@@ -113,9 +113,9 @@ Du code qui dure. Des équipes qui progressent.
 
 ---
 
-### 2. ABOUT — L'humain derrière le code
+### 2. ABOUT : L'humain derrière le code
 
-Layout : 2 colonnes — photo à gauche, texte à droite
+Layout : 2 colonnes, photo à gauche, texte à droite
 
 **Photo :** Avatar professionnel avec border gradient animé (halo tournant)
 
@@ -146,7 +146,7 @@ Aujourd'hui disponible en freelance à Paris — et partout en remote.
 
 ---
 
-### 3. SKILLS — La preuve par la tech
+### 3. SKILLS : La preuve par la tech
 
 Layout : Grid de cartes avec hover glow
 
@@ -172,11 +172,11 @@ Layout : Grid de cartes avec hover glow
     TDD · BDD · Clean Code · SCRUM · XP · Sonar · Git
 ```
 
-**Niveaux de maîtrise :** Barres animées au scroll, pas de % (trop subjectif) — plutôt des labels : Expert / Avancé / Maîtrisé
+**Niveaux de maîtrise :** Barres animées au scroll, pas de % (trop subjectif), plutôt des labels : Expert / Avancé / Maîtrisé
 
 ---
 
-### 4. EXPÉRIENCE — Le parcours qui rassure
+### 4. EXPÉRIENCE : Le parcours qui rassure
 
 Layout : Vertical timeline avec cards expandables
 
@@ -207,7 +207,7 @@ Layout : Vertical timeline avec cards expandables
 
 ---
 
-### 5. PROJETS & CONTRIBUTIONS — La preuve par les réalisations
+### 5. PROJETS & CONTRIBUTIONS : La preuve par les réalisations
 
 Layout : Masonry grid (3 col desktop, 1 col mobile), cards avec preview
 
@@ -240,7 +240,7 @@ Layout : Masonry grid (3 col desktop, 1 col mobile), cards avec preview
 
 ---
 
-### 6. CERTIFICATIONS — La crédibilité certifiée
+### 6. CERTIFICATIONS : La crédibilité certifiée
 
 Layout : Cards avec badge doré, date, organisme
 
@@ -254,7 +254,7 @@ Layout : Cards avec badge doré, date, organisme
 
 ---
 
-### 7. COMMUNAUTÉ — L'engagement qui différencie
+### 7. COMMUNAUTÉ : L'engagement qui différencie
 
 Layout : Grille de cards avec logos et chiffres clés
 
@@ -271,11 +271,11 @@ Layout : Grille de cards avec logos et chiffres clés
 
 ---
 
-### 8. TESTIMONIALS — La preuve sociale
+### 8. TESTIMONIALS : La preuve sociale
 
 Layout : Carousel avec photos, noms, entreprises
 
-> Placeholder pour les recommandations LinkedIn — importer dynamiquement ou copier-coller les plus impactantes.
+> Placeholder pour les recommandations LinkedIn : importer dynamiquement ou copier-coller les plus impactantes.
 
 Structure de chaque testimonial :
 ```
@@ -286,7 +286,7 @@ Photo + Nom + Titre + Entreprise
 
 ---
 
-### 9. SERVICES — Ce qu'il offre concrètement
+### 9. SERVICES : Ce qu'il offre concrètement
 
 Layout : 3 cards principales avec CTA
 
@@ -312,9 +312,9 @@ Layout : 3 cards principales avec CTA
 
 ---
 
-### 10. CONTACT — La conversion finale
+### 10. CONTACT : La conversion finale
 
-Layout : Split — formulaire à gauche, infos + liens à droite
+Layout : Split, formulaire à gauche, infos + liens à droite
 
 **Formulaire (avec validation Zod + Server Actions Next.js) :**
 ```

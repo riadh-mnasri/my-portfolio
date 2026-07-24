@@ -1,4 +1,4 @@
-# Riadh MNASRI — Portfolio
+# Riadh MNASRI : Portfolio
 
 > Senior Tech Lead & Architect · AI-Driven Solutions · Cloud Native · Java & Kotlin Expert  
 > **[riadh-mnasri.pro](https://riadh-mnasri.pro)**
@@ -19,19 +19,19 @@
 
 ## Sections
 
-- **Hero** — Split layout, photo avec anneau gradient animé, compteurs, CTAs
-- **Client Logos** — Bandeau défilant SGCIB · GRTgaz · Casino · Justice · Polytechnique
-- **About** — Bio, KPIs chiffrés (−50% @ SGCIB, +30% vélocité IA), timeline
-- **AI & Innovation** — Section dédiée IA : outils maîtrisés, parcours, thought leadership
-- **Why Me** — 3 différenciateurs : Vision Stratégique · Performance · AI-Ready
-- **Skills** — 6 catégories tech + 5 domaines métier (Finance, Énergie, Retail, Justice, Conseil)
-- **Experience** — SGCIB, GRTgaz, Casino, Ministère de la Justice, WeHighTech
-- **Education** — Executive MBA École Polytechnique (featured) + certif + ingénieur
-- **Projects** — GitHub repos · LinkedIn posts · Talks SlideShare · Blog
-- **Certifications** — 19 certifications (Anthropic, Google Cloud, VMware, Sun, Coursera...)
-- **Testimonials** — Retours clients (SGCIB, GRTgaz, Casino)
-- **Services** — 3 offres freelance + bannière TJM 700€/j
-- **Contact** — Formulaire + liens directs
+- **Hero** : Split layout, photo avec anneau gradient animé, compteurs, CTAs
+- **Client Logos** : Bandeau défilant SGCIB · GRTgaz · Casino · Justice · Polytechnique
+- **About** : Bio, KPIs chiffrés (−50% @ SGCIB, +30% vélocité IA), timeline
+- **AI & Innovation** : Section dédiée IA : outils maîtrisés, parcours, thought leadership
+- **Why Me** : 3 différenciateurs : Vision Stratégique · Performance · AI-Ready
+- **Skills** : 6 catégories tech + 5 domaines métier (Finance, Énergie, Retail, Justice, Conseil)
+- **Experience** : SGCIB, GRTgaz, Casino, Ministère de la Justice, WeHighTech
+- **Education** : Executive MBA École Polytechnique (featured) + certif + ingénieur
+- **Projects** : GitHub repos · LinkedIn posts · Talks SlideShare · Blog
+- **Certifications** : 19 certifications (Anthropic, Google Cloud, VMware, Sun, Coursera...)
+- **Testimonials** : Retours clients (SGCIB, GRTgaz, Casino)
+- **Services** : 3 offres freelance + bannière TJM 700€/j
+- **Contact** : Formulaire + liens directs
 
 ## 🏆 Certifications (19)
 
