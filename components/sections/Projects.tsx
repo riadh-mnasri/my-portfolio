@@ -134,7 +134,7 @@ export function Projects() {
           <h3 className="text-xl font-bold text-[#F1F5F9]">Articles de blog</h3>
           <a href={links.blog} target="_blank" rel="noopener noreferrer"
             className="ml-auto text-sm text-[#6366F1] hover:text-[#22D3EE] flex items-center gap-1 transition-colors">
-            techpassionsharing.com <ExternalLink size={12} />
+            riadhmnasri.fr <ExternalLink size={12} />
           </a>
         </div>
       </SectionReveal>
