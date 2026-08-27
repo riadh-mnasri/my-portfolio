@@ -34,7 +34,7 @@ export function Testimonials() {
               {/* Quote mark */}
               <div className="text-5xl font-serif leading-none mb-4 select-none"
                 style={{ color: t.color, opacity: 0.4 }}>
-                "
+                &ldquo;
               </div>
 
               {/* Quote text */}
@@ -62,7 +62,15 @@ export function Testimonials() {
       {/* Bottom note */}
       <SectionReveal delay={0.4}>
         <p className="text-center text-xs text-[#475569] mt-8">
-          Références détaillées disponibles sur demande · Profil LinkedIn vérifié
+          Recommandations réelles, publiées sur mon{" "}
+          <a
+            href={`${CONTENT.links.linkedin}/details/recommendations/`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-[#94A3B8] transition-colors"
+          >
+            profil LinkedIn
+          </a>
         </p>
       </SectionReveal>
     </section>
