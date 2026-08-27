@@ -24,7 +24,7 @@ export function Certifications() {
       <SectionReveal>
         <div className="flex items-center gap-3 mb-5">
           <div className="px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest flex items-center gap-2"
-            style={{ background: "rgba(194,164,107,0.1)", color: "#C2A46B", border: "1px solid rgba(194,164,107,0.25)" }}>
+            style={{ background: "rgba(212,175,55,0.1)", color: "#D4AF37", border: "1px solid rgba(212,175,55,0.25)" }}>
             <Icon name="ai" size={14} />
             IA & Anthropic - 2026
           </div>
@@ -105,7 +105,7 @@ export function Certifications() {
               className="glass rounded-xl px-5 py-4 flex items-center gap-4"
               style={{ border: "1px solid rgba(255,255,255,0.06)" }}
             >
-              <Icon name={c.icon} size={22} className="text-[#C2A46B] flex-shrink-0" />
+              <Icon name={c.icon} size={22} className="text-[#D4AF37] flex-shrink-0" />
               <div>
                 <div className="font-semibold text-[#F1F5F9] text-sm">{c.name}</div>
                 <div className="text-xs text-[#94A3B8]">{c.desc}</div>

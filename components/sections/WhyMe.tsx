@@ -7,9 +7,9 @@ import { Icon } from "@/lib/icons";
 const differentiators = [
   {
     icon: "graduation",
-    color: "#C2A46B",
-    gradient: "linear-gradient(135deg, rgba(194,164,107,0.12), rgba(194,164,107,0.04))",
-    border: "rgba(194,164,107,0.25)",
+    color: "#D4AF37",
+    gradient: "linear-gradient(135deg, rgba(212,175,55,0.12), rgba(212,175,55,0.04))",
+    border: "rgba(212,175,55,0.25)",
     tag: "Vision Stratégique",
     title: "Le pont entre la C-suite et l'ingénierie",
     body: "Executive MBA à l'École Polytechnique + 20 ans sur le terrain. Je traduis vos enjeux business en architectures techniques et vos contraintes techniques en décisions stratégiques. Je parle autant à votre DSI qu'à votre équipe dev.",
@@ -17,9 +17,9 @@ const differentiators = [
   },
   {
     icon: "energy",
-    color: "#C2A46B",
-    gradient: "linear-gradient(135deg, rgba(194,164,107,0.12), rgba(194,164,107,0.04))",
-    border: "rgba(194,164,107,0.25)",
+    color: "#D4AF37",
+    gradient: "linear-gradient(135deg, rgba(212,175,55,0.12), rgba(212,175,55,0.04))",
+    border: "rgba(212,175,55,0.25)",
     tag: "Performance Prouvée",
     title: "Des résultats mesurables, pas des promesses",
     body: "Chez Société Générale CIB, j'ai contribué à réduire nettement les temps de traitement sur un moteur de risque critique, et à accélérer la vélocité dev via l'intégration de l'IA. Des ordres de grandeur, détaillés ci-dessous, pas des promesses en l'air.",
@@ -27,9 +27,9 @@ const differentiators = [
   },
   {
     icon: "ai",
-    color: "#C2A46B",
-    gradient: "linear-gradient(135deg, rgba(194,164,107,0.1), rgba(194,164,107,0.03))",
-    border: "rgba(194,164,107,0.25)",
+    color: "#D4AF37",
+    gradient: "linear-gradient(135deg, rgba(212,175,55,0.1), rgba(212,175,55,0.03))",
+    border: "rgba(212,175,55,0.25)",
     tag: "AI-Ready dès J+1",
     title: "L'IA dans vos pipelines, maintenant",
     body: "Certifié Anthropic (Claude Code, Subagents), pionnier de l'intégration GitHub Copilot & Claude en contexte enterprise. J'intègre l'IA dans vos workflows de développement de façon sécurisée, maîtrisée et immédiatement actionnable.",
@@ -100,8 +100,8 @@ export function WhyMe() {
       <SectionReveal delay={0.3}>
         <div className="mt-12 rounded-2xl px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4"
           style={{
-            background: "linear-gradient(135deg, rgba(194,164,107,0.08), rgba(194,164,107,0.05))",
-            border: "1px solid rgba(194,164,107,0.2)",
+            background: "linear-gradient(135deg, rgba(212,175,55,0.08), rgba(212,175,55,0.05))",
+            border: "1px solid rgba(212,175,55,0.2)",
           }}>
           <div>
             <p className="text-[#F1F5F9] font-semibold text-lg mb-0.5">
@@ -113,7 +113,7 @@ export function WhyMe() {
           </div>
           <a href="#contact"
             className="px-7 py-3 rounded-xl font-semibold text-white text-sm flex-shrink-0 transition-all hover:opacity-90 hover:scale-105"
-            style={{ background: "#C2A46B" }}>
+            style={{ background: "#D4AF37" }}>
             Discutons de votre projet →
           </a>
         </div>

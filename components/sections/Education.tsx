@@ -14,7 +14,7 @@ const education = [
     promo: "Promotion 7",
     year: "2024",
     highlight: true,
-    color: "#C2A46B",
+    color: "#D4AF37",
     project: "Transformation d'un distributeur de produits de cybersécurité en fournisseur de services managés.",
     skills: [
       "Concevoir et impulser la stratégie de transformation numérique",
@@ -33,7 +33,7 @@ const education = [
     promo: "",
     year: "2023",
     highlight: false,
-    color: "#C2A46B",
+    color: "#D4AF37",
     project: "",
     skills: [],
     url: "https://www.polytechnique.edu/executive-education",
@@ -46,7 +46,7 @@ const education = [
     promo: "",
     year: "2004",
     highlight: false,
-    color: "#C2A46B",
+    color: "#D4AF37",
     project: "",
     skills: [],
     url: "",
@@ -73,12 +73,12 @@ export function Education() {
                 whileHover={{ y: -2 }}
                 className="relative rounded-2xl overflow-hidden"
                 style={{
-                  background: "linear-gradient(135deg, rgba(194,164,107,0.08) 0%, rgba(194,164,107,0.06) 100%)",
-                  border: "1px solid rgba(194,164,107,0.3)",
+                  background: "linear-gradient(135deg, rgba(212,175,55,0.08) 0%, rgba(212,175,55,0.06) 100%)",
+                  border: "1px solid rgba(212,175,55,0.3)",
                 }}
               >
                 {/* Top accent bar */}
-                <div className="h-1 w-full" style={{ background: "#C2A46B" }} />
+                <div className="h-1 w-full" style={{ background: "#D4AF37" }} />
 
                 <div className="p-8">
                   {/* Header */}
@@ -86,15 +86,15 @@ export function Education() {
                     <div className="flex items-start gap-4">
                       <div
                         className="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0"
-                        style={{ background: "rgba(194,164,107,0.12)" }}
+                        style={{ background: "rgba(212,175,55,0.12)" }}
                       >
-                        <Icon name={edu.logo} size={28} className="text-[#C2A46B]" />
+                        <Icon name={edu.logo} size={28} className="text-[#D4AF37]" />
                       </div>
                       <div>
                         <div className="flex items-center gap-2 mb-1 flex-wrap">
                           <span
                             className="text-xs font-bold px-2.5 py-1 rounded-full uppercase tracking-widest"
-                            style={{ background: "rgba(194,164,107,0.15)", color: "#C2A46B" }}
+                            style={{ background: "rgba(212,175,55,0.15)", color: "#D4AF37" }}
                           >
                             {edu.degree}
                           </span>
@@ -106,17 +106,17 @@ export function Education() {
                           {edu.field}
                         </h3>
                         <div className="flex items-center gap-2 mt-1">
-                          <span className="text-[#C2A46B] font-semibold text-sm">{edu.school}</span>
+                          <span className="text-[#D4AF37] font-semibold text-sm">{edu.school}</span>
                           {edu.url && (
                             <a href={edu.url} target="_blank" rel="noopener noreferrer"
-                              className="text-[#94A3B8] hover:text-[#C2A46B] transition-colors">
+                              className="text-[#94A3B8] hover:text-[#D4AF37] transition-colors">
                               <ExternalLink size={12} />
                             </a>
                           )}
                         </div>
                       </div>
                     </div>
-                    <span className="text-2xl font-bold font-mono text-[#C2A46B] flex-shrink-0">
+                    <span className="text-2xl font-bold font-mono text-[#D4AF37] flex-shrink-0">
                       {edu.year}
                     </span>
                   </div>
@@ -125,9 +125,9 @@ export function Education() {
                   {edu.project && (
                     <div
                       className="rounded-xl p-4 mb-6"
-                      style={{ background: "rgba(194,164,107,0.06)", border: "1px solid rgba(194,164,107,0.1)" }}
+                      style={{ background: "rgba(212,175,55,0.06)", border: "1px solid rgba(212,175,55,0.1)" }}
                     >
-                      <div className="text-xs uppercase tracking-widest text-[#C2A46B] mb-2 font-semibold">
+                      <div className="text-xs uppercase tracking-widest text-[#D4AF37] mb-2 font-semibold">
                         Projet de transformation
                       </div>
                       <p className="text-[#F1F5F9] text-sm leading-relaxed">{edu.project}</p>
@@ -143,7 +143,7 @@ export function Education() {
                       <ul className="grid sm:grid-cols-2 gap-2">
                         {edu.skills.map((skill, j) => (
                           <li key={j} className="flex items-start gap-2 text-sm text-[#94A3B8]">
-                            <span className="text-[#C2A46B] mt-0.5 flex-shrink-0">▸</span>
+                            <span className="text-[#D4AF37] mt-0.5 flex-shrink-0">▸</span>
                             {skill}
                           </li>
                         ))}

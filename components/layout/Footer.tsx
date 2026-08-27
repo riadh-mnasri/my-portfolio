@@ -20,11 +20,11 @@ export function Footer() {
         </p>
         <div className="flex gap-4">
           <a href={links.github} target="_blank" rel="noopener noreferrer"
-            className="text-[#94A3B8] hover:text-[#C2A46B] transition-colors">
+            className="text-[#94A3B8] hover:text-[#D4AF37] transition-colors">
             <GithubIcon size={18} />
           </a>
           <a href={links.linkedin} target="_blank" rel="noopener noreferrer"
-            className="text-[#94A3B8] hover:text-[#C2A46B] transition-colors">
+            className="text-[#94A3B8] hover:text-[#D4AF37] transition-colors">
             <LinkedinIcon size={18} />
           </a>
         </div>
