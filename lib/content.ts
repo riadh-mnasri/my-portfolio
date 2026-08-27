@@ -10,12 +10,12 @@ export const CONTENT = {
       "Kotlin ☑ Certifié",
       "Spring ☑ Certifié",
       "Executive Master @ Polytechnique",
-      "Paris · Freelance · 700€/j",
+      "Paris · Freelance · 780€/j",
     ],
     stats: [
       { value: 20, suffix: "+", label: "ans d'expérience" },
       { value: 7459, suffix: "", label: "abonnés LinkedIn" },
-      { value: 700, suffix: "€", label: "TJM journalier" },
+      { value: 780, suffix: "€", label: "TJM journalier" },
       { value: 19, suffix: "", label: "certifications" },
     ],
   },
@@ -24,9 +24,10 @@ export const CONTENT = {
     bio: [
       "J'aide les organisations à transformer leur dette technique en actifs scalables et haute performance. Migration Cloud-Native (AWS, Azure, GCP), intégration de l'IA, sécurisation des architectures Microservices : j'assure que la technologie propulse la croissance plutôt que de la freiner.",
       "20 ans d'excellence ingénierie combinés à une vision stratégique (Executive Master @ École Polytechnique). Certifié Kotlin, Java et Spring, pionnier de l'intégration de l'IA (GitHub Copilot, Claude) dans les workflows de développement.",
-      "Actuellement Tech Lead @ Société Générale CIB sur un moteur de risque de contrepartie cloud-native. Disponible pour missions freelance à Paris et en remote.",
+      "Actuellement Tech Lead & Architect @ Cartan Trade, sur les initiatives IA et la plateforme de risque de crédit assurance. Disponible pour missions freelance à Paris et en remote.",
     ],
     timeline: [
+      { year: "2026", event: "Tech Lead & Architect IA @ Cartan Trade" },
       { year: "2026", event: "Claude Code 101 & Subagents - Anthropic Certified" },
       { year: "2024", event: "Executive MBA - Stratège de la Transformation Numérique, École Polytechnique" },
       { year: "2024", event: "Tech Lead Java Spark Azure AI @ Société Générale CIB" },
@@ -143,9 +144,22 @@ export const CONTENT = {
 
   experience: [
     {
+      company: "Cartan Trade",
+      role: "Senior Tech Lead & Architect",
+      period: "Août 2026 – présent",
+      emoji: "🏛️",
+      highlights: [
+        "Intégration de capacités IA avancées (Claude) pour révolutionner l'évaluation du risque et automatiser les workflows de décision",
+        "Traduction de la logique métier du risque de crédit en solutions techniques innovantes, en lien direct avec les équipes business",
+        "Co-construction de modèles de calcul de risque de défaut avec les équipes tech en place",
+        "Architecture fullstack scalable sur Google Cloud Platform (GCP), développement Kotlin",
+      ],
+      stack: "Kotlin · Google Cloud Platform · Claude APIs · Risk Modeling",
+    },
+    {
       company: "Société Générale CIB (SGCIB)",
       role: "Technical Leader Java Spark Azure AI",
-      period: "Jan 2024 – présent",
+      period: "Jan 2024 – Août 2026",
       emoji: "🏦",
       highlights: [
         "Architecture cloud-native sur Azure & Kubernetes pour un moteur de risque de contrepartie",

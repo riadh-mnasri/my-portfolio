@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 
 const clients = [
+  { name: "Cartan Trade", abbr: "Cartan Trade", icon: "🏛️", color: "#A78BFA" },
   { name: "Société Générale CIB", abbr: "SGCIB", icon: "🏦", color: "#E31837" },
   { name: "GRTgaz", abbr: "GRTgaz", icon: "⚡", color: "#F97316" },
   { name: "Groupe Casino", abbr: "Casino", icon: "🛒", color: "#22C55E" },

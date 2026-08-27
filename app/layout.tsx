@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Riadh MNASRI - Senior Tech Lead & Architect | AI · Cloud Native · Java",
     description:
-      "20+ ans Java/Kotlin · Cloud Native AWS/Azure/GCP · Executive MBA Polytechnique · Certifié Kotlin, Spring, Java. Freelance Paris 700€/j.",
+      "20+ ans Java/Kotlin · Cloud Native AWS/Azure/GCP · Executive MBA Polytechnique · Certifié Kotlin, Spring, Java. Freelance Paris 780€/j.",
     url: "https://riadh-mnasri.pro",
     siteName: "Riadh MNASRI",
     locale: "fr_FR",
