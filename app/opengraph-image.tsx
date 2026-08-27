@@ -46,7 +46,7 @@ export default async function OpengraphImage() {
             fontSize: 88,
             fontWeight: 700,
             display: "flex",
-            background: "linear-gradient(135deg, #F59E0B 0%, #F97316 100%)",
+            background: "#C2A46B",
             backgroundClip: "text",
             color: "transparent",
           }}
@@ -77,8 +77,8 @@ export default async function OpengraphImage() {
                 fontSize: 24,
                 padding: "10px 24px",
                 borderRadius: 999,
-                border: "1px solid rgba(245,158,11,0.35)",
-                color: "#F59E0B",
+                border: "1px solid rgba(194,164,107,0.35)",
+                color: "#C2A46B",
               }}
             >
               {badge}

@@ -7,8 +7,8 @@ import { CONTENT } from "@/lib/content";
 
 const tools = [
   { name: "Claude", org: "Anthropic", emoji: "ai", color: "#EF4444", certified: true },
-  { name: "GitHub Copilot", org: "Microsoft", emoji: "energy", color: "#F97316", certified: false },
-  { name: "Claude Code", org: "Anthropic", emoji: "terminal", color: "#F59E0B", certified: true },
+  { name: "GitHub Copilot", org: "Microsoft", emoji: "energy", color: "#2DD4BF", certified: false },
+  { name: "Claude Code", org: "Anthropic", emoji: "terminal", color: "#C2A46B", certified: true },
   { name: "AI Agents", org: "Architecture", emoji: "network", color: "#22C55E", certified: false },
   { name: "LLM Integration", org: "Enterprise", emoji: "link", color: "#38BDF8", certified: false },
 ];
@@ -20,11 +20,11 @@ const impacts = [
 ];
 
 const timeline = [
-  { year: "2026", event: "Certifié Claude Code 101 - Anthropic", color: "#F97316" },
-  { year: "2026", event: "Certifié Introduction to Subagents - Anthropic", color: "#F97316" },
-  { year: "2025", event: "Formation Claude Code @ SFEIR Institute", color: "#F59E0B" },
-  { year: "2024", event: "Pionnier GitHub Copilot en production @ SGCIB", color: "#F97316" },
-  { year: "2024", event: "Architecture Agent-Ready sur systèmes Java enterprise", color: "#F97316" },
+  { year: "2026", event: "Certifié Claude Code 101 - Anthropic", color: "#C2A46B" },
+  { year: "2026", event: "Certifié Introduction to Subagents - Anthropic", color: "#C2A46B" },
+  { year: "2025", event: "Formation Claude Code @ SFEIR Institute", color: "#C2A46B" },
+  { year: "2024", event: "Pionnier GitHub Copilot en production @ SGCIB", color: "#C2A46B" },
+  { year: "2024", event: "Architecture Agent-Ready sur systèmes Java enterprise", color: "#C2A46B" },
   { year: "2023", event: "Veille active LLM : architecture AI-Driven, sécurité, agents", color: "#94A3B8" },
 ];
 
@@ -38,11 +38,11 @@ export function AISection() {
       <SectionReveal>
         <div className="text-center mb-16">
           <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase mb-4"
-            style={{ background: "rgba(249,115,22,0.1)", color: "#F97316", border: "1px solid rgba(249,115,22,0.25)" }}>
+            style={{ background: "rgba(194,164,107,0.1)", color: "#C2A46B", border: "1px solid rgba(194,164,107,0.25)" }}>
             AI & Innovation
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-[#F1F5F9] leading-tight mb-4">
-            L&apos;IA, pas comme un <span style={{ color: "#F97316" }}>buzzword</span>
+            L&apos;IA, pas comme un <span style={{ color: "#C2A46B" }}>buzzword</span>
           </h2>
           <p className="text-[#94A3B8] text-lg max-w-2xl mx-auto">
             Certifié Anthropic, formé sur le terrain. J&apos;intègre l&apos;IA de façon structurée, sécurisée et immédiatement rentable dans vos projets.
@@ -65,11 +65,11 @@ export function AISection() {
                   transition={{ duration: 0.15 }}
                   className="flex items-center gap-5 rounded-xl px-6 py-4"
                   style={{
-                    background: "rgba(249,115,22,0.06)",
-                    border: "1px solid rgba(249,115,22,0.15)",
+                    background: "rgba(194,164,107,0.06)",
+                    border: "1px solid rgba(194,164,107,0.15)",
                   }}
                 >
-                  <div className="text-3xl font-bold flex-shrink-0" style={{ color: "#F97316" }}>
+                  <div className="text-3xl font-bold flex-shrink-0" style={{ color: "#C2A46B" }}>
                     {item.value}
                   </div>
                   <div>
@@ -84,7 +84,7 @@ export function AISection() {
           {/* Tools strip */}
           <SectionReveal delay={0.1}>
             <div className="rounded-2xl p-6"
-              style={{ background: "rgba(17,17,24,0.6)", border: "1px solid rgba(249,115,22,0.12)" }}>
+              style={{ background: "rgba(17,17,24,0.6)", border: "1px solid rgba(194,164,107,0.12)" }}>
               <div className="text-xs uppercase tracking-widest text-[#94A3B8] mb-4 font-semibold">
                 Outils maîtrisés
               </div>
@@ -116,13 +116,13 @@ export function AISection() {
         {/* Right - Timeline AI journey */}
         <SectionReveal delay={0.15}>
           <div className="rounded-2xl p-6 h-full"
-            style={{ background: "rgba(17,17,24,0.6)", border: "1px solid rgba(249,115,22,0.12)" }}>
+            style={{ background: "rgba(17,17,24,0.6)", border: "1px solid rgba(194,164,107,0.12)" }}>
             <div className="text-xs uppercase tracking-widest text-[#94A3B8] mb-6 font-semibold">
               Mon parcours IA
             </div>
             <div className="relative">
               <div className="absolute left-3 top-0 bottom-0 w-px"
-                style={{ background: "linear-gradient(to bottom, #F97316, #F59E0B, transparent)" }} />
+                style={{ background: "linear-gradient(to bottom, #C2A46B, transparent)" }} />
               <ol className="space-y-5 pl-9">
                 {timeline.map((item, i) => (
                   <li key={i} className="relative">
@@ -144,12 +144,12 @@ export function AISection() {
       <SectionReveal delay={0.2}>
         <div className="rounded-2xl p-6"
           style={{
-            background: "linear-gradient(135deg, rgba(249,115,22,0.08), rgba(249,115,22,0.04))",
-            border: "1px solid rgba(249,115,22,0.2)",
+            background: "linear-gradient(135deg, rgba(194,164,107,0.08), rgba(194,164,107,0.04))",
+            border: "1px solid rgba(194,164,107,0.2)",
           }}>
           <div className="flex items-center justify-between mb-5 flex-wrap gap-3">
             <div>
-              <div className="text-xs uppercase tracking-widest text-[#F97316] mb-1 font-semibold">
+              <div className="text-xs uppercase tracking-widest text-[#C2A46B] mb-1 font-semibold">
                 Thought Leadership
               </div>
               <div className="text-[#F1F5F9] font-bold text-lg">
@@ -158,7 +158,7 @@ export function AISection() {
             </div>
             <a href={links.linkedin} target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold text-white flex-shrink-0"
-              style={{ background: "linear-gradient(135deg,#F97316,#F59E0B)" }}>
+              style={{ background: "#C2A46B" }}>
               Suivre sur LinkedIn <ExternalLink size={12} />
             </a>
           </div>
@@ -167,11 +167,11 @@ export function AISection() {
               <a key={post.title} href={links.linkedin} target="_blank" rel="noopener noreferrer">
                 <motion.div whileHover={{ y: -3 }} transition={{ duration: 0.15 }}
                   className="rounded-xl p-4 h-full"
-                  style={{ background: "rgba(17,17,24,0.5)", border: "1px solid rgba(249,115,22,0.1)" }}>
+                  style={{ background: "rgba(17,17,24,0.5)", border: "1px solid rgba(194,164,107,0.1)" }}>
                   <div className="flex flex-wrap gap-1 mb-2">
                     {post.tags.map((tag) => (
                       <span key={tag} className="text-[10px] px-1.5 py-0.5 rounded"
-                        style={{ background: "rgba(249,115,22,0.12)", color: "#F97316" }}>
+                        style={{ background: "rgba(194,164,107,0.12)", color: "#C2A46B" }}>
                         {tag}
                       </span>
                     ))}

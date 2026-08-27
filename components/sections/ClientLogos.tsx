@@ -5,9 +5,9 @@ import { Icon } from "@/lib/icons";
 const clients = [
   { name: "Cartan Trade", abbr: "Cartan Trade", icon: "institution", color: "#A78BFA" },
   { name: "Société Générale CIB", abbr: "SGCIB", icon: "finance", color: "#E31837" },
-  { name: "GRTgaz", abbr: "GRTgaz", icon: "energy", color: "#F97316" },
+  { name: "GRTgaz", abbr: "GRTgaz", icon: "energy", color: "#38BDF8" },
   { name: "Groupe Casino", abbr: "Casino", icon: "retail", color: "#22C55E" },
-  { name: "Ministère de la Justice", abbr: "Justice", icon: "justice", color: "#F59E0B" },
+  { name: "Ministère de la Justice", abbr: "Justice", icon: "justice", color: "#64748B" },
 ];
 
 // Duplicated for seamless infinite loop
@@ -63,7 +63,7 @@ export function ClientLogos() {
       {/* Separator line */}
       <div className="mt-10 max-w-6xl mx-auto px-6">
         <div className="h-px w-full"
-          style={{ background: "linear-gradient(to right, transparent, rgba(245,158,11,0.3), rgba(249,115,22,0.3), transparent)" }} />
+          style={{ background: "linear-gradient(to right, transparent, rgba(194,164,107,0.3), rgba(194,164,107,0.3), transparent)" }} />
       </div>
     </div>
   );

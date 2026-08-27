@@ -25,7 +25,7 @@ export function Services() {
               <p className="text-[#94A3B8] text-sm leading-relaxed mb-4 flex-1">{service.desc}</p>
               <div
                 className="text-xs px-3 py-1.5 rounded-full font-medium w-fit"
-                style={{ background: "rgba(249,115,22,0.08)", color: "#F97316", border: "1px solid rgba(249,115,22,0.15)" }}
+                style={{ background: "rgba(194,164,107,0.08)", color: "#C2A46B", border: "1px solid rgba(194,164,107,0.15)" }}
               >
                 → {service.target}
               </div>
@@ -39,8 +39,8 @@ export function Services() {
         <div
           className="rounded-2xl p-8 text-center"
           style={{
-            background: "linear-gradient(135deg, rgba(245,158,11,0.15), rgba(249,115,22,0.08))",
-            border: "1px solid rgba(245,158,11,0.25)",
+            background: "linear-gradient(135deg, rgba(194,164,107,0.15), rgba(194,164,107,0.08))",
+            border: "1px solid rgba(194,164,107,0.25)",
           }}
         >
           <div className="text-5xl font-bold gradient-text mb-2">780€ / jour</div>
@@ -50,7 +50,7 @@ export function Services() {
           <a
             href="#contact"
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-white transition-all hover:opacity-90 hover:scale-105"
-            style={{ background: "linear-gradient(135deg,#F59E0B,#F97316)" }}
+            style={{ background: "#C2A46B" }}
           >
             Discutons de votre projet <ArrowRight size={16} />
           </a>

@@ -3,8 +3,8 @@
 :root {
   --bg: #0A0A0F;
   --surface: #111118;
-  --primary: #F59E0B;
-  --accent: #F97316;
+  --primary: #C2A46B;
+  --accent: #C2A46B;
   --text: #F1F5F9;
   --muted: #94A3B8;
   --border: rgba(255,255,255,0.06);
@@ -36,8 +36,8 @@ body {
 ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 3px; }
 ::selection { background: var(--primary); color: white; }
 
-.glow-primary { box-shadow: 0 0 30px rgba(245,158,11,0.3); }
-.glow-accent  { box-shadow: 0 0 30px rgba(249,115,22,0.3); }
+.glow-primary { box-shadow: 0 0 30px rgba(194,164,107,0.3); }
+.glow-accent  { box-shadow: 0 0 30px rgba(194,164,107,0.3); }
 
 .glass {
   background: var(--surface);
@@ -45,7 +45,7 @@ body {
 }
 
 .gradient-text {
-  color: #F59E0B;
+  color: #C2A46B;
 }
 
 @keyframes fadeInUp {
@@ -64,8 +64,8 @@ body {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(245,158,11,0.3); }
-  50%       { box-shadow: 0 0 50px rgba(245,158,11,0.7); }
+  0%, 100% { box-shadow: 0 0 20px rgba(194,164,107,0.3); }
+  50%       { box-shadow: 0 0 50px rgba(194,164,107,0.7); }
 }
 
 .cursor { animation: blink 1s step-end infinite; }

@@ -10,7 +10,7 @@ export function SectionHeader({ label, title, subtitle }: Props) {
   return (
     <div className="text-center mb-16">
       <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase mb-4"
-        style={{ background: "rgba(245,158,11,0.1)", color: "#F59E0B", border: "1px solid rgba(245,158,11,0.2)" }}>
+        style={{ background: "rgba(194,164,107,0.1)", color: "#C2A46B", border: "1px solid rgba(194,164,107,0.2)" }}>
         {label}
       </span>
       <h2 className="text-4xl md:text-5xl font-bold text-[#F1F5F9] leading-tight mb-4">

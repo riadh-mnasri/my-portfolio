@@ -78,7 +78,7 @@ export const CONTENT = {
     {
       icon: "finance",
       sector: "Finance de Marché & Risque",
-      color: "#F59E0B",
+      color: "#C2A46B",
       client: "Société Générale CIB",
       items: [
         "Risque de contrepartie (CCR / XVA)",
@@ -91,7 +91,7 @@ export const CONTENT = {
     {
       icon: "energy",
       sector: "Énergie & Utilities",
-      color: "#F97316",
+      color: "#38BDF8",
       client: "GRTgaz",
       items: [
         "Gestion de la distribution énergétique",
@@ -309,19 +309,19 @@ export const CONTENT = {
   ],
 
   certifications: [
-    { name: "Claude Code 101", org: "Anthropic", year: "2026", color: "#F97316", featured: true },
-    { name: "Introduction to Subagents", org: "Anthropic", year: "2026", color: "#F97316", featured: true },
-    { name: "Introduction to Agent Skills", org: "Anthropic", year: "2026", color: "#F97316", featured: true },
-    { name: "Découvrir Claude IA d'Anthropic", org: "LinkedIn", year: "2026", color: "#F97316", featured: true },
-    { name: "Claude Code in Action", org: "Anthropic", year: "2026", color: "#F59E0B", featured: true },
+    { name: "Claude Code 101", org: "Anthropic", year: "2026", color: "#C2A46B", featured: true },
+    { name: "Introduction to Subagents", org: "Anthropic", year: "2026", color: "#C2A46B", featured: true },
+    { name: "Introduction to Agent Skills", org: "Anthropic", year: "2026", color: "#C2A46B", featured: true },
+    { name: "Découvrir Claude IA d'Anthropic", org: "LinkedIn", year: "2026", color: "#C2A46B", featured: true },
+    { name: "Claude Code in Action", org: "Anthropic", year: "2026", color: "#C2A46B", featured: true },
     { name: "Gen AI: Unlock Foundational Concepts", org: "Google Cloud", year: "2025", color: "#4285F4", featured: false },
     { name: "IA : au-delà du chatbot", org: "Google Cloud", year: "2025", color: "#4285F4", featured: false },
-    { name: "L'essentiel d'Apache Spark", org: "LinkedIn", year: "2024", color: "#F97316", featured: false },
+    { name: "L'essentiel d'Apache Spark", org: "LinkedIn", year: "2024", color: "#C2A46B", featured: false },
     { name: "Introduction to Generative AI", org: "Google", year: "2023", color: "#4285F4", featured: false },
     { name: "Introducing Semantic Kernel: Building AI Apps", org: "LinkedIn", year: "2023", color: "#0A66C2", featured: false },
     { name: "Se lancer dans le recrutement indépendant", org: "LinkedIn", year: "2023", color: "#0A66C2", featured: false },
     { name: "Découvrir Terraform", org: "LinkedIn", year: "2022", color: "#7B42BC", featured: false },
-    { name: "Software Architecture: Domain-Driven Design", org: "LinkedIn", year: "2021", color: "#F59E0B", featured: false },
+    { name: "Software Architecture: Domain-Driven Design", org: "LinkedIn", year: "2021", color: "#C2A46B", featured: false },
     { name: "L'essentiel de Google Cloud Platform", org: "LinkedIn", year: "2021", color: "#4285F4", featured: false },
     { name: "Javascript: La formation ULTIME", org: "Udemy", year: "2020", color: "#A435F0", featured: false },
     { name: "Angular par la pratique", org: "Udemy", year: "2020", color: "#A435F0", featured: false },
@@ -368,14 +368,14 @@ export const CONTENT = {
       author: "Abdelaziz Houmadi",
       company: "Senior Full Stack Java & AWS",
       emoji: "developer",
-      color: "#F59E0B",
+      color: "#C2A46B",
     },
     {
       quote: "J'ai eu la chance de travailler avec Riadh, un collaborateur très corporate. Il a un réel sens de l'engagement pour mener à bien ses projets dans les délais au bénéfice de ses clients. Son expertise technique sur les architectures orientées services, sa capacité à faire progresser chaque membre de sa squad techniquement et humainement, sa facilité à interagir avec les équipes qui gravitent autour de lui font de lui un atout majeur sur un projet.",
       author: "Mounir Bayach",
       company: "Ingénieur d'affaires (ex-manager direct)",
       emoji: "compass",
-      color: "#F97316",
+      color: "#22C55E",
     },
     {
       quote: "J'ai eu le privilège de travailler dans la même équipe que Riadh. Riadh est un développeur passionné, travailleur, avec de solides compétences, et aime partager ses connaissances. Son esprit d'équipe, son professionnalisme et sa recherche de l'excellence sont des qualités que j'ai beaucoup appréciées chez lui.",
