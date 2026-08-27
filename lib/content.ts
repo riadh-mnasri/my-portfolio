@@ -364,7 +364,7 @@ export const CONTENT = {
 
   testimonials: [
     {
-      quote: "Riadh a transformé notre approche du risque de contrepartie. En quelques mois, il a livré une architecture cloud-native sur Azure qui a réduit nos temps de calcul de 50%. Sa maîtrise de Spark et sa vision système sont rares à ce niveau.",
+      quote: "Riadh a transformé notre approche du risque de contrepartie. En quelques mois, il a livré une architecture cloud-native sur Azure qui a nettement réduit nos temps de calcul. Sa maîtrise de Spark et sa vision système sont rares à ce niveau.",
       author: "Directeur Architecture SI",
       company: "Société Générale CIB",
       emoji: "🏦",
