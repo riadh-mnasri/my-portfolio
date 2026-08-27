@@ -309,10 +309,10 @@ export const CONTENT = {
   ],
 
   certifications: [
-    { name: "Claude Code 101", org: "Anthropic", year: "2026", color: "#A78BFA", featured: true },
-    { name: "Introduction to Subagents", org: "Anthropic", year: "2026", color: "#A78BFA", featured: true },
-    { name: "Introduction to Agent Skills", org: "Anthropic", year: "2026", color: "#A78BFA", featured: true },
-    { name: "Découvrir Claude IA d'Anthropic", org: "LinkedIn", year: "2026", color: "#A78BFA", featured: true },
+    { name: "Claude Code 101", org: "Anthropic", year: "2026", color: "#F97316", featured: true },
+    { name: "Introduction to Subagents", org: "Anthropic", year: "2026", color: "#F97316", featured: true },
+    { name: "Introduction to Agent Skills", org: "Anthropic", year: "2026", color: "#F97316", featured: true },
+    { name: "Découvrir Claude IA d'Anthropic", org: "LinkedIn", year: "2026", color: "#F97316", featured: true },
     { name: "Claude Code in Action", org: "Anthropic", year: "2026", color: "#F59E0B", featured: true },
     { name: "Gen AI: Unlock Foundational Concepts", org: "Google Cloud", year: "2025", color: "#4285F4", featured: false },
     { name: "IA : au-delà du chatbot", org: "Google Cloud", year: "2025", color: "#4285F4", featured: false },
