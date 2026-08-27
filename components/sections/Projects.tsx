@@ -29,7 +29,7 @@ export function Projects() {
             rel="noopener noreferrer"
             className="ml-auto text-sm text-[#F59E0B] hover:text-[#F97316] flex items-center gap-1 transition-colors"
           >
-            7 459 abonnés <ExternalLink size={12} />
+            7 735 abonnés <ExternalLink size={12} />
           </a>
         </div>
       </SectionReveal>
@@ -71,7 +71,7 @@ export function Projects() {
             rel="noopener noreferrer"
             className="ml-auto text-sm text-[#F59E0B] hover:text-[#F97316] flex items-center gap-1 transition-colors"
           >
-            110 repos <ExternalLink size={12} />
+            153 repos <ExternalLink size={12} />
           </a>
         </div>
       </SectionReveal>
