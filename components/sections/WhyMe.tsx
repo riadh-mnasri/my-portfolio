@@ -21,8 +21,8 @@ const differentiators = [
     border: "rgba(99,102,241,0.25)",
     tag: "Performance Prouvée",
     title: "Des résultats mesurables, pas des promesses",
-    body: "Chez Société Générale CIB, j'ai réduit les temps de traitement de 50% sur un moteur de risque critique, et accéléré la vélocité dev de 30% via l'intégration de l'IA. Je livre des impacts business chiffrés, pas des slides.",
-    kpis: ["−50% temps de traitement @ SGCIB", "+30% vélocité dev avec l'IA", "99.9% disponibilité systèmes"],
+    body: "Chez Société Générale CIB, j'ai contribué à réduire jusqu'à 50% les temps de traitement sur un moteur de risque critique, et à accélérer d'environ 30% la vélocité dev via l'intégration de l'IA. Des ordres de grandeur, pas des promesses en l'air.",
+    kpis: ["Jusqu'à −50% temps de traitement @ SGCIB", "~+30% vélocité dev avec l'IA", "99%+ disponibilité visée"],
   },
   {
     icon: "🤖",

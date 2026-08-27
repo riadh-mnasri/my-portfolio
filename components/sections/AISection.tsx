@@ -13,7 +13,7 @@ const tools = [
 ];
 
 const impacts = [
-  { value: "+30%", label: "vélocité de développement", detail: "via GitHub Copilot & Claude @ SGCIB" },
+  { value: "~+30%", label: "vélocité de développement", detail: "via GitHub Copilot & Claude @ SGCIB" },
   { value: "J+1", label: "intégration opérationnelle", detail: "IA dans vos pipelines dès le premier jour" },
   { value: "2026", label: "double certifié Anthropic", detail: "Claude Code 101 · Introduction to Subagents" },
 ];
@@ -22,7 +22,7 @@ const timeline = [
   { year: "2026", event: "Certifié Claude Code 101 - Anthropic", color: "#A78BFA" },
   { year: "2026", event: "Certifié Introduction to Subagents - Anthropic", color: "#A78BFA" },
   { year: "2025", event: "Formation Claude Code @ SFEIR Institute", color: "#6366F1" },
-  { year: "2024", event: "Pionnier GitHub Copilot en production @ SGCIB (+30% vélocité)", color: "#22D3EE" },
+  { year: "2024", event: "Pionnier GitHub Copilot en production @ SGCIB (~+30% vélocité)", color: "#22D3EE" },
   { year: "2024", event: "Architecture Agent-Ready sur systèmes Java enterprise", color: "#22D3EE" },
   { year: "2023", event: "Veille active LLM : architecture AI-Driven, sécurité, agents", color: "#94A3B8" },
 ];

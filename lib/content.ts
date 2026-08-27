@@ -85,7 +85,7 @@ export const CONTENT = {
         "Moteurs de calcul de risque cloud-native",
         "Régulation financière (FRTB, CRD IV/V)",
         "Capital Markets & CIB",
-        "Optimisation de performance Spark (+50%)",
+        "Optimisation de performance Spark (~+50%)",
       ],
     },
     {
@@ -163,8 +163,8 @@ export const CONTENT = {
       emoji: "🏦",
       highlights: [
         "Architecture cloud-native sur Azure & Kubernetes pour un moteur de risque de contrepartie",
-        "50% de réduction du temps de traitement via optimisation algorithmique et Spark tuning",
-        "30% d'accélération du cycle de dev grâce à l'intégration de GitHub Copilot et d'outils AI",
+        "Réduction significative (jusqu'à 50%) du temps de traitement via optimisation algorithmique et Spark tuning",
+        "Accélération notable (~30%) du cycle de dev grâce à l'intégration de GitHub Copilot et d'outils AI",
         "Culture TDD/BDD et Clean Code : réduction significative des bugs en production",
         "CI/CD automatisé (GitHub/Jenkins) en environnement hautement régulé",
       ],
@@ -345,7 +345,7 @@ export const CONTENT = {
     {
       icon: "☁️",
       title: "Migration Cloud-Native & Architecture",
-      desc: "Migration de systèmes legacy vers le Cloud (AWS, Azure, GCP). Conception d'architectures microservices scalables avec 99.9% de disponibilité. Kubernetes, Terraform, Kafka.",
+      desc: "Migration de systèmes legacy vers le Cloud (AWS, Azure, GCP). Conception d'architectures microservices scalables avec une disponibilité visée de 99%+. Kubernetes, Terraform, Kafka.",
       target: "DSI, CTO, grands comptes & scale-ups",
     },
     {

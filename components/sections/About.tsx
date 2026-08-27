@@ -39,9 +39,9 @@ export function About() {
             {/* Key numbers */}
             <div className="grid grid-cols-3 gap-4 pt-4">
               {[
-                { n: "−50%", label: "temps de traitement @ SGCIB" },
-                { n: "+30%", label: "vélocité dev avec l'IA" },
-                { n: "99.9%", label: "disponibilité architectures" },
+                { n: "~−50%", label: "temps de traitement @ SGCIB" },
+                { n: "~+30%", label: "vélocité dev avec l'IA" },
+                { n: "99%+", label: "disponibilité visée" },
               ].map((kpi) => (
                 <div key={kpi.label} className="glass rounded-xl p-3 text-center"
                   style={{ border: "1px solid rgba(99,102,241,0.1)" }}>
