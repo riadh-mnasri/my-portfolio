@@ -24,7 +24,7 @@ export function Experience() {
           <SectionReveal key={exp.company} delay={i * 0.08}>
             <div
               className="glass rounded-2xl overflow-hidden cursor-pointer"
-              style={{ border: open === i ? "1px solid rgba(99,102,241,0.4)" : "1px solid rgba(255,255,255,0.06)" }}
+              style={{ border: open === i ? "1px solid rgba(245,158,11,0.4)" : "1px solid rgba(255,255,255,0.06)" }}
               onClick={() => setOpen(open === i ? null : i)}
             >
               <div className="flex items-center justify-between px-6 py-5">
@@ -32,7 +32,7 @@ export function Experience() {
                   <span className="text-2xl">{exp.emoji}</span>
                   <div>
                     <div className="font-bold text-[#F1F5F9]">{exp.company}</div>
-                    <div className="text-sm text-[#6366F1]">{exp.role}</div>
+                    <div className="text-sm text-[#F59E0B]">{exp.role}</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -61,7 +61,7 @@ export function Experience() {
                       <ul className="space-y-2 mb-4">
                         {exp.highlights.map((h, j) => (
                           <li key={j} className="flex items-start gap-3 text-sm text-[#94A3B8]">
-                            <span className="text-[#6366F1] mt-0.5">▸</span>
+                            <span className="text-[#F59E0B] mt-0.5">▸</span>
                             {h}
                           </li>
                         ))}
@@ -69,7 +69,7 @@ export function Experience() {
                       {"stack" in exp && exp.stack && (
                         <div className="pt-3 border-t border-[rgba(255,255,255,0.06)]">
                           <div className="text-xs text-[#94A3B8] mb-2 uppercase tracking-wider">Stack</div>
-                          <p className="text-xs font-mono text-[#6366F1]">{exp.stack as string}</p>
+                          <p className="text-xs font-mono text-[#F59E0B]">{exp.stack as string}</p>
                         </div>
                       )}
                     </div>

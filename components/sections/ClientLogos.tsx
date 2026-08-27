@@ -6,7 +6,7 @@ const clients = [
   { name: "Société Générale CIB", abbr: "SGCIB", icon: "🏦", color: "#E31837" },
   { name: "GRTgaz", abbr: "GRTgaz", icon: "⚡", color: "#F97316" },
   { name: "Groupe Casino", abbr: "Casino", icon: "🛒", color: "#22C55E" },
-  { name: "Ministère de la Justice", abbr: "Justice", icon: "⚖️", color: "#6366F1" },
+  { name: "Ministère de la Justice", abbr: "Justice", icon: "⚖️", color: "#F59E0B" },
 ];
 
 // Duplicated for seamless infinite loop
@@ -62,7 +62,7 @@ export function ClientLogos() {
       {/* Separator line */}
       <div className="mt-10 max-w-6xl mx-auto px-6">
         <div className="h-px w-full"
-          style={{ background: "linear-gradient(to right, transparent, rgba(99,102,241,0.3), rgba(34,211,238,0.3), transparent)" }} />
+          style={{ background: "linear-gradient(to right, transparent, rgba(245,158,11,0.3), rgba(249,115,22,0.3), transparent)" }} />
       </div>
     </div>
   );

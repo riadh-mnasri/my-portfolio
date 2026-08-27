@@ -91,7 +91,7 @@ export const CONTENT = {
     {
       icon: "⚡",
       sector: "Énergie & Utilities",
-      color: "#22D3EE",
+      color: "#F97316",
       client: "GRTgaz",
       items: [
         "Gestion de la distribution énergétique",
@@ -117,7 +117,7 @@ export const CONTENT = {
     {
       icon: "⚖️",
       sector: "Secteur Public & Justice",
-      color: "#6366F1",
+      color: "#64748B",
       client: "Ministère de la Justice",
       items: [
         "Dématérialisation de procédures judiciaires",
@@ -313,15 +313,15 @@ export const CONTENT = {
     { name: "Introduction to Subagents", org: "Anthropic", year: "2026", color: "#A78BFA", featured: true },
     { name: "Introduction to Agent Skills", org: "Anthropic", year: "2026", color: "#A78BFA", featured: true },
     { name: "Découvrir Claude IA d'Anthropic", org: "LinkedIn", year: "2026", color: "#A78BFA", featured: true },
-    { name: "Claude Code in Action", org: "Anthropic", year: "2026", color: "#6366F1", featured: true },
+    { name: "Claude Code in Action", org: "Anthropic", year: "2026", color: "#F59E0B", featured: true },
     { name: "Gen AI: Unlock Foundational Concepts", org: "Google Cloud", year: "2025", color: "#4285F4", featured: false },
     { name: "IA : au-delà du chatbot", org: "Google Cloud", year: "2025", color: "#4285F4", featured: false },
-    { name: "L'essentiel d'Apache Spark", org: "LinkedIn", year: "2024", color: "#22D3EE", featured: false },
+    { name: "L'essentiel d'Apache Spark", org: "LinkedIn", year: "2024", color: "#F97316", featured: false },
     { name: "Introduction to Generative AI", org: "Google", year: "2023", color: "#4285F4", featured: false },
     { name: "Introducing Semantic Kernel: Building AI Apps", org: "LinkedIn", year: "2023", color: "#0A66C2", featured: false },
     { name: "Se lancer dans le recrutement indépendant", org: "LinkedIn", year: "2023", color: "#0A66C2", featured: false },
     { name: "Découvrir Terraform", org: "LinkedIn", year: "2022", color: "#7B42BC", featured: false },
-    { name: "Software Architecture: Domain-Driven Design", org: "LinkedIn", year: "2021", color: "#6366F1", featured: false },
+    { name: "Software Architecture: Domain-Driven Design", org: "LinkedIn", year: "2021", color: "#F59E0B", featured: false },
     { name: "L'essentiel de Google Cloud Platform", org: "LinkedIn", year: "2021", color: "#4285F4", featured: false },
     { name: "Javascript: La formation ULTIME", org: "Udemy", year: "2020", color: "#A435F0", featured: false },
     { name: "Angular par la pratique", org: "Udemy", year: "2020", color: "#A435F0", featured: false },
@@ -375,7 +375,7 @@ export const CONTENT = {
       author: "Product Owner",
       company: "GRTgaz",
       emoji: "⚡",
-      color: "#22D3EE",
+      color: "#F97316",
     },
     {
       quote: "Riadh a introduit GitHub Copilot dans nos workflows dès le début de sa mission. Le gain de vélocité a été immédiat et mesurable. Il a aussi formé toute l'équipe aux bonnes pratiques TDD et Clean Code - l'impact dure encore.",

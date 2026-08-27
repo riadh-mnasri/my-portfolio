@@ -59,8 +59,8 @@ export function Navbar() {
       <div className="absolute top-0 left-0 h-[2px] transition-all duration-100 ease-out"
         style={{
           width: `${progress}%`,
-          background: "linear-gradient(90deg, #6366F1, #22D3EE)",
-          boxShadow: "0 0 8px rgba(99,102,241,0.6)",
+          background: "linear-gradient(90deg, #F59E0B, #F97316)",
+          boxShadow: "0 0 8px rgba(245,158,11,0.6)",
         }} />
 
       <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -82,7 +82,7 @@ export function Navbar() {
                 <motion.div
                   layoutId="nav-active"
                   className="absolute -bottom-1 left-0 right-0 h-[2px] rounded-full"
-                  style={{ background: "linear-gradient(90deg,#6366F1,#22D3EE)" }}
+                  style={{ background: "linear-gradient(90deg,#F59E0B,#F97316)" }}
                   transition={{ type: "spring", stiffness: 380, damping: 30 }}
                 />
               )}
@@ -91,7 +91,7 @@ export function Navbar() {
           <li>
             <a href="#contact"
               className="px-4 py-2 rounded-lg text-sm font-semibold text-white transition-all hover:opacity-90 hover:scale-105"
-              style={{ background: "linear-gradient(135deg,#6366F1,#22D3EE)" }}>
+              style={{ background: "linear-gradient(135deg,#F59E0B,#F97316)" }}>
               Me contacter
             </a>
           </li>
@@ -116,7 +116,7 @@ export function Navbar() {
                 <li key={l.href}>
                   <a href={l.href} onClick={() => setOpen(false)}
                     className="block py-2.5 text-sm transition-colors"
-                    style={{ color: isActive(l.href) ? "#6366F1" : "#94A3B8" }}>
+                    style={{ color: isActive(l.href) ? "#F59E0B" : "#94A3B8" }}>
                     {isActive(l.href) ? "▸ " : ""}{l.label}
                   </a>
                 </li>

@@ -25,8 +25,8 @@ export function FloatingCTA() {
           transition={{ type: "spring", stiffness: 300, damping: 22 }}
           className="fixed bottom-6 right-6 z-40 flex items-center gap-2 px-5 py-3 rounded-full font-semibold text-sm text-white shadow-2xl"
           style={{
-            background: "linear-gradient(135deg, #6366F1, #22D3EE)",
-            boxShadow: "0 8px 32px rgba(99,102,241,0.45)",
+            background: "linear-gradient(135deg, #F59E0B, #F97316)",
+            boxShadow: "0 8px 32px rgba(245,158,11,0.45)",
           }}
         >
           <MessageCircle size={16} />

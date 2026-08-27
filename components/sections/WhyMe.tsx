@@ -16,19 +16,19 @@ const differentiators = [
   },
   {
     icon: "⚡",
-    color: "#6366F1",
-    gradient: "linear-gradient(135deg, rgba(99,102,241,0.12), rgba(99,102,241,0.04))",
-    border: "rgba(99,102,241,0.25)",
+    color: "#F59E0B",
+    gradient: "linear-gradient(135deg, rgba(245,158,11,0.12), rgba(245,158,11,0.04))",
+    border: "rgba(245,158,11,0.25)",
     tag: "Performance Prouvée",
     title: "Des résultats mesurables, pas des promesses",
-    body: "Chez Société Générale CIB, j'ai contribué à réduire jusqu'à 50% les temps de traitement sur un moteur de risque critique, et à accélérer d'environ 30% la vélocité dev via l'intégration de l'IA. Des ordres de grandeur, pas des promesses en l'air.",
+    body: "Chez Société Générale CIB, j'ai contribué à réduire nettement les temps de traitement sur un moteur de risque critique, et à accélérer la vélocité dev via l'intégration de l'IA. Des ordres de grandeur, détaillés ci-dessous, pas des promesses en l'air.",
     kpis: ["Jusqu'à −50% temps de traitement @ SGCIB", "~+30% vélocité dev avec l'IA", "99%+ disponibilité visée"],
   },
   {
     icon: "🤖",
-    color: "#22D3EE",
-    gradient: "linear-gradient(135deg, rgba(34,211,238,0.1), rgba(34,211,238,0.03))",
-    border: "rgba(34,211,238,0.25)",
+    color: "#F97316",
+    gradient: "linear-gradient(135deg, rgba(249,115,22,0.1), rgba(249,115,22,0.03))",
+    border: "rgba(249,115,22,0.25)",
     tag: "AI-Ready dès J+1",
     title: "L'IA dans vos pipelines, maintenant",
     body: "Certifié Anthropic (Claude Code, Subagents), pionnier de l'intégration GitHub Copilot & Claude en contexte enterprise. J'intègre l'IA dans vos workflows de développement de façon sécurisée, maîtrisée et immédiatement actionnable.",
@@ -99,8 +99,8 @@ export function WhyMe() {
       <SectionReveal delay={0.3}>
         <div className="mt-12 rounded-2xl px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4"
           style={{
-            background: "linear-gradient(135deg, rgba(99,102,241,0.08), rgba(34,211,238,0.05))",
-            border: "1px solid rgba(99,102,241,0.2)",
+            background: "linear-gradient(135deg, rgba(245,158,11,0.08), rgba(249,115,22,0.05))",
+            border: "1px solid rgba(245,158,11,0.2)",
           }}>
           <div>
             <p className="text-[#F1F5F9] font-semibold text-lg mb-0.5">
@@ -112,7 +112,7 @@ export function WhyMe() {
           </div>
           <a href="#contact"
             className="px-7 py-3 rounded-xl font-semibold text-white text-sm flex-shrink-0 transition-all hover:opacity-90 hover:scale-105"
-            style={{ background: "linear-gradient(135deg,#6366F1,#22D3EE)" }}>
+            style={{ background: "linear-gradient(135deg,#F59E0B,#F97316)" }}>
             Discutons de votre projet →
           </a>
         </div>

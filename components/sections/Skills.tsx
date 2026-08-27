@@ -42,12 +42,12 @@ export function Skills() {
       {/* Domain expertise divider */}
       <SectionReveal>
         <div className="flex items-center gap-4 mb-10">
-          <div className="flex-1 h-px" style={{ background: "linear-gradient(90deg, transparent, rgba(99,102,241,0.3))" }} />
+          <div className="flex-1 h-px" style={{ background: "linear-gradient(90deg, transparent, rgba(245,158,11,0.3))" }} />
           <div className="px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest"
-            style={{ background: "rgba(99,102,241,0.08)", border: "1px solid rgba(99,102,241,0.2)", color: "#6366F1" }}>
+            style={{ background: "rgba(245,158,11,0.08)", border: "1px solid rgba(245,158,11,0.2)", color: "#F59E0B" }}>
             Expertise Métier & Sectorielle
           </div>
-          <div className="flex-1 h-px" style={{ background: "linear-gradient(90deg, rgba(99,102,241,0.3), transparent)" }} />
+          <div className="flex-1 h-px" style={{ background: "linear-gradient(90deg, rgba(245,158,11,0.3), transparent)" }} />
         </div>
       </SectionReveal>
 
@@ -99,8 +99,8 @@ export function Skills() {
         <SectionReveal delay={CONTENT.domains.length * 0.08}>
           <div className="rounded-2xl p-5 h-full flex flex-col items-center justify-center text-center min-h-[180px]"
             style={{
-              background: "linear-gradient(135deg, rgba(99,102,241,0.06), rgba(34,211,238,0.03))",
-              border: "1px dashed rgba(99,102,241,0.25)",
+              background: "linear-gradient(135deg, rgba(245,158,11,0.06), rgba(249,115,22,0.03))",
+              border: "1px dashed rgba(245,158,11,0.25)",
             }}>
             <div className="text-3xl mb-3">🌍</div>
             <p className="text-sm font-semibold text-[#F1F5F9] mb-1">Secteur public, privé, international</p>

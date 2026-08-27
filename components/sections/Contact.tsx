@@ -27,7 +27,7 @@ export function Contact() {
   };
 
   const inputClass =
-    "w-full rounded-xl px-4 py-3 text-[#F1F5F9] text-sm outline-none focus:border-[rgba(99,102,241,0.5)] transition-colors placeholder-[#94A3B8]";
+    "w-full rounded-xl px-4 py-3 text-[#F1F5F9] text-sm outline-none focus:border-[rgba(245,158,11,0.5)] transition-colors placeholder-[#94A3B8]";
   const inputStyle = {
     background: "rgba(255,255,255,0.04)",
     border: "1px solid rgba(255,255,255,0.08)",
@@ -49,7 +49,7 @@ export function Contact() {
           {status === "sent" ? (
             <div
               className="glass rounded-2xl p-8 text-center h-full flex flex-col items-center justify-center gap-4"
-              style={{ border: "1px solid rgba(34,211,238,0.2)" }}
+              style={{ border: "1px solid rgba(249,115,22,0.2)" }}
             >
               <div className="text-5xl">🎉</div>
               <h3 className="text-2xl font-bold text-[#F1F5F9]">Message envoyé !</h3>
@@ -111,7 +111,7 @@ export function Contact() {
                 type="submit"
                 disabled={status === "sending"}
                 className="w-full py-3.5 rounded-xl font-semibold text-white flex items-center justify-center gap-2 transition-all hover:opacity-90 disabled:opacity-60"
-                style={{ background: "linear-gradient(135deg,#6366F1,#22D3EE)" }}
+                style={{ background: "linear-gradient(135deg,#F59E0B,#F97316)" }}
               >
                 {status === "sending" ? "Envoi..." : (<><Send size={16} /> Envoyer le message</>)}
               </button>
@@ -124,20 +124,20 @@ export function Contact() {
           <div className="space-y-6">
             <div className="glass rounded-2xl p-6 space-y-5">
               <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ background: "rgba(99,102,241,0.15)" }}>
-                  <Mail size={16} className="text-[#6366F1]" />
+                <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ background: "rgba(245,158,11,0.15)" }}>
+                  <Mail size={16} className="text-[#F59E0B]" />
                 </div>
                 <div>
                   <div className="text-xs text-[#94A3B8] mb-0.5">Email</div>
-                  <a href={`mailto:${links.email}`} className="text-[#F1F5F9] hover:text-[#6366F1] transition-colors text-sm">
+                  <a href={`mailto:${links.email}`} className="text-[#F1F5F9] hover:text-[#F59E0B] transition-colors text-sm">
                     {links.email}
                   </a>
                 </div>
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ background: "rgba(99,102,241,0.15)" }}>
-                  <MapPin size={16} className="text-[#6366F1]" />
+                <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ background: "rgba(245,158,11,0.15)" }}>
+                  <MapPin size={16} className="text-[#F59E0B]" />
                 </div>
                 <div>
                   <div className="text-xs text-[#94A3B8] mb-0.5">Localisation</div>
@@ -146,13 +146,13 @@ export function Contact() {
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ background: "rgba(34,211,238,0.1)" }}>
+                <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ background: "rgba(249,115,22,0.1)" }}>
                   <span className="text-sm">💼</span>
                 </div>
                 <div>
                   <div className="text-xs text-[#94A3B8] mb-0.5">Malt</div>
                   <a href={links.malt} target="_blank" rel="noopener noreferrer"
-                    className="text-[#22D3EE] hover:underline text-sm flex items-center gap-1">
+                    className="text-[#F97316] hover:underline text-sm flex items-center gap-1">
                     Voir mon profil Malt <ExternalLink size={11} />
                   </a>
                 </div>
@@ -183,13 +183,13 @@ export function Contact() {
 
             <div
               className="rounded-2xl p-5 text-center"
-              style={{ background: "rgba(99,102,241,0.08)", border: "1px solid rgba(99,102,241,0.2)" }}
+              style={{ background: "rgba(245,158,11,0.08)", border: "1px solid rgba(245,158,11,0.2)" }}
             >
               <div className="flex items-center justify-center gap-2 text-sm text-[#94A3B8] mb-1">
                 <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
                 Disponible pour missions
               </div>
-              <div className="text-[#6366F1] font-bold text-lg">780€ / jour</div>
+              <div className="text-[#F59E0B] font-bold text-lg">780€ / jour</div>
             </div>
           </div>
         </SectionReveal>

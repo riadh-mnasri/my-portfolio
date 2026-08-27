@@ -3,8 +3,8 @@
 :root {
   --bg: #0A0A0F;
   --surface: #111118;
-  --primary: #6366F1;
-  --accent: #22D3EE;
+  --primary: #F59E0B;
+  --accent: #F97316;
   --text: #F1F5F9;
   --muted: #94A3B8;
   --border: rgba(255,255,255,0.06);
@@ -36,8 +36,8 @@ body {
 ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 3px; }
 ::selection { background: var(--primary); color: white; }
 
-.glow-primary { box-shadow: 0 0 30px rgba(99,102,241,0.3); }
-.glow-accent  { box-shadow: 0 0 30px rgba(34,211,238,0.3); }
+.glow-primary { box-shadow: 0 0 30px rgba(245,158,11,0.3); }
+.glow-accent  { box-shadow: 0 0 30px rgba(249,115,22,0.3); }
 
 .glass {
   background: rgba(17,17,24,0.6);
@@ -47,7 +47,7 @@ body {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #6366F1 0%, #22D3EE 100%);
+  background: linear-gradient(135deg, #F59E0B 0%, #F97316 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -69,8 +69,8 @@ body {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(99,102,241,0.3); }
-  50%       { box-shadow: 0 0 50px rgba(99,102,241,0.7); }
+  0%, 100% { box-shadow: 0 0 20px rgba(245,158,11,0.3); }
+  50%       { box-shadow: 0 0 50px rgba(245,158,11,0.7); }
 }
 
 .cursor { animation: blink 1s step-end infinite; }

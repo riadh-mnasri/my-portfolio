@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import { ParticleCanvas } from "@/components/ui/ParticleCanvas";
 import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import { CONTENT } from "@/lib/content";
 import { ArrowDown, ExternalLink } from "lucide-react";
@@ -15,15 +14,23 @@ export function Hero() {
       className="relative min-h-screen flex flex-col justify-center overflow-hidden"
       style={{ padding: 0 }}
     >
-      <ParticleCanvas />
+      {/* Subtle static grid texture */}
+      <div
+        className="absolute inset-0 opacity-[0.02] pointer-events-none"
+        style={{
+          backgroundImage: `linear-gradient(#F1F5F9 1px, transparent 1px),
+                           linear-gradient(90deg, #F1F5F9 1px, transparent 1px)`,
+          backgroundSize: "56px 56px",
+        }}
+      />
 
       {/* Glow left */}
       <div className="absolute inset-0 pointer-events-none" style={{
-        background: "radial-gradient(ellipse 50% 60% at 30% 50%, rgba(99,102,241,0.1) 0%, transparent 70%)",
+        background: "radial-gradient(ellipse 50% 60% at 30% 50%, rgba(245,158,11,0.1) 0%, transparent 70%)",
       }} />
       {/* Glow right */}
       <div className="absolute inset-0 pointer-events-none" style={{
-        background: "radial-gradient(ellipse 40% 50% at 75% 50%, rgba(34,211,238,0.06) 0%, transparent 70%)",
+        background: "radial-gradient(ellipse 40% 50% at 75% 50%, rgba(249,115,22,0.06) 0%, transparent 70%)",
       }} />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 w-full py-24 lg:py-0 min-h-screen flex items-center">
@@ -92,7 +99,7 @@ export function Hero() {
               {hero.badges.map((badge) => (
                 <span key={badge}
                   className="px-3 py-1.5 rounded-full text-xs font-medium glass text-[#F1F5F9]"
-                  style={{ border: "1px solid rgba(99,102,241,0.3)" }}>
+                  style={{ border: "1px solid rgba(245,158,11,0.3)" }}>
                   {badge}
                 </span>
               ))}
@@ -107,15 +114,15 @@ export function Hero() {
             >
               <a href="#contact"
                 className="px-7 py-3 rounded-xl font-semibold text-white text-sm transition-all hover:opacity-90 hover:scale-105"
-                style={{ background: "linear-gradient(135deg,#6366F1,#22D3EE)" }}>
+                style={{ background: "linear-gradient(135deg,#F59E0B,#F97316)" }}>
                 Me contacter
               </a>
               <a href="#projects"
-                className="px-7 py-3 rounded-xl font-semibold text-[#F1F5F9] glass border border-[rgba(99,102,241,0.3)] hover:border-[rgba(99,102,241,0.6)] transition-all text-sm">
+                className="px-7 py-3 rounded-xl font-semibold text-[#F1F5F9] glass border border-[rgba(245,158,11,0.3)] hover:border-[rgba(245,158,11,0.6)] transition-all text-sm">
                 Voir mes projets
               </a>
               <a href={links.malt} target="_blank" rel="noopener noreferrer"
-                className="px-7 py-3 rounded-xl font-semibold text-[#22D3EE] glass border border-[rgba(34,211,238,0.25)] hover:border-[rgba(34,211,238,0.5)] transition-all text-sm flex items-center gap-1.5">
+                className="px-7 py-3 rounded-xl font-semibold text-[#F97316] glass border border-[rgba(249,115,22,0.25)] hover:border-[rgba(249,115,22,0.5)] transition-all text-sm flex items-center gap-1.5">
                 Malt · 780€/j <ExternalLink size={12} />
               </a>
             </motion.div>
@@ -128,11 +135,11 @@ export function Hero() {
               className="flex items-center gap-5"
             >
               <a href={links.github} target="_blank" rel="noopener noreferrer"
-                className="text-[#94A3B8] hover:text-[#6366F1] transition-colors">
+                className="text-[#94A3B8] hover:text-[#F59E0B] transition-colors">
                 <GithubIcon size={20} />
               </a>
               <a href={links.linkedin} target="_blank" rel="noopener noreferrer"
-                className="text-[#94A3B8] hover:text-[#6366F1] transition-colors">
+                className="text-[#94A3B8] hover:text-[#F59E0B] transition-colors">
                 <LinkedinIcon size={20} />
               </a>
               <div className="w-px h-5 bg-[rgba(255,255,255,0.1)]" />
@@ -156,7 +163,7 @@ export function Hero() {
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute -inset-4 rounded-full pointer-events-none"
                 style={{
-                  background: "radial-gradient(circle, rgba(99,102,241,0.25) 0%, transparent 70%)",
+                  background: "radial-gradient(circle, rgba(245,158,11,0.25) 0%, transparent 70%)",
                 }}
               />
 
@@ -167,7 +174,7 @@ export function Hero() {
                   transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
                   className="absolute inset-0 rounded-full"
                   style={{
-                    background: "conic-gradient(from 0deg, #6366F1 0%, #22D3EE 40%, #6366F1 60%, #A78BFA 80%, #6366F1 100%)",
+                    background: "conic-gradient(from 0deg, #F59E0B 0%, #F97316 40%, #F59E0B 60%, #A78BFA 80%, #F59E0B 100%)",
                   }}
                 />
 
@@ -212,7 +219,7 @@ export function Hero() {
               {hero.stats.map((stat) => (
                 <div key={stat.label}
                   className="glass rounded-xl p-4 text-center"
-                  style={{ border: "1px solid rgba(99,102,241,0.15)" }}>
+                  style={{ border: "1px solid rgba(245,158,11,0.15)" }}>
                   <div className="text-2xl font-bold gradient-text mb-0.5">
                     <AnimatedCounter value={stat.value} suffix={stat.suffix} />
                   </div>

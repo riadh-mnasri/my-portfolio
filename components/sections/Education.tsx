@@ -32,7 +32,7 @@ const education = [
     promo: "",
     year: "2023",
     highlight: false,
-    color: "#6366F1",
+    color: "#F59E0B",
     project: "",
     skills: [],
     url: "https://www.polytechnique.edu/executive-education",
@@ -45,7 +45,7 @@ const education = [
     promo: "",
     year: "2004",
     highlight: false,
-    color: "#22D3EE",
+    color: "#F97316",
     project: "",
     skills: [],
     url: "",
@@ -72,12 +72,12 @@ export function Education() {
                 whileHover={{ y: -2 }}
                 className="relative rounded-2xl overflow-hidden"
                 style={{
-                  background: "linear-gradient(135deg, rgba(245,158,11,0.08) 0%, rgba(99,102,241,0.06) 100%)",
+                  background: "linear-gradient(135deg, rgba(245,158,11,0.08) 0%, rgba(245,158,11,0.06) 100%)",
                   border: "1px solid rgba(245,158,11,0.3)",
                 }}
               >
                 {/* Top accent bar */}
-                <div className="h-1 w-full" style={{ background: "linear-gradient(90deg, #F59E0B, #6366F1)" }} />
+                <div className="h-1 w-full" style={{ background: "linear-gradient(90deg, #F59E0B, #F97316)" }} />
 
                 <div className="p-8">
                   {/* Header */}

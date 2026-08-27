@@ -6,10 +6,10 @@ import { CONTENT } from "@/lib/content";
 
 const tools = [
   { name: "Claude", org: "Anthropic", emoji: "🤖", color: "#A78BFA", certified: true },
-  { name: "GitHub Copilot", org: "Microsoft", emoji: "⚡", color: "#22D3EE", certified: false },
-  { name: "Claude Code", org: "Anthropic", emoji: "💻", color: "#6366F1", certified: true },
+  { name: "GitHub Copilot", org: "Microsoft", emoji: "⚡", color: "#F97316", certified: false },
+  { name: "Claude Code", org: "Anthropic", emoji: "💻", color: "#F59E0B", certified: true },
   { name: "AI Agents", org: "Architecture", emoji: "🕸️", color: "#22C55E", certified: false },
-  { name: "LLM Integration", org: "Enterprise", emoji: "🔗", color: "#F97316", certified: false },
+  { name: "LLM Integration", org: "Enterprise", emoji: "🔗", color: "#38BDF8", certified: false },
 ];
 
 const impacts = [
@@ -21,9 +21,9 @@ const impacts = [
 const timeline = [
   { year: "2026", event: "Certifié Claude Code 101 - Anthropic", color: "#A78BFA" },
   { year: "2026", event: "Certifié Introduction to Subagents - Anthropic", color: "#A78BFA" },
-  { year: "2025", event: "Formation Claude Code @ SFEIR Institute", color: "#6366F1" },
-  { year: "2024", event: "Pionnier GitHub Copilot en production @ SGCIB (~+30% vélocité)", color: "#22D3EE" },
-  { year: "2024", event: "Architecture Agent-Ready sur systèmes Java enterprise", color: "#22D3EE" },
+  { year: "2025", event: "Formation Claude Code @ SFEIR Institute", color: "#F59E0B" },
+  { year: "2024", event: "Pionnier GitHub Copilot en production @ SGCIB", color: "#F97316" },
+  { year: "2024", event: "Architecture Agent-Ready sur systèmes Java enterprise", color: "#F97316" },
   { year: "2023", event: "Veille active LLM : architecture AI-Driven, sécurité, agents", color: "#94A3B8" },
 ];
 
@@ -43,7 +43,7 @@ export function AISection() {
           <h2 className="text-4xl md:text-5xl font-bold text-[#F1F5F9] leading-tight mb-4">
             L&apos;IA, pas comme un{" "}
             <span style={{
-              background: "linear-gradient(135deg, #A78BFA 0%, #22D3EE 100%)",
+              background: "linear-gradient(135deg, #A78BFA 0%, #F97316 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
@@ -78,7 +78,7 @@ export function AISection() {
                 >
                   <div className="text-3xl font-bold flex-shrink-0"
                     style={{
-                      background: "linear-gradient(135deg, #A78BFA, #22D3EE)",
+                      background: "linear-gradient(135deg, #A78BFA, #F97316)",
                       WebkitBackgroundClip: "text",
                       WebkitTextFillColor: "transparent",
                       backgroundClip: "text",
@@ -135,7 +135,7 @@ export function AISection() {
             </div>
             <div className="relative">
               <div className="absolute left-3 top-0 bottom-0 w-px"
-                style={{ background: "linear-gradient(to bottom, #A78BFA, #6366F1, #22D3EE, transparent)" }} />
+                style={{ background: "linear-gradient(to bottom, #A78BFA, #F59E0B, #F97316, transparent)" }} />
               <ol className="space-y-5 pl-9">
                 {timeline.map((item, i) => (
                   <li key={i} className="relative">
@@ -157,7 +157,7 @@ export function AISection() {
       <SectionReveal delay={0.2}>
         <div className="rounded-2xl p-6"
           style={{
-            background: "linear-gradient(135deg, rgba(167,139,250,0.08), rgba(34,211,238,0.04))",
+            background: "linear-gradient(135deg, rgba(167,139,250,0.08), rgba(249,115,22,0.04))",
             border: "1px solid rgba(167,139,250,0.2)",
           }}>
           <div className="flex items-center justify-between mb-5 flex-wrap gap-3">
@@ -171,7 +171,7 @@ export function AISection() {
             </div>
             <a href={links.linkedin} target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold text-white flex-shrink-0"
-              style={{ background: "linear-gradient(135deg,#A78BFA,#6366F1)" }}>
+              style={{ background: "linear-gradient(135deg,#A78BFA,#F59E0B)" }}>
               Suivre sur LinkedIn <ExternalLink size={12} />
             </a>
           </div>
