@@ -1,12 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
+import { Icon } from "@/lib/icons";
 
 const clients = [
-  { name: "Cartan Trade", abbr: "Cartan Trade", icon: "🏛️", color: "#A78BFA" },
-  { name: "Société Générale CIB", abbr: "SGCIB", icon: "🏦", color: "#E31837" },
-  { name: "GRTgaz", abbr: "GRTgaz", icon: "⚡", color: "#F97316" },
-  { name: "Groupe Casino", abbr: "Casino", icon: "🛒", color: "#22C55E" },
-  { name: "Ministère de la Justice", abbr: "Justice", icon: "⚖️", color: "#F59E0B" },
+  { name: "Cartan Trade", abbr: "Cartan Trade", icon: "institution", color: "#A78BFA" },
+  { name: "Société Générale CIB", abbr: "SGCIB", icon: "finance", color: "#E31837" },
+  { name: "GRTgaz", abbr: "GRTgaz", icon: "energy", color: "#F97316" },
+  { name: "Groupe Casino", abbr: "Casino", icon: "retail", color: "#22C55E" },
+  { name: "Ministère de la Justice", abbr: "Justice", icon: "justice", color: "#F59E0B" },
 ];
 
 // Duplicated for seamless infinite loop
@@ -43,7 +44,7 @@ export function ClientLogos() {
               minWidth: "180px",
             }}
           >
-            <span className="text-xl">{client.icon}</span>
+            <Icon name={client.icon} size={20} style={{ color: client.color }} />
             <div>
               <div className="text-sm font-semibold text-[#F1F5F9] whitespace-nowrap">
                 {client.abbr}

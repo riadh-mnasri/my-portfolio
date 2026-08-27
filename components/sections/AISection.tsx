@@ -1,15 +1,16 @@
 "use client";
 import { motion } from "framer-motion";
 import { SectionReveal } from "@/components/ui/SectionReveal";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Heart } from "lucide-react";
+import { Icon } from "@/lib/icons";
 import { CONTENT } from "@/lib/content";
 
 const tools = [
-  { name: "Claude", org: "Anthropic", emoji: "🤖", color: "#A78BFA", certified: true },
-  { name: "GitHub Copilot", org: "Microsoft", emoji: "⚡", color: "#F97316", certified: false },
-  { name: "Claude Code", org: "Anthropic", emoji: "💻", color: "#F59E0B", certified: true },
-  { name: "AI Agents", org: "Architecture", emoji: "🕸️", color: "#22C55E", certified: false },
-  { name: "LLM Integration", org: "Enterprise", emoji: "🔗", color: "#38BDF8", certified: false },
+  { name: "Claude", org: "Anthropic", emoji: "ai", color: "#A78BFA", certified: true },
+  { name: "GitHub Copilot", org: "Microsoft", emoji: "energy", color: "#F97316", certified: false },
+  { name: "Claude Code", org: "Anthropic", emoji: "terminal", color: "#F59E0B", certified: true },
+  { name: "AI Agents", org: "Architecture", emoji: "network", color: "#22C55E", certified: false },
+  { name: "LLM Integration", org: "Enterprise", emoji: "link", color: "#38BDF8", certified: false },
 ];
 
 const impacts = [
@@ -41,15 +42,7 @@ export function AISection() {
             AI & Innovation
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-[#F1F5F9] leading-tight mb-4">
-            L&apos;IA, pas comme un{" "}
-            <span style={{
-              background: "linear-gradient(135deg, #A78BFA 0%, #F97316 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}>
-              buzzword
-            </span>
+            L&apos;IA, pas comme un <span style={{ color: "#A78BFA" }}>buzzword</span>
           </h2>
           <p className="text-[#94A3B8] text-lg max-w-2xl mx-auto">
             Certifié Anthropic, formé sur le terrain. J&apos;intègre l&apos;IA de façon structurée, sécurisée et immédiatement rentable dans vos projets.
@@ -76,13 +69,7 @@ export function AISection() {
                     border: "1px solid rgba(167,139,250,0.15)",
                   }}
                 >
-                  <div className="text-3xl font-bold flex-shrink-0"
-                    style={{
-                      background: "linear-gradient(135deg, #A78BFA, #F97316)",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                      backgroundClip: "text",
-                    }}>
+                  <div className="text-3xl font-bold flex-shrink-0" style={{ color: "#A78BFA" }}>
                     {item.value}
                   </div>
                   <div>
@@ -106,14 +93,14 @@ export function AISection() {
                   <div key={tool.name}
                     className="flex items-center gap-2 px-3 py-2 rounded-lg"
                     style={{ background: `${tool.color}10`, border: `1px solid ${tool.color}25` }}>
-                    <span className="text-base">{tool.emoji}</span>
+                    <Icon name={tool.emoji} size={18} style={{ color: tool.color }} />
                     <div>
                       <div className="text-xs font-semibold text-[#F1F5F9] flex items-center gap-1.5">
                         {tool.name}
                         {tool.certified && (
-                          <span className="text-[10px] px-1.5 py-0.5 rounded font-bold"
+                          <span className="text-[10px] px-1.5 py-0.5 rounded font-bold flex items-center gap-0.5"
                             style={{ background: `${tool.color}20`, color: tool.color }}>
-                            ✓ Certifié
+                            <Icon name="check" size={9} /> Certifié
                           </span>
                         )}
                       </div>
@@ -190,7 +177,9 @@ export function AISection() {
                     ))}
                   </div>
                   <p className="text-xs text-[#F1F5F9] font-medium leading-snug mb-2">{post.title}</p>
-                  <div className="text-[10px] text-[#94A3B8]">♥ {post.reactions} réactions</div>
+                  <div className="text-[10px] text-[#94A3B8] flex items-center gap-1">
+                    <Heart size={10} /> {post.reactions} réactions
+                  </div>
                 </motion.div>
               </a>
             ))}

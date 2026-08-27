@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { GlowCard } from "@/components/ui/GlowCard";
+import { Icon } from "@/lib/icons";
+import { Globe } from "lucide-react";
 import { CONTENT } from "@/lib/content";
 
 export function Skills() {
@@ -21,7 +23,7 @@ export function Skills() {
         {CONTENT.skills.map((skill, i) => (
           <SectionReveal key={skill.category} delay={i * 0.07}>
             <GlowCard className="h-full">
-              <div className="text-3xl mb-3">{skill.icon}</div>
+              <Icon name={skill.icon} size={28} className="mb-3 text-[#F59E0B]" />
               <h3 className="text-lg font-bold text-[#F1F5F9] mb-4">{skill.category}</h3>
               <div className="flex flex-wrap gap-2">
                 {skill.items.map((item) => (
@@ -70,7 +72,7 @@ export function Skills() {
               <div className="p-5 flex flex-col flex-1">
                 {/* Header */}
                 <div className="flex items-start gap-3 mb-4">
-                  <div className="text-2xl flex-shrink-0 mt-0.5">{domain.icon}</div>
+                  <Icon name={domain.icon} size={22} className="flex-shrink-0 mt-0.5" style={{ color: domain.color }} />
                   <div>
                     <h3 className="text-sm font-bold text-[#F1F5F9] leading-snug">{domain.sector}</h3>
                     <span className="text-[10px] font-medium mt-0.5 inline-block px-2 py-0.5 rounded-full"
@@ -102,7 +104,7 @@ export function Skills() {
               background: "linear-gradient(135deg, rgba(245,158,11,0.06), rgba(249,115,22,0.03))",
               border: "1px dashed rgba(245,158,11,0.25)",
             }}>
-            <div className="text-3xl mb-3">🌍</div>
+            <Globe size={28} className="mb-3 text-[#F59E0B]" />
             <p className="text-sm font-semibold text-[#F1F5F9] mb-1">Secteur public, privé, international</p>
             <p className="text-xs text-[#94A3B8] leading-relaxed max-w-[200px]">
               Capacité d&apos;adaptation rapide à tout domaine métier grâce à 20 ans de missions variées.

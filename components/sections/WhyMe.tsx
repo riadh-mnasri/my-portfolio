@@ -2,10 +2,11 @@
 import { motion } from "framer-motion";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { Icon } from "@/lib/icons";
 
 const differentiators = [
   {
-    icon: "🏛️",
+    icon: "graduation",
     color: "#F59E0B",
     gradient: "linear-gradient(135deg, rgba(245,158,11,0.12), rgba(245,158,11,0.04))",
     border: "rgba(245,158,11,0.25)",
@@ -15,7 +16,7 @@ const differentiators = [
     kpis: ["Executive MBA Polytechnique", "20+ ans d'expérience", "Leadership C-level ↔ Engineering"],
   },
   {
-    icon: "⚡",
+    icon: "energy",
     color: "#F59E0B",
     gradient: "linear-gradient(135deg, rgba(245,158,11,0.12), rgba(245,158,11,0.04))",
     border: "rgba(245,158,11,0.25)",
@@ -25,7 +26,7 @@ const differentiators = [
     kpis: ["Jusqu'à −50% temps de traitement @ SGCIB", "~+30% vélocité dev avec l'IA", "99%+ disponibilité visée"],
   },
   {
-    icon: "🤖",
+    icon: "ai",
     color: "#F97316",
     gradient: "linear-gradient(135deg, rgba(249,115,22,0.1), rgba(249,115,22,0.03))",
     border: "rgba(249,115,22,0.25)",
@@ -61,7 +62,7 @@ export function WhyMe() {
                 style={{ background: `linear-gradient(90deg, transparent, ${d.color}, transparent)` }} />
 
               {/* Icon */}
-              <div className="text-4xl mb-5">{d.icon}</div>
+              <Icon name={d.icon} size={32} className="mb-5" style={{ color: d.color }} />
 
               {/* Tag */}
               <span className="text-xs font-bold uppercase tracking-widest mb-3 px-2.5 py-1 rounded-full w-fit"

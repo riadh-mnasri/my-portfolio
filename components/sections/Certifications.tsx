@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { Icon } from "@/lib/icons";
 import { CONTENT } from "@/lib/content";
 
 export function Certifications() {
@@ -22,9 +23,10 @@ export function Certifications() {
       {/* Featured - Anthropic AI certs */}
       <SectionReveal>
         <div className="flex items-center gap-3 mb-5">
-          <div className="px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest"
+          <div className="px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest flex items-center gap-2"
             style={{ background: "rgba(167,139,250,0.1)", color: "#A78BFA", border: "1px solid rgba(167,139,250,0.25)" }}>
-            🤖 IA & Anthropic - 2026
+            <Icon name="ai" size={14} />
+            IA & Anthropic - 2026
           </div>
         </div>
       </SectionReveal>
@@ -40,9 +42,9 @@ export function Certifications() {
             >
               <div className="absolute top-0 left-0 right-0 h-0.5"
                 style={{ background: `linear-gradient(90deg, transparent, ${cert.color}, transparent)` }} />
-              <div className="w-10 h-10 rounded-full flex items-center justify-center text-lg"
+              <div className="w-10 h-10 rounded-full flex items-center justify-center"
                 style={{ background: `${cert.color}15` }}>
-                🏅
+                <Icon name="award" size={18} style={{ color: cert.color }} />
               </div>
               <div className="font-bold text-[#F1F5F9] text-xs text-center leading-snug">{cert.name}</div>
               <div className="text-[10px] text-[#94A3B8]">{cert.org}</div>
@@ -74,9 +76,9 @@ export function Certifications() {
               className="glass rounded-xl px-4 py-3 flex items-center gap-3 h-full"
               style={{ border: `1px solid ${cert.color}18` }}
             >
-              <div className="w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center text-sm"
+              <div className="w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center"
                 style={{ background: `${cert.color}12`, color: cert.color }}>
-                ✓
+                <Icon name="check" size={14} />
               </div>
               <div className="min-w-0">
                 <div className="text-xs font-semibold text-[#F1F5F9] leading-snug truncate">{cert.name}</div>
@@ -103,7 +105,7 @@ export function Certifications() {
               className="glass rounded-xl px-5 py-4 flex items-center gap-4"
               style={{ border: "1px solid rgba(255,255,255,0.06)" }}
             >
-              <span className="text-2xl">{c.icon}</span>
+              <Icon name={c.icon} size={22} className="text-[#F59E0B] flex-shrink-0" />
               <div>
                 <div className="font-semibold text-[#F1F5F9] text-sm">{c.name}</div>
                 <div className="text-xs text-[#94A3B8]">{c.desc}</div>

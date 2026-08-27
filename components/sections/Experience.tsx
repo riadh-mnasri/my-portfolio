@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { Icon } from "@/lib/icons";
 import { CONTENT } from "@/lib/content";
 
 export function Experience() {
@@ -29,7 +30,7 @@ export function Experience() {
             >
               <div className="flex items-center justify-between px-6 py-5">
                 <div className="flex items-center gap-4">
-                  <span className="text-2xl">{exp.emoji}</span>
+                  <Icon name={exp.emoji} size={24} className="text-[#F59E0B]" />
                   <div>
                     <div className="font-bold text-[#F1F5F9]">{exp.company}</div>
                     <div className="text-sm text-[#F59E0B]">{exp.role}</div>

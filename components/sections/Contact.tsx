@@ -5,6 +5,7 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { CONTENT } from "@/lib/content";
 import { Mail, MapPin, ExternalLink, Send } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/ui/SocialIcons";
+import { Icon } from "@/lib/icons";
 
 export function Contact() {
   const { links } = CONTENT;
@@ -51,7 +52,7 @@ export function Contact() {
               className="glass rounded-2xl p-8 text-center h-full flex flex-col items-center justify-center gap-4"
               style={{ border: "1px solid rgba(249,115,22,0.2)" }}
             >
-              <div className="text-5xl">🎉</div>
+              <Icon name="celebrate" size={48} className="text-[#F97316]" />
               <h3 className="text-2xl font-bold text-[#F1F5F9]">Message envoyé !</h3>
               <p className="text-[#94A3B8]">Je vous réponds dans les 24 heures.</p>
             </div>
@@ -147,7 +148,7 @@ export function Contact() {
 
               <div className="flex items-center gap-3">
                 <div className="w-9 h-9 rounded-lg flex items-center justify-center" style={{ background: "rgba(249,115,22,0.1)" }}>
-                  <span className="text-sm">💼</span>
+                  <Icon name="briefcase" size={16} className="text-[#F97316]" />
                 </div>
                 <div>
                   <div className="text-xs text-[#94A3B8] mb-0.5">Malt</div>
@@ -165,7 +166,7 @@ export function Contact() {
                 {[
                   { href: links.github, icon: <GithubIcon size={18} />, label: "GitHub" },
                   { href: links.linkedin, icon: <LinkedinIcon size={18} />, label: "LinkedIn" },
-                  { href: links.blog, icon: <span className="text-sm">✍️</span>, label: "Blog" },
+                  { href: links.blog, icon: <Icon name="pen" size={18} />, label: "Blog" },
                 ].map((s) => (
                   <a
                     key={s.label}

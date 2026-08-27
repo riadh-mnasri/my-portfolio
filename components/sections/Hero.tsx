@@ -4,6 +4,7 @@ import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 import { CONTENT } from "@/lib/content";
 import { ArrowDown, ExternalLink } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/ui/SocialIcons";
+import { Icon } from "@/lib/icons";
 
 export function Hero() {
   const { hero, links } = CONTENT;
@@ -197,14 +198,15 @@ export function Hero() {
                   initial={{ opacity: 0, scale: 0 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.8, type: "spring" }}
-                  className="absolute -bottom-2 -right-2 px-3 py-1.5 rounded-full text-xs font-bold shadow-lg"
+                  className="absolute -bottom-2 -right-2 px-3 py-1.5 rounded-full text-xs font-bold shadow-lg flex items-center gap-1.5"
                   style={{
                     background: "linear-gradient(135deg, #F59E0B, #F97316)",
                     color: "#0A0A0F",
                     boxShadow: "0 4px 20px rgba(245,158,11,0.4)",
                   }}
                 >
-                  🏛️ Polytechnique
+                  <Icon name="graduation" size={14} />
+                  Polytechnique
                 </motion.div>
               </div>
             </motion.div>

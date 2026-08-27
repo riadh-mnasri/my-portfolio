@@ -3,11 +3,12 @@ import { motion } from "framer-motion";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ExternalLink } from "lucide-react";
+import { Icon } from "@/lib/icons";
 
 const education = [
   {
     school: "École Polytechnique",
-    logo: "🏛️",
+    logo: "graduation",
     degree: "Executive MBA",
     field: "Stratège de la Transformation Numérique",
     promo: "Promotion 7",
@@ -26,7 +27,7 @@ const education = [
   },
   {
     school: "École Polytechnique",
-    logo: "🎓",
+    logo: "graduation",
     degree: "Certification",
     field: "Digital Business - Act on the Digital World",
     promo: "",
@@ -39,7 +40,7 @@ const education = [
   },
   {
     school: "EMI - École Mohammadia d'Ingénieurs",
-    logo: "⚙️",
+    logo: "gear",
     degree: "Diplôme d'Ingénieur",
     field: "Génie Informatique",
     promo: "",
@@ -84,10 +85,10 @@ export function Education() {
                   <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-6">
                     <div className="flex items-start gap-4">
                       <div
-                        className="w-14 h-14 rounded-xl flex items-center justify-center text-3xl flex-shrink-0"
+                        className="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0"
                         style={{ background: "rgba(245,158,11,0.12)" }}
                       >
-                        {edu.logo}
+                        <Icon name={edu.logo} size={28} className="text-[#F59E0B]" />
                       </div>
                       <div>
                         <div className="flex items-center gap-2 mb-1 flex-wrap">
@@ -158,10 +159,10 @@ export function Education() {
                 style={{ border: `1px solid ${edu.color}22` }}
               >
                 <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0"
+                  className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
                   style={{ background: `${edu.color}12` }}
                 >
-                  {edu.logo}
+                  <Icon name={edu.logo} size={22} style={{ color: edu.color }} />
                 </div>
                 <div className="flex-1 min-w-0">
                   <div

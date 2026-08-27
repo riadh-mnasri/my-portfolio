@@ -1,8 +1,9 @@
 "use client";
-import { ExternalLink, BookOpen, Mic, MessageSquare } from "lucide-react";
+import { ExternalLink, BookOpen, Mic, MessageSquare, Heart, Eye } from "lucide-react";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { GlowCard } from "@/components/ui/GlowCard";
+import { Icon } from "@/lib/icons";
 import { CONTENT } from "@/lib/content";
 
 export function Projects() {
@@ -51,7 +52,7 @@ export function Projects() {
                 </h4>
                 <p className="text-[#94A3B8] text-xs leading-relaxed flex-1 mb-4">{post.excerpt}</p>
                 <div className="flex items-center gap-1.5 text-xs text-[#94A3B8]">
-                  <span className="text-[#F97316]">♥</span>
+                  <Heart size={12} className="text-[#F97316]" />
                   <span>{post.reactions} réactions</span>
                 </div>
               </GlowCard>
@@ -63,7 +64,7 @@ export function Projects() {
       {/* GitHub repos */}
       <SectionReveal>
         <div className="flex items-center gap-3 mb-6">
-          <span className="text-xl">🐙</span>
+          <Icon name="github" size={20} className="text-[#F59E0B]" />
           <h3 className="text-xl font-bold text-[#F1F5F9]">GitHub Open Source</h3>
           <a
             href={links.github}
@@ -117,10 +118,12 @@ export function Projects() {
           <SectionReveal key={t.title} delay={i * 0.07}>
             <div className="glass rounded-xl p-4 flex items-start gap-4"
               style={{ border: "1px solid rgba(255,255,255,0.06)" }}>
-              <span className="text-2xl">{t.icon}</span>
+              <Icon name={t.icon} size={22} className="text-[#F59E0B] flex-shrink-0 mt-0.5" />
               <div>
                 <div className="text-sm font-medium text-[#F1F5F9] mb-1">{t.title}</div>
-                <div className="text-xs text-[#F59E0B]">👁 {t.views}</div>
+                <div className="text-xs text-[#F59E0B] flex items-center gap-1">
+                  <Eye size={12} /> {t.views}
+                </div>
               </div>
             </div>
           </SectionReveal>

@@ -5,10 +5,10 @@ export const CONTENT = {
     subtitle: "AI-Driven Solutions · Cloud Native · Java & Kotlin Expert",
     tagline: "20 ans d'ingénierie. Des architectures cloud-native qui transforment.\nL'IA au service de votre business.",
     badges: [
-      "🤖 Anthropic Certified",
-      "Java ☑ Certifié",
-      "Kotlin ☑ Certifié",
-      "Spring ☑ Certifié",
+      "Anthropic Certified",
+      "Java Certifié",
+      "Kotlin Certifié",
+      "Spring Certifié",
       "Executive Master @ Polytechnique",
       "Paris · Freelance · 780€/j",
     ],
@@ -43,32 +43,32 @@ export const CONTENT = {
 
   skills: [
     {
-      icon: "🏗️",
+      icon: "architecture",
       category: "Architecture",
       items: ["Microservices", "DDD", "Hexagonal", "Event-Driven", "CQRS", "Cloud-Native"],
     },
     {
-      icon: "☕",
+      icon: "jvm",
       category: "JVM & Langages",
       items: ["Java 21+", "Kotlin", "Scala", "TypeScript", "Spring Boot", "Reactor"],
     },
     {
-      icon: "☁️",
+      icon: "cloud",
       category: "Cloud & Infra",
       items: ["AWS", "Azure", "GCP", "Kubernetes", "Docker", "Terraform"],
     },
     {
-      icon: "🤖",
+      icon: "ai",
       category: "AI & Innovation",
       items: ["GitHub Copilot", "Claude / Anthropic", "AI Agents", "LLM Integration", "Cybersécurité", "OWASP"],
     },
     {
-      icon: "📡",
+      icon: "data",
       category: "Data & Messaging",
       items: ["Apache Kafka", "Apache Spark", "Elasticsearch", "PostgreSQL", "MongoDB", "Axon"],
     },
     {
-      icon: "🔬",
+      icon: "quality",
       category: "Qualité & Leadership",
       items: ["TDD", "BDD", "Clean Code", "DevSecOps", "CI/CD", "Mentoring"],
     },
@@ -76,7 +76,7 @@ export const CONTENT = {
 
   domains: [
     {
-      icon: "🏦",
+      icon: "finance",
       sector: "Finance de Marché & Risque",
       color: "#F59E0B",
       client: "Société Générale CIB",
@@ -89,7 +89,7 @@ export const CONTENT = {
       ],
     },
     {
-      icon: "⚡",
+      icon: "energy",
       sector: "Énergie & Utilities",
       color: "#F97316",
       client: "GRTgaz",
@@ -102,7 +102,7 @@ export const CONTENT = {
       ],
     },
     {
-      icon: "🛒",
+      icon: "retail",
       sector: "Retail & Grande Distribution",
       color: "#22C55E",
       client: "Groupe Casino",
@@ -115,7 +115,7 @@ export const CONTENT = {
       ],
     },
     {
-      icon: "⚖️",
+      icon: "justice",
       sector: "Secteur Public & Justice",
       color: "#64748B",
       client: "Ministère de la Justice",
@@ -128,7 +128,7 @@ export const CONTENT = {
       ],
     },
     {
-      icon: "🚀",
+      icon: "rocket",
       sector: "Conseil & Transformation Digitale",
       color: "#A78BFA",
       client: "WeHighTech (CEO)",
@@ -147,7 +147,7 @@ export const CONTENT = {
       company: "Cartan Trade",
       role: "Senior Tech Lead & Architect",
       period: "Août 2026 – présent",
-      emoji: "🏛️",
+      emoji: "institution",
       highlights: [
         "Intégration de capacités IA avancées (Claude) pour révolutionner l'évaluation du risque et automatiser les workflows de décision",
         "Traduction de la logique métier du risque de crédit en solutions techniques innovantes, en lien direct avec les équipes business",
@@ -160,7 +160,7 @@ export const CONTENT = {
       company: "Société Générale CIB (SGCIB)",
       role: "Technical Leader Java Spark Azure AI",
       period: "Jan 2024 – Août 2026",
-      emoji: "🏦",
+      emoji: "finance",
       highlights: [
         "Architecture cloud-native sur Azure & Kubernetes pour un moteur de risque de contrepartie",
         "Réduction significative (jusqu'à 50%) du temps de traitement via optimisation algorithmique et Spark tuning",
@@ -174,7 +174,7 @@ export const CONTENT = {
       company: "WeHighTech",
       role: "CEO & Fondateur",
       period: "Jan 2017 – présent",
-      emoji: "🚀",
+      emoji: "rocket",
       highlights: [
         "Création et direction d'une société de conseil tech orientée qualité et excellence",
         "Pilotage de missions freelance pour grands comptes (banque, énergie, retail, justice)",
@@ -187,7 +187,7 @@ export const CONTENT = {
       company: "GRTgaz",
       role: "Technical Leader Fullstack Java Angular AWS Terraform",
       period: "Mar 2022 – Fév 2024",
-      emoji: "⚡",
+      emoji: "energy",
       highlights: [
         "Conception et développement d'une plateforme de gestion de distribution énergétique",
         "Architecture microservices avec Axon Framework et programmation réactive (Reactor)",
@@ -200,7 +200,7 @@ export const CONTENT = {
       company: "Groupe Casino",
       role: "Lead Backend Developer Java Kotlin GCP",
       period: "Jan 2021 – Mar 2022",
-      emoji: "🛒",
+      emoji: "retail",
       highlights: [
         "Conception et développement d'une plateforme de gestion de campagnes et offres",
         "Design d'API, développement Kotlin & Java, pratiques SOLID, Kiss, DRY",
@@ -213,7 +213,7 @@ export const CONTENT = {
       company: "Ministère de la Justice",
       role: "Technical Leader Full Stack",
       period: "Jun 2020 – Jan 2021",
-      emoji: "⚖️",
+      emoji: "justice",
       highlights: [
         "Lead technique full-stack (Java/Kotlin back + Angular front)",
         "BBL internes : Functional Programming with Java Streams, Kotlin from Zero to Hero",
@@ -252,11 +252,11 @@ export const CONTENT = {
   ],
 
   talks: [
-    { title: "Architectures Microservices", views: "871 vues", icon: "🏗️" },
-    { title: "Git l'essentiel", views: "1 200 vues", icon: "🐙" },
-    { title: "Discover Micronaut", views: "306 vues", icon: "🚀" },
-    { title: "Kotlin ArrowKt", views: "318 vues", icon: "🎯" },
-    { title: "BBL Reactive Programming", views: "197 vues", icon: "⚡" },
+    { title: "Architectures Microservices", views: "871 vues", icon: "architecture" },
+    { title: "Git l'essentiel", views: "1 200 vues", icon: "github" },
+    { title: "Discover Micronaut", views: "306 vues", icon: "rocket" },
+    { title: "Kotlin ArrowKt", views: "318 vues", icon: "target" },
+    { title: "BBL Reactive Programming", views: "197 vues", icon: "energy" },
     { title: "Functional Programming with Kotlin", views: "122 vues", icon: "λ" },
   ],
 
@@ -331,31 +331,31 @@ export const CONTENT = {
   ],
 
   community: [
-    { icon: "🏛️", name: "École Polytechnique", desc: "Executive Master - Promo 7 Stratège du Numérique" },
-    { icon: "🤖", name: "Anthropic Certified", desc: "Claude Code 101 · Introduction to Subagents" },
-    { icon: "☕", name: "JUG Paris", desc: "Java User Group - Membre actif" },
-    { icon: "🥪", name: "Brown Bag Lunch", desc: "Speaker & formateur (Kotlin, Java, FP...)" },
-    { icon: "🐙", name: "GitHub", desc: "153 repos · Arctic Code Vault Contributor" },
-    { icon: "✍️", name: "Blog Technique", desc: "riadhmnasri.fr - Architecture, IA, Finance & risque" },
-    { icon: "💼", name: "LinkedIn", desc: "7 735 abonnés · Veille AI & Architecture" },
-    { icon: "♟️", name: "Chess Club CEBC", desc: "Bois-Colombes - Accompagnement jeunes joueurs" },
+    { icon: "graduation", name: "École Polytechnique", desc: "Executive Master - Promo 7 Stratège du Numérique" },
+    { icon: "ai", name: "Anthropic Certified", desc: "Claude Code 101 · Introduction to Subagents" },
+    { icon: "jvm", name: "JUG Paris", desc: "Java User Group - Membre actif" },
+    { icon: "sandwich", name: "Brown Bag Lunch", desc: "Speaker & formateur (Kotlin, Java, FP...)" },
+    { icon: "github", name: "GitHub", desc: "153 repos · Arctic Code Vault Contributor" },
+    { icon: "pen", name: "Blog Technique", desc: "riadhmnasri.fr - Architecture, IA, Finance & risque" },
+    { icon: "linkedin", name: "LinkedIn", desc: "7 735 abonnés · Veille AI & Architecture" },
+    { icon: "chess", name: "Chess Club CEBC", desc: "Bois-Colombes - Accompagnement jeunes joueurs" },
   ],
 
   services: [
     {
-      icon: "☁️",
+      icon: "cloud",
       title: "Migration Cloud-Native & Architecture",
       desc: "Migration de systèmes legacy vers le Cloud (AWS, Azure, GCP). Conception d'architectures microservices scalables avec une disponibilité visée de 99%+. Kubernetes, Terraform, Kafka.",
       target: "DSI, CTO, grands comptes & scale-ups",
     },
     {
-      icon: "🤖",
+      icon: "ai",
       title: "AI Integration & Modernisation",
       desc: "Intégration de l'IA dans vos pipelines de développement (Copilot, Claude, LLM). Sécurisation des architectures (OWASP, OAuth2/OIDC). Accélération du Time-to-Market.",
       target: "Équipes tech souhaitant adopter l'IA",
     },
     {
-      icon: "👨‍💼",
+      icon: "leadership",
       title: "Technical Leadership & Mentoring",
       desc: "Pilotage technique d'équipes, culture craftsmanship (TDD, Clean Code, DDD), DevSecOps. Je fais le pont entre stratégie C-level et réalité ingénierie terrain.",
       target: "Startups, ETI & grands groupes",
@@ -367,28 +367,28 @@ export const CONTENT = {
       quote: "J'ai travaillé avec Riadh en tant que développeur dans l'équipe qu'il dirigeait. C'est un profil qui correspond à toute entreprise cherchant quelqu'un avec une grande capacité de proposition et de résolution de problèmes, avec un time-to-market réduit. Il est doué et n'hésite pas à aider les autres grâce à son immense connaissance en informatique. Ce fut un réel plaisir de travailler avec lui.",
       author: "Abdelaziz Houmadi",
       company: "Senior Full Stack Java & AWS",
-      emoji: "👨‍💻",
+      emoji: "developer",
       color: "#F59E0B",
     },
     {
       quote: "J'ai eu la chance de travailler avec Riadh, un collaborateur très corporate. Il a un réel sens de l'engagement pour mener à bien ses projets dans les délais au bénéfice de ses clients. Son expertise technique sur les architectures orientées services, sa capacité à faire progresser chaque membre de sa squad techniquement et humainement, sa facilité à interagir avec les équipes qui gravitent autour de lui font de lui un atout majeur sur un projet.",
       author: "Mounir Bayach",
       company: "Ingénieur d'affaires (ex-manager direct)",
-      emoji: "🧭",
+      emoji: "compass",
       color: "#F97316",
     },
     {
       quote: "J'ai eu le privilège de travailler dans la même équipe que Riadh. Riadh est un développeur passionné, travailleur, avec de solides compétences, et aime partager ses connaissances. Son esprit d'équipe, son professionnalisme et sa recherche de l'excellence sont des qualités que j'ai beaucoup appréciées chez lui.",
       author: "Van-Minh Pho",
       company: "Développeur / Technical Lead Java & Kotlin",
-      emoji: "🤝",
+      emoji: "handshake",
       color: "#A78BFA",
     },
     {
       quote: "J'ai eu le plaisir de travailler avec Riadh. C'est un développeur Java et Kotlin solide et passionné, pour qui la qualité et le travail bien fait comptent énormément. C'est aussi un excellent orateur, qui partage ses connaissances lors d'événements tech (Brown Bag Lunch). Si vous cherchez un développeur senior solide, je le recommande chaleureusement.",
       author: "Romain Schlick",
       company: "Technical Leader & Senior Developer",
-      emoji: "🎤",
+      emoji: "mic",
       color: "#38BDF8",
     },
   ],
