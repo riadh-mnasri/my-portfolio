@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { FloatingCTA } from "@/components/ui/FloatingCTA";
+import { MotionProvider } from "@/components/ui/MotionProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -53,14 +54,6 @@ export const metadata: Metadata = {
     siteName: "Riadh MNASRI",
     locale: "fr_FR",
     type: "website",
-    images: [
-      {
-        url: "/riadh-photo.jpg",
-        width: 512,
-        height: 512,
-        alt: "Riadh MNASRI - Senior Tech Lead & Architect",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -68,7 +61,6 @@ export const metadata: Metadata = {
     description: "20+ ans Java/Kotlin · Cloud Native · AI · Polytechnique · Freelance Paris",
     creator: "@riadhmnasri",
     site: "@riadhmnasri",
-    images: ["/riadh-photo.jpg"],
   },
 };
 
@@ -112,8 +104,10 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col bg-[#0A0A0F] text-[#F1F5F9]">
-        {children}
-        <FloatingCTA />
+        <MotionProvider>
+          {children}
+          <FloatingCTA />
+        </MotionProvider>
       </body>
     </html>
   );
