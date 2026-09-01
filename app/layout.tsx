@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { FloatingCTA } from "@/components/ui/FloatingCTA";
+import { ChatWidget } from "@/components/ui/ChatWidget";
 import { MotionProvider } from "@/components/ui/MotionProvider";
 
 const geistSans = Geist({
@@ -107,6 +108,7 @@ export default function RootLayout({
         <MotionProvider>
           {children}
           <FloatingCTA />
+          <ChatWidget />
         </MotionProvider>
       </body>
     </html>
