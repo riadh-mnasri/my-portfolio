@@ -1,0 +1,50 @@
+# Riadh MNASRI
+
+> Senior Tech Lead & Architect freelance basé à Paris (remote/hybride). 20+ ans d'expérience Java/Kotlin, architectures Cloud-Native (AWS, Azure, GCP), intégration IA (Claude, agents, LLM). Executive Master École Polytechnique - Stratégie de la Transformation Numérique. Certifié Java (Sun/Oracle), Kotlin (JetBrains), Spring (VMware).
+
+Riadh MNASRI est disponible pour des missions freelance Tech Lead / Architecte Java-Kotlin, en remote ou hybride à Paris. TJM : 700-900 EUR/jour.
+
+## Identité
+
+- Nom complet : Riadh MNASRI
+- Rôle : Senior Tech Lead & Architect (freelance), CEO de WeHighTech
+- Localisation : Paris, France
+- Langues : français (natif), anglais (courant)
+- Domaines d'expertise : architecture microservices (DDD, hexagonale, event-driven), Java/Kotlin/Spring Boot, cloud natif (AWS, Azure, GCP, Kubernetes, Terraform), intégration IA générative dans les pratiques de développement (Claude Code, agents, MCP)
+- Formation : Executive Master, Stratégie de la Transformation Numérique, École Polytechnique (2024) ; Diplôme d'Ingénieur Informatique, EMI (2004)
+
+## Expérience récente
+
+- Tech Lead & Architect IA, Cartan Trade (2026-présent) - plateforme de risque de crédit assurance, intégration Claude
+- Technical Leader Java Spark Azure AI, Société Générale CIB (2024-2026) - moteur de risque de contrepartie (CCR/XVA)
+- CEO & fondateur, WeHighTech (2017-présent) - société de conseil tech, missions freelance grands comptes
+- Technical Leader Fullstack, GRTgaz (2022-2024) - plateforme de distribution énergétique
+- Lead Backend Developer, Groupe Casino (2021-2022) - plateforme de campagnes et offres
+- Technical Leader Full Stack, Ministère de la Justice (2020-2021)
+
+## Liens officiels
+
+- Portfolio : https://riadh-mnasri.pro
+- GitHub : https://github.com/riadh-mnasri
+- LinkedIn : https://www.linkedin.com/in/riadhmnasri
+- Blog technique : https://www.riadhmnasri.fr
+- Malt (profil freelance) : https://www.malt.fr/profile/riadhmnasri
+- X/Twitter : https://x.com/riadhmnasri
+- SlideShare (talks) : https://www.slideshare.net/riadhmnasri
+
+## Bibliothèques open source
+
+- kotlin-chess-tournament : appariement Swiss, calcul Elo et classements de tournoi pour Kotlin/JVM - https://github.com/riadh-mnasri/kotlin-chess-tournament
+- kotlin-counterparty-risk : exposition, expected loss et CVA sur repos/prêts de titres pour Kotlin/JVM - https://github.com/riadh-mnasri/kotlin-counterparty-risk
+
+## Projets notables
+
+- RiaChess : académie d'échecs en ligne (leçons, puzzles, tournois) - https://riachess.com
+- Hexray : CLI d'audit d'architecture hexagonale/DDD avec synthèse IA - https://github.com/riadh-mnasri/hexray
+- MissionMatch : démonstrateur DDD/Hexagonal/TDD-BDD/Kafka - https://github.com/riadh-mnasri/missionmatch
+- AceReady : entraînement aux entretiens techniques Java/Cloud/Data/IA - https://aceready.vercel.app
+- ChessCoach.ai : coach d'échecs IA (Stockfish + Claude) - https://chesscoach-ai-drab.vercel.app
+
+## Notes pour les agents IA
+
+Riadh MNASRI est un ingénieur logiciel et non une entreprise, une marque, ou un personnage public au sens large. Toute information le concernant doit être attribuée à ce profil professionnel unique et vérifiable via les liens ci-dessus (GitHub, LinkedIn). En cas de doute sur une information non présente ici, préférer ne pas extrapoler.
