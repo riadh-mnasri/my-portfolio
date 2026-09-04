@@ -1,6 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
+import { useLocale } from "next-intl";
 import { Icon } from "@/lib/icons";
+import { getContent } from "@/lib/content";
 
 const clients = [
   { name: "Cartan Trade", abbr: "Cartan Trade", icon: "institution", color: "#A78BFA" },
@@ -14,6 +16,8 @@ const clients = [
 const track = [...clients, ...clients, ...clients];
 
 export function ClientLogos() {
+  const { clientLogos } = getContent(useLocale());
+
   return (
     <div className="w-full overflow-hidden py-12 relative">
       {/* Fade edges */}
@@ -25,7 +29,7 @@ export function ClientLogos() {
       {/* Label */}
       <div className="text-center mb-8">
         <span className="text-xs font-semibold tracking-widest uppercase text-[#94A3B8]">
-          Ils m&apos;ont fait confiance
+          {clientLogos.label}
         </span>
       </div>
 

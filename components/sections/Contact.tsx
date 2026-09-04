@@ -1,14 +1,15 @@
 "use client";
 import { useState } from "react";
+import { useLocale } from "next-intl";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { CONTENT } from "@/lib/content";
+import { getContent } from "@/lib/content";
 import { Mail, MapPin, ExternalLink, Send } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/ui/SocialIcons";
 import { Icon } from "@/lib/icons";
 
 export function Contact() {
-  const { links } = CONTENT;
+  const { links, contact } = getContent(useLocale());
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [form, setForm] = useState({ name: "", email: "", company: "", type: "", message: "" });
 
@@ -38,9 +39,9 @@ export function Contact() {
     <section id="contact" className="max-w-6xl mx-auto px-6">
       <SectionReveal>
         <SectionHeader
-          label="Contact"
-          title={<>Parlons de votre <span className="gradient-text">projet</span></>}
-          subtitle="Une mission, une formation, un audit technique ? Je réponds en moins de 24h."
+          label={contact.label}
+          title={<>{contact.titlePrefix}<span className="gradient-text">{contact.titleHighlight}</span></>}
+          subtitle={contact.subtitle}
         />
       </SectionReveal>
 
@@ -53,8 +54,8 @@ export function Contact() {
               style={{ border: "1px solid rgba(212,175,55,0.2)" }}
             >
               <Icon name="celebrate" size={48} className="text-[#D4AF37]" />
-              <h3 className="text-2xl font-bold text-[#F1F5F9]">Message envoyé !</h3>
-              <p className="text-[#94A3B8]">Je vous réponds dans les 24 heures.</p>
+              <h3 className="text-2xl font-bold text-[#F1F5F9]">{contact.sentTitle}</h3>
+              <p className="text-[#94A3B8]">{contact.sentDesc}</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="glass rounded-2xl p-8 space-y-4">
@@ -62,7 +63,7 @@ export function Contact() {
                 <input
                   className={inputClass}
                   style={inputStyle}
-                  placeholder="Prénom / Nom *"
+                  placeholder={contact.namePlaceholder}
                   required
                   value={form.name}
                   onChange={e => setForm({ ...form, name: e.target.value })}
@@ -71,7 +72,7 @@ export function Contact() {
                   className={inputClass}
                   style={inputStyle}
                   type="email"
-                  placeholder="Email *"
+                  placeholder={contact.emailPlaceholder}
                   required
                   value={form.email}
                   onChange={e => setForm({ ...form, email: e.target.value })}
@@ -80,7 +81,7 @@ export function Contact() {
               <input
                 className={inputClass}
                 style={inputStyle}
-                placeholder="Entreprise (optionnel)"
+                placeholder={contact.companyPlaceholder}
                 value={form.company}
                 onChange={e => setForm({ ...form, company: e.target.value })}
               />
@@ -90,23 +91,22 @@ export function Contact() {
                 value={form.type}
                 onChange={e => setForm({ ...form, type: e.target.value })}
               >
-                <option value="" style={{ background: "#111118" }}>Type de mission</option>
-                <option style={{ background: "#111118" }}>Architecture technique</option>
-                <option style={{ background: "#111118" }}>Lead Developer / Tech Lead</option>
-                <option style={{ background: "#111118" }}>Formation / BBL</option>
-                <option style={{ background: "#111118" }}>Autre</option>
+                <option value="" style={{ background: "#111118" }}>{contact.typePlaceholder}</option>
+                {contact.typeOptions.map((opt) => (
+                  <option key={opt} style={{ background: "#111118" }}>{opt}</option>
+                ))}
               </select>
               <textarea
                 className={inputClass}
                 style={{ ...inputStyle, resize: "none" }}
-                placeholder="Décrivez votre besoin... *"
+                placeholder={contact.messagePlaceholder}
                 rows={5}
                 required
                 value={form.message}
                 onChange={e => setForm({ ...form, message: e.target.value })}
               />
               {status === "error" && (
-                <p className="text-red-400 text-sm">Une erreur est survenue. Contactez-moi directement par email.</p>
+                <p className="text-red-400 text-sm">{contact.errorMessage}</p>
               )}
               <button
                 type="submit"
@@ -114,7 +114,7 @@ export function Contact() {
                 className="w-full py-3.5 rounded-xl font-semibold text-white flex items-center justify-center gap-2 transition-all hover:opacity-90 disabled:opacity-60"
                 style={{ background: "#D4AF37" }}
               >
-                {status === "sending" ? "Envoi..." : (<><Send size={16} /> Envoyer le message</>)}
+                {status === "sending" ? contact.sendingLabel : (<><Send size={16} /> {contact.sendLabel}</>)}
               </button>
             </form>
           )}
@@ -129,7 +129,7 @@ export function Contact() {
                   <Mail size={16} className="text-[#D4AF37]" />
                 </div>
                 <div>
-                  <div className="text-xs text-[#94A3B8] mb-0.5">Email</div>
+                  <div className="text-xs text-[#94A3B8] mb-0.5">{contact.emailLabel}</div>
                   <a href={`mailto:${links.email}`} className="text-[#F1F5F9] hover:text-[#D4AF37] transition-colors text-sm">
                     {links.email}
                   </a>
@@ -141,8 +141,8 @@ export function Contact() {
                   <MapPin size={16} className="text-[#D4AF37]" />
                 </div>
                 <div>
-                  <div className="text-xs text-[#94A3B8] mb-0.5">Localisation</div>
-                  <span className="text-[#F1F5F9] text-sm">Paris, France · Remote OK</span>
+                  <div className="text-xs text-[#94A3B8] mb-0.5">{contact.locationLabel}</div>
+                  <span className="text-[#F1F5F9] text-sm">{contact.locationValue}</span>
                 </div>
               </div>
 
@@ -151,22 +151,22 @@ export function Contact() {
                   <Icon name="briefcase" size={16} className="text-[#D4AF37]" />
                 </div>
                 <div>
-                  <div className="text-xs text-[#94A3B8] mb-0.5">Malt</div>
+                  <div className="text-xs text-[#94A3B8] mb-0.5">{contact.maltLabel}</div>
                   <a href={links.malt} target="_blank" rel="noopener noreferrer"
                     className="text-[#D4AF37] hover:underline text-sm flex items-center gap-1">
-                    Voir mon profil Malt <ExternalLink size={11} />
+                    {contact.maltCta} <ExternalLink size={11} />
                   </a>
                 </div>
               </div>
             </div>
 
             <div className="glass rounded-2xl p-6">
-              <div className="text-sm font-semibold text-[#F1F5F9] mb-4">Retrouvez-moi sur</div>
+              <div className="text-sm font-semibold text-[#F1F5F9] mb-4">{contact.findMeLabel}</div>
               <div className="flex gap-3">
                 {[
-                  { href: links.github, icon: <GithubIcon size={18} />, label: "GitHub" },
-                  { href: links.linkedin, icon: <LinkedinIcon size={18} />, label: "LinkedIn" },
-                  { href: links.blog, icon: <Icon name="pen" size={18} />, label: "Blog" },
+                  { href: links.github, icon: <GithubIcon size={18} />, label: contact.githubLabel },
+                  { href: links.linkedin, icon: <LinkedinIcon size={18} />, label: contact.linkedinLabel },
+                  { href: links.blog, icon: <Icon name="pen" size={18} />, label: contact.blogLabel },
                 ].map((s) => (
                   <a
                     key={s.label}
@@ -188,9 +188,9 @@ export function Contact() {
             >
               <div className="flex items-center justify-center gap-2 text-sm text-[#94A3B8] mb-1">
                 <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                Disponible pour missions
+                {contact.availableLabel}
               </div>
-              <div className="text-[#D4AF37] font-bold text-lg">780€ / jour</div>
+              <div className="text-[#D4AF37] font-bold text-lg">{contact.dayRate}</div>
             </div>
           </div>
         </SectionReveal>

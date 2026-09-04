@@ -1,22 +1,24 @@
 "use client";
 import { motion } from "framer-motion";
+import { useLocale } from "next-intl";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Icon } from "@/lib/icons";
-import { CONTENT } from "@/lib/content";
+import { getContent } from "@/lib/content";
 
 export function Certifications() {
-  const { certifications, community } = CONTENT;
-  const featured = certifications.filter((c) => c.featured);
-  const others = certifications.filter((c) => !c.featured);
+  const { certifications } = getContent(useLocale());
+  const { items, community } = certifications;
+  const featured = items.filter((c) => c.featured);
+  const others = items.filter((c) => !c.featured);
 
   return (
     <section id="certifications" className="max-w-6xl mx-auto px-6">
       <SectionReveal>
         <SectionHeader
-          label="Certifications & Communauté"
-          title={<>19 certifications, <span className="gradient-text">une expertise prouvée</span></>}
-          subtitle="Des certifications reconnues sur les domaines les plus stratégiques : IA, Cloud, Architecture, JVM."
+          label={certifications.label}
+          title={<>{certifications.titlePrefix}<span className="gradient-text">{certifications.titleHighlight}</span></>}
+          subtitle={certifications.subtitle}
         />
       </SectionReveal>
 
@@ -26,7 +28,7 @@ export function Certifications() {
           <div className="px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest flex items-center gap-2"
             style={{ background: "rgba(212,175,55,0.1)", color: "#D4AF37", border: "1px solid rgba(212,175,55,0.25)" }}>
             <Icon name="ai" size={14} />
-            IA & Anthropic - 2026
+            {certifications.aiBadge}
           </div>
         </div>
       </SectionReveal>
@@ -62,7 +64,7 @@ export function Certifications() {
         <div className="flex items-center gap-4 mb-7">
           <div className="flex-1 h-px" style={{ background: "rgba(255,255,255,0.06)" }} />
           <span className="text-xs text-[#475569] uppercase tracking-widest font-semibold">
-            Toutes les certifications ({certifications.length})
+            {certifications.allLabel} ({items.length})
           </span>
           <div className="flex-1 h-px" style={{ background: "rgba(255,255,255,0.06)" }} />
         </div>
@@ -95,7 +97,7 @@ export function Certifications() {
       {/* Community */}
       <SectionReveal>
         <h3 className="text-2xl font-bold text-[#F1F5F9] mb-8 text-center">
-          Engagement <span className="gradient-text">communautaire</span>
+          {certifications.communityTitlePrefix}<span className="gradient-text">{certifications.communityTitleHighlight}</span>
         </h3>
       </SectionReveal>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">

@@ -1,23 +1,26 @@
 "use client";
+import { useLocale } from "next-intl";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { GlowCard } from "@/components/ui/GlowCard";
-import { CONTENT } from "@/lib/content";
+import { getContent } from "@/lib/content";
 import { ArrowRight } from "lucide-react";
 
 export function Services() {
+  const { services } = getContent(useLocale());
+
   return (
     <section id="services" className="max-w-6xl mx-auto px-6">
       <SectionReveal>
         <SectionHeader
-          label="Services"
-          title={<>Ce que je peux faire <span className="gradient-text">pour vous</span></>}
-          subtitle="Disponible en mission freelance à Paris et en remote. TJM : 780€/jour."
+          label={services.label}
+          title={<>{services.titlePrefix}<span className="gradient-text">{services.titleHighlight}</span></>}
+          subtitle={services.subtitle}
         />
       </SectionReveal>
 
       <div className="grid md:grid-cols-3 gap-6 mb-12">
-        {CONTENT.services.map((service, i) => (
+        {services.items.map((service, i) => (
           <SectionReveal key={service.title} delay={i * 0.1}>
             <GlowCard className="h-full flex flex-col">
               <div className="text-4xl mb-5">{service.icon}</div>
@@ -43,16 +46,16 @@ export function Services() {
             border: "1px solid rgba(212,175,55,0.25)",
           }}
         >
-          <div className="text-5xl font-bold gradient-text mb-2">780€ / jour</div>
+          <div className="text-5xl font-bold gradient-text mb-2">{services.dayRateBig}</div>
           <p className="text-[#94A3B8] mb-6 text-lg">
-            Tarif journalier moyen · Paris & Remote · Disponible dès maintenant
+            {services.dayRateSubtitle}
           </p>
           <a
             href="#contact"
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl font-semibold text-white transition-all hover:opacity-90 hover:scale-105"
             style={{ background: "#D4AF37" }}
           >
-            Discutons de votre projet <ArrowRight size={16} />
+            {services.ctaButton} <ArrowRight size={16} />
           </a>
         </div>
       </SectionReveal>

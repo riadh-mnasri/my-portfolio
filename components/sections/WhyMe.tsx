@@ -1,55 +1,26 @@
 "use client";
 import { motion } from "framer-motion";
+import { useLocale } from "next-intl";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Icon } from "@/lib/icons";
-
-const differentiators = [
-  {
-    icon: "graduation",
-    color: "#D4AF37",
-    gradient: "linear-gradient(135deg, rgba(212,175,55,0.12), rgba(212,175,55,0.04))",
-    border: "rgba(212,175,55,0.25)",
-    tag: "Vision Stratégique",
-    title: "Le pont entre la C-suite et l'ingénierie",
-    body: "Executive MBA à l'École Polytechnique + 20 ans sur le terrain. Je traduis vos enjeux business en architectures techniques et vos contraintes techniques en décisions stratégiques. Je parle autant à votre DSI qu'à votre équipe dev.",
-    kpis: ["Executive MBA Polytechnique", "20+ ans d'expérience", "Leadership C-level ↔ Engineering"],
-  },
-  {
-    icon: "energy",
-    color: "#D4AF37",
-    gradient: "linear-gradient(135deg, rgba(212,175,55,0.12), rgba(212,175,55,0.04))",
-    border: "rgba(212,175,55,0.25)",
-    tag: "Performance Prouvée",
-    title: "Des résultats mesurables, pas des promesses",
-    body: "Chez Société Générale CIB, j'ai contribué à réduire nettement les temps de traitement sur un moteur de risque critique, et à accélérer la vélocité dev via l'intégration de l'IA. Des ordres de grandeur, détaillés ci-dessous, pas des promesses en l'air.",
-    kpis: ["Jusqu'à −50% temps de traitement @ SGCIB", "~+30% vélocité dev avec l'IA", "99%+ disponibilité visée"],
-  },
-  {
-    icon: "ai",
-    color: "#D4AF37",
-    gradient: "linear-gradient(135deg, rgba(212,175,55,0.1), rgba(212,175,55,0.03))",
-    border: "rgba(212,175,55,0.25)",
-    tag: "AI-Ready dès J+1",
-    title: "L'IA dans vos pipelines, maintenant",
-    body: "Certifié Anthropic (Claude Code, Subagents), pionnier de l'intégration GitHub Copilot & Claude en contexte enterprise. J'intègre l'IA dans vos workflows de développement de façon sécurisée, maîtrisée et immédiatement actionnable.",
-    kpis: ["Claude Code 101 - Anthropic 2026", "GitHub Copilot en production", "Architecture Agent-Ready"],
-  },
-];
+import { getContent } from "@/lib/content";
 
 export function WhyMe() {
+  const { whyMe } = getContent(useLocale());
+
   return (
     <section id="why-me" className="max-w-6xl mx-auto px-6">
       <SectionReveal>
         <SectionHeader
-          label="Pourquoi moi"
-          title={<>Ce qui me <span className="gradient-text">différencie</span></>}
-          subtitle="Trois raisons concrètes de choisir Riadh MNASRI pour votre prochain défi technique."
+          label={whyMe.label}
+          title={<>{whyMe.titlePrefix}<span className="gradient-text">{whyMe.titleHighlight}</span></>}
+          subtitle={whyMe.subtitle}
         />
       </SectionReveal>
 
       <div className="grid md:grid-cols-3 gap-6">
-        {differentiators.map((d, i) => (
+        {whyMe.differentiators.map((d, i) => (
           <SectionReveal key={d.tag} delay={i * 0.12}>
             <motion.div
               whileHover={{ y: -6 }}
@@ -105,16 +76,16 @@ export function WhyMe() {
           }}>
           <div>
             <p className="text-[#F1F5F9] font-semibold text-lg mb-0.5">
-              Prêt à transformer votre stack ?
+              {whyMe.ctaTitle}
             </p>
             <p className="text-[#94A3B8] text-sm">
-              Disponible pour missions freelance · Paris & Remote · 780€/j
+              {whyMe.ctaSubtitle}
             </p>
           </div>
           <a href="#contact"
             className="px-7 py-3 rounded-xl font-semibold text-white text-sm flex-shrink-0 transition-all hover:opacity-90 hover:scale-105"
             style={{ background: "#D4AF37" }}>
-            Discutons de votre projet →
+            {whyMe.ctaButton}
           </a>
         </div>
       </SectionReveal>

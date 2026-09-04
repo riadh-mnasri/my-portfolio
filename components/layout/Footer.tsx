@@ -1,9 +1,12 @@
-import { CONTENT } from "@/lib/content";
+"use client";
+import { useLocale } from "next-intl";
+import { getContent } from "@/lib/content";
 import { GithubIcon, LinkedinIcon } from "@/components/ui/SocialIcons";
 
 export function Footer() {
-  const { links } = CONTENT;
-  const lastUpdated = new Date().toLocaleDateString("fr-FR", {
+  const locale = useLocale();
+  const { links, footer } = getContent(locale);
+  const lastUpdated = new Date().toLocaleDateString(locale === "fr" ? "fr-FR" : "en-US", {
     day: "numeric",
     month: "long",
     year: "numeric",
@@ -13,10 +16,10 @@ export function Footer() {
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
         <span className="gradient-text font-bold text-lg">Riadh MNASRI</span>
         <p className="text-xs text-[#94A3B8] text-center">
-          © {new Date().getFullYear()} · Senior Software Architect & Lead Developer · Paris
+          © {new Date().getFullYear()} · {footer.role} · Paris
           <br className="md:hidden" />
           <span className="hidden md:inline"> · </span>
-          Dernière mise à jour : {lastUpdated}
+          {footer.lastUpdatedLabel} : {lastUpdated}
         </p>
         <div className="flex gap-4">
           <a href={links.github} target="_blank" rel="noopener noreferrer"

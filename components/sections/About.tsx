@@ -1,17 +1,18 @@
 "use client";
+import { useLocale } from "next-intl";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { CONTENT } from "@/lib/content";
+import { getContent } from "@/lib/content";
 
 export function About() {
-  const { about } = CONTENT;
+  const { about } = getContent(useLocale());
 
   return (
     <section id="about" className="max-w-6xl mx-auto px-6">
       <SectionReveal>
         <SectionHeader
-          label="À propos"
-          title={<>L&apos;humain derrière <span className="gradient-text">le code</span></>}
+          label={about.label}
+          title={<>{about.titlePrefix}<span className="gradient-text">{about.titleHighlight}</span></>}
         />
       </SectionReveal>
 
@@ -27,7 +28,7 @@ export function About() {
             ))}
 
             <div className="flex flex-wrap gap-3 pt-4">
-              {["Artisan du code", "Speaker", "Mentor", "Open-source", "AI Pioneer"].map((tag) => (
+              {about.tags.map((tag) => (
                 <span key={tag}
                   className="px-3 py-1 rounded-full text-sm font-medium"
                   style={{ background: "rgba(212,175,55,0.1)", color: "#D4AF37", border: "1px solid rgba(212,175,55,0.2)" }}>

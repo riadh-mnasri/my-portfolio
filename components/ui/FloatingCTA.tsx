@@ -1,9 +1,12 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLocale } from "next-intl";
 import { MessageCircle } from "lucide-react";
+import { getContent } from "@/lib/content";
 
 export function FloatingCTA() {
+  const { floatingCta } = getContent(useLocale());
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -30,7 +33,7 @@ export function FloatingCTA() {
           }}
         >
           <MessageCircle size={16} />
-          Me contacter
+          {floatingCta}
         </motion.a>
       )}
     </AnimatePresence>

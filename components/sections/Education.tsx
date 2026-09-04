@@ -1,71 +1,27 @@
 "use client";
 import { motion } from "framer-motion";
+import { useLocale } from "next-intl";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ExternalLink } from "lucide-react";
 import { Icon } from "@/lib/icons";
-
-const education = [
-  {
-    school: "École Polytechnique",
-    logo: "graduation",
-    degree: "Executive MBA",
-    field: "Stratège de la Transformation Numérique",
-    promo: "Promotion 7",
-    year: "2024",
-    highlight: true,
-    color: "#D4AF37",
-    project: "Transformation d'un distributeur de produits de cybersécurité en fournisseur de services managés.",
-    skills: [
-      "Concevoir et impulser la stratégie de transformation numérique",
-      "Créer de la valeur à partir des technologies de pointe",
-      "Construire des business models basés sur l'innovation technologique",
-      "Déclencher et animer la dynamique collective de transformation",
-      "Accompagner les collectifs dans le changement",
-    ],
-    url: "https://www.polytechnique.edu/executive-education",
-  },
-  {
-    school: "École Polytechnique",
-    logo: "graduation",
-    degree: "Certification",
-    field: "Digital Business - Act on the Digital World",
-    promo: "",
-    year: "2023",
-    highlight: false,
-    color: "#D4AF37",
-    project: "",
-    skills: [],
-    url: "https://www.polytechnique.edu/executive-education",
-  },
-  {
-    school: "EMI - École Mohammadia d'Ingénieurs",
-    logo: "gear",
-    degree: "Diplôme d'Ingénieur",
-    field: "Génie Informatique",
-    promo: "",
-    year: "2004",
-    highlight: false,
-    color: "#D4AF37",
-    project: "",
-    skills: [],
-    url: "",
-  },
-];
+import { getContent } from "@/lib/content";
 
 export function Education() {
+  const { education } = getContent(useLocale());
+
   return (
     <section id="education" className="max-w-6xl mx-auto px-6">
       <SectionReveal>
         <SectionHeader
-          label="Formation"
-          title={<>Excellence <span className="gradient-text">académique</span></>}
-          subtitle="Une formation d'ingénieur ancrée dans la technique, élevée par une vision stratégique de haut niveau."
+          label={education.label}
+          title={<>{education.titlePrefix}<span className="gradient-text">{education.titleHighlight}</span></>}
+          subtitle={education.subtitle}
         />
       </SectionReveal>
 
       <div className="space-y-6 max-w-4xl mx-auto">
-        {education.map((edu, i) => (
+        {education.items.map((edu, i) => (
           <SectionReveal key={`${edu.school}-${edu.year}`} delay={i * 0.1}>
             {edu.highlight ? (
               /* Featured card for Polytechnique */
@@ -128,7 +84,7 @@ export function Education() {
                       style={{ background: "rgba(212,175,55,0.06)", border: "1px solid rgba(212,175,55,0.1)" }}
                     >
                       <div className="text-xs uppercase tracking-widest text-[#D4AF37] mb-2 font-semibold">
-                        Projet de transformation
+                        {education.projectLabel}
                       </div>
                       <p className="text-[#F1F5F9] text-sm leading-relaxed">{edu.project}</p>
                     </div>
@@ -138,7 +94,7 @@ export function Education() {
                   {edu.skills.length > 0 && (
                     <div>
                       <div className="text-xs uppercase tracking-widest text-[#94A3B8] mb-3 font-semibold">
-                        Compétences développées
+                        {education.skillsLabel}
                       </div>
                       <ul className="grid sm:grid-cols-2 gap-2">
                         {edu.skills.map((skill, j) => (

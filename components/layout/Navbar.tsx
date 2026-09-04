@@ -1,22 +1,16 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLocale } from "next-intl";
 import { Menu, X } from "lucide-react";
-
-const links = [
-  { href: "#about", label: "À propos" },
-  { href: "#ai", label: "IA & Innovation" },
-  { href: "#skills", label: "Skills" },
-  { href: "#experience", label: "Expérience" },
-  { href: "#education", label: "Formation" },
-  { href: "#projects", label: "Projets" },
-  { href: "#services", label: "Services" },
-  { href: "#contact", label: "Contact" },
-];
+import { getContent } from "@/lib/content";
+import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 
 const sectionIds = ["about", "ai", "skills", "why-me", "experience", "education", "projects", "certifications", "services", "contact"];
 
 export function Navbar() {
+  const { nav } = getContent(useLocale());
+  const links = nav.links;
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("");
@@ -92,8 +86,11 @@ export function Navbar() {
             <a href="#contact"
               className="px-4 py-2 rounded-lg text-sm font-semibold text-white transition-all hover:opacity-90 hover:scale-105"
               style={{ background: "#D4AF37" }}>
-              Me contacter
+              {nav.cta}
             </a>
+          </li>
+          <li>
+            <LanguageSwitcher />
           </li>
         </ul>
 
@@ -121,6 +118,9 @@ export function Navbar() {
                   </a>
                 </li>
               ))}
+              <li className="pt-2">
+                <LanguageSwitcher />
+              </li>
             </ul>
           </motion.div>
         )}

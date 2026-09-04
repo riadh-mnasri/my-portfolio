@@ -1,27 +1,29 @@
 "use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLocale } from "next-intl";
 import { ChevronDown } from "lucide-react";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Icon } from "@/lib/icons";
-import { CONTENT } from "@/lib/content";
+import { getContent } from "@/lib/content";
 
 export function Experience() {
   const [open, setOpen] = useState<number | null>(0);
+  const { experience } = getContent(useLocale());
 
   return (
     <section id="experience" className="max-w-6xl mx-auto px-6">
       <SectionReveal>
         <SectionHeader
-          label="Expérience"
-          title={<>20 ans de <span className="gradient-text">terrain</span></>}
-          subtitle="Banque, énergie, retail, secteur public : des systèmes critiques cloud-native pour les plus grands."
+          label={experience.label}
+          title={<>{experience.titlePrefix}<span className="gradient-text">{experience.titleHighlight}</span></>}
+          subtitle={experience.subtitle}
         />
       </SectionReveal>
 
       <div className="max-w-3xl mx-auto space-y-4">
-        {CONTENT.experience.map((exp, i) => (
+        {experience.items.map((exp, i) => (
           <SectionReveal key={exp.company} delay={i * 0.08}>
             <div
               className="glass rounded-2xl overflow-hidden cursor-pointer"
@@ -69,7 +71,7 @@ export function Experience() {
                       </ul>
                       {"stack" in exp && exp.stack && (
                         <div className="pt-3 border-t border-[rgba(255,255,255,0.06)]">
-                          <div className="text-xs text-[#94A3B8] mb-2 uppercase tracking-wider">Stack</div>
+                          <div className="text-xs text-[#94A3B8] mb-2 uppercase tracking-wider">{experience.stackLabel}</div>
                           <p className="text-xs font-mono text-[#D4AF37]">{exp.stack as string}</p>
                         </div>
                       )}

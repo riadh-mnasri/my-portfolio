@@ -1,22 +1,25 @@
 "use client";
 import { motion } from "framer-motion";
+import { useLocale } from "next-intl";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { CONTENT } from "@/lib/content";
+import { getContent } from "@/lib/content";
 
 export function Testimonials() {
+  const { testimonials, links } = getContent(useLocale());
+
   return (
     <section id="testimonials" className="max-w-6xl mx-auto px-6">
       <SectionReveal>
         <SectionHeader
-          label="Témoignages"
-          title={<>Ce que disent <span className="gradient-text">mes clients</span></>}
-          subtitle="Des résultats concrets, des équipes satisfaites. Quelques retours de collaborateurs et clients."
+          label={testimonials.label}
+          title={<>{testimonials.titlePrefix}<span className="gradient-text">{testimonials.titleHighlight}</span></>}
+          subtitle={testimonials.subtitle}
         />
       </SectionReveal>
 
       <div className="grid md:grid-cols-2 gap-6">
-        {CONTENT.testimonials.map((t, i) => (
+        {testimonials.items.map((t, i) => (
           <SectionReveal key={i} delay={i * 0.1}>
             <motion.div
               whileHover={{ y: -4 }}
@@ -62,14 +65,14 @@ export function Testimonials() {
       {/* Bottom note */}
       <SectionReveal delay={0.4}>
         <p className="text-center text-xs text-[#475569] mt-8">
-          Recommandations réelles, publiées sur mon{" "}
+          {testimonials.footerPrefix}
           <a
-            href={`${CONTENT.links.linkedin}/details/recommendations/`}
+            href={`${links.linkedin}/details/recommendations/`}
             target="_blank"
             rel="noopener noreferrer"
             className="underline hover:text-[#94A3B8] transition-colors"
           >
-            profil LinkedIn
+            {testimonials.footerLinkLabel}
           </a>
         </p>
       </SectionReveal>

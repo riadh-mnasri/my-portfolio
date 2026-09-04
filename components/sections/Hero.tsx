@@ -1,13 +1,14 @@
 "use client";
 import { motion } from "framer-motion";
+import { useLocale } from "next-intl";
 import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
-import { CONTENT } from "@/lib/content";
+import { getContent } from "@/lib/content";
 import { ArrowDown, ExternalLink } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/ui/SocialIcons";
 import { Icon } from "@/lib/icons";
 
 export function Hero() {
-  const { hero, links } = CONTENT;
+  const { hero, links } = getContent(useLocale());
 
   return (
     <section
@@ -48,7 +49,7 @@ export function Hero() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm mb-6 glass"
             >
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-              <span className="text-[#94A3B8]">Disponible pour missions freelance</span>
+              <span className="text-[#94A3B8]">{hero.availability}</span>
             </motion.div>
 
             {/* Name */}
@@ -116,15 +117,15 @@ export function Hero() {
               <a href="#contact"
                 className="px-7 py-3 rounded-xl font-semibold text-white text-sm transition-all hover:opacity-90 hover:scale-105"
                 style={{ background: "#D4AF37" }}>
-                Me contacter
+                {hero.ctaContact}
               </a>
               <a href="#projects"
                 className="px-7 py-3 rounded-xl font-semibold text-[#F1F5F9] glass border border-[rgba(212,175,55,0.3)] hover:border-[rgba(212,175,55,0.6)] transition-all text-sm">
-                Voir mes projets
+                {hero.ctaProjects}
               </a>
               <a href={links.malt} target="_blank" rel="noopener noreferrer"
                 className="px-7 py-3 rounded-xl font-semibold text-[#D4AF37] glass border border-[rgba(212,175,55,0.25)] hover:border-[rgba(212,175,55,0.5)] transition-all text-sm flex items-center gap-1.5">
-                Malt · 780€/j <ExternalLink size={12} />
+                {hero.maltLabel} <ExternalLink size={12} />
               </a>
             </motion.div>
 
@@ -144,7 +145,7 @@ export function Hero() {
                 <LinkedinIcon size={20} />
               </a>
               <div className="w-px h-5 bg-[rgba(255,255,255,0.1)]" />
-              <span className="text-xs text-[#94A3B8]">Paris · Hybride · Remote</span>
+              <span className="text-xs text-[#94A3B8]">{hero.location}</span>
             </motion.div>
           </div>
 
@@ -188,7 +189,7 @@ export function Hero() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src="/riadh-photo.jpg"
-                    alt="Riadh MNASRI - Senior Tech Lead & Architect"
+                    alt={hero.photoAlt}
                     className="w-full h-full object-cover object-center"
                   />
                 </div>
@@ -206,7 +207,7 @@ export function Hero() {
                   }}
                 >
                   <Icon name="graduation" size={14} />
-                  Polytechnique
+                  {hero.polytechniqueBadge}
                 </motion.div>
               </div>
             </motion.div>
@@ -243,7 +244,7 @@ export function Hero() {
         transition={{ delay: 1.3 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[#94A3B8]"
       >
-        <span className="text-xs tracking-widest uppercase">Scroll</span>
+        <span className="text-xs tracking-widest uppercase">{hero.scroll}</span>
         <motion.div animate={{ y: [0, 6, 0] }} transition={{ repeat: Infinity, duration: 1.5 }}>
           <ArrowDown size={16} />
         </motion.div>

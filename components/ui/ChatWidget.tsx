@@ -1,17 +1,14 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLocale } from "next-intl";
 import { Bot, Send, X } from "lucide-react";
+import { getContent } from "@/lib/content";
 
 type Message = { role: "user" | "assistant"; content: string };
 
-const SUGGESTIONS = [
-  "Quelles sont ses compétences en IA ?",
-  "Est-il disponible pour une mission ?",
-  "Quelle est son expérience en finance de marché ?",
-];
-
 export function ChatWidget() {
+  const { chat } = getContent(useLocale());
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
@@ -58,7 +55,7 @@ export function ChatWidget() {
         const updated = [...prev];
         updated[updated.length - 1] = {
           role: "assistant",
-          content: "Une erreur est survenue. Réessayez ou écrivez directement à riadh.mnasri@gmail.com.",
+          content: chat.errorMessage,
         };
         return updated;
       });
@@ -82,7 +79,7 @@ export function ChatWidget() {
         }}
       >
         <Bot size={16} />
-        {open ? "Fermer" : "Poser une question"}
+        {open ? chat.toggleClose : chat.toggleOpen}
       </motion.button>
 
       <AnimatePresence>
@@ -105,8 +102,8 @@ export function ChatWidget() {
               style={{ borderBottom: "1px solid rgba(212,175,55,0.15)" }}
             >
               <div>
-                <div className="text-sm font-semibold text-[#F1F5F9]">Assistant du profil</div>
-                <div className="text-[10px] text-[#94A3B8]">Questions sur Riadh MNASRI</div>
+                <div className="text-sm font-semibold text-[#F1F5F9]">{chat.title}</div>
+                <div className="text-[10px] text-[#94A3B8]">{chat.subtitle}</div>
               </div>
               <button onClick={() => setOpen(false)} className="text-[#94A3B8] hover:text-[#F1F5F9]">
                 <X size={16} />
@@ -117,10 +114,10 @@ export function ChatWidget() {
               {messages.length === 0 && (
                 <div className="space-y-2">
                   <p className="text-xs text-[#94A3B8]">
-                    Posez une question sur les compétences, l&apos;expérience ou la disponibilité de Riadh.
+                    {chat.emptyPrompt}
                   </p>
                   <div className="flex flex-col gap-1.5">
-                    {SUGGESTIONS.map((s) => (
+                    {chat.suggestions.map((s) => (
                       <button
                         key={s}
                         onClick={() => send(s)}
@@ -160,7 +157,7 @@ export function ChatWidget() {
               <input
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
-                placeholder="Votre question..."
+                placeholder={chat.inputPlaceholder}
                 className="flex-1 bg-transparent text-sm text-[#F1F5F9] placeholder:text-[#64748B] outline-none px-2 py-1.5 rounded-lg"
                 style={{ border: "1px solid rgba(255,255,255,0.1)" }}
                 disabled={streaming}

@@ -1,7 +1,16 @@
-import { CONTENT } from "@/lib/content";
+import { getContent } from "@/lib/content";
 
 export function buildSystemPrompt(): string {
-  const { hero, about, skills, domains, experience, projects, services, certifications, community, testimonials, links } = CONTENT;
+  const CONTENT = getContent("fr");
+  const { hero, about, links } = CONTENT;
+  const skills = CONTENT.skills.categories;
+  const domains = CONTENT.skills.domains;
+  const experience = CONTENT.experience.items;
+  const projects = CONTENT.projects.items;
+  const services = CONTENT.services.items;
+  const certifications = CONTENT.certifications.items;
+  const community = CONTENT.certifications.community;
+  const testimonials = CONTENT.testimonials.items;
 
   const skillsBlock = skills
     .map((s) => `- ${s.category} : ${s.items.join(", ")}`)

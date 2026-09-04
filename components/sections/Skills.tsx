@@ -1,26 +1,29 @@
 "use client";
 import { motion } from "framer-motion";
+import { useLocale } from "next-intl";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { GlowCard } from "@/components/ui/GlowCard";
 import { Icon } from "@/lib/icons";
 import { Globe } from "lucide-react";
-import { CONTENT } from "@/lib/content";
+import { getContent } from "@/lib/content";
 
 export function Skills() {
+  const { skills } = getContent(useLocale());
+
   return (
     <section id="skills" className="max-w-6xl mx-auto px-6">
       <SectionReveal>
         <SectionHeader
-          label="Compétences"
-          title={<>Technique <span className="gradient-text">& Métier</span></>}
-          subtitle="20 ans sur le terrain, dans des secteurs exigeants. Une double expertise rare : architecture cloud-native et compréhension profonde des domaines fonctionnels."
+          label={skills.label}
+          title={<>{skills.titlePrefix}<span className="gradient-text">{skills.titleHighlight}</span></>}
+          subtitle={skills.subtitle}
         />
       </SectionReveal>
 
       {/* Technical skills grid */}
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-        {CONTENT.skills.map((skill, i) => (
+        {skills.categories.map((skill, i) => (
           <SectionReveal key={skill.category} delay={i * 0.07}>
             <GlowCard className="h-full">
               <Icon name={skill.icon} size={28} className="mb-3 text-[#D4AF37]" />
@@ -47,7 +50,7 @@ export function Skills() {
           <div className="flex-1 h-px" style={{ background: "linear-gradient(90deg, transparent, rgba(212,175,55,0.3))" }} />
           <div className="px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest"
             style={{ background: "rgba(212,175,55,0.08)", border: "1px solid rgba(212,175,55,0.2)", color: "#D4AF37" }}>
-            Expertise Métier & Sectorielle
+            {skills.domainDividerLabel}
           </div>
           <div className="flex-1 h-px" style={{ background: "linear-gradient(90deg, rgba(212,175,55,0.3), transparent)" }} />
         </div>
@@ -55,7 +58,7 @@ export function Skills() {
 
       {/* Domain cards */}
       <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-5">
-        {CONTENT.domains.map((domain, i) => (
+        {skills.domains.map((domain, i) => (
           <SectionReveal key={domain.sector} delay={i * 0.08}>
             <motion.div
               whileHover={{ y: -4 }}
@@ -97,17 +100,17 @@ export function Skills() {
           </SectionReveal>
         ))}
 
-        {/* "Et plus encore" card */}
-        <SectionReveal delay={CONTENT.domains.length * 0.08}>
+        {/* "More" card */}
+        <SectionReveal delay={skills.domains.length * 0.08}>
           <div className="rounded-2xl p-5 h-full flex flex-col items-center justify-center text-center min-h-[180px]"
             style={{
               background: "linear-gradient(135deg, rgba(212,175,55,0.06), rgba(212,175,55,0.03))",
               border: "1px dashed rgba(212,175,55,0.25)",
             }}>
             <Globe size={28} className="mb-3 text-[#D4AF37]" />
-            <p className="text-sm font-semibold text-[#F1F5F9] mb-1">Secteur public, privé, international</p>
+            <p className="text-sm font-semibold text-[#F1F5F9] mb-1">{skills.moreLabel}</p>
             <p className="text-xs text-[#94A3B8] leading-relaxed max-w-[200px]">
-              Capacité d&apos;adaptation rapide à tout domaine métier grâce à 20 ans de missions variées.
+              {skills.moreDesc}
             </p>
           </div>
         </SectionReveal>

@@ -1,21 +1,23 @@
 "use client";
+import { useLocale } from "next-intl";
 import { ExternalLink, BookOpen, Mic, MessageSquare, Heart, Eye } from "lucide-react";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { GlowCard } from "@/components/ui/GlowCard";
 import { Icon } from "@/lib/icons";
-import { CONTENT } from "@/lib/content";
+import { getContent } from "@/lib/content";
 
 export function Projects() {
-  const { projects, talks, blogPosts, linkedinPosts, links } = CONTENT;
+  const { projects, links } = getContent(useLocale());
+  const { items, talks, blogPosts, linkedinPosts } = projects;
 
   return (
     <section id="projects" className="max-w-6xl mx-auto px-6">
       <SectionReveal>
         <SectionHeader
-          label="Projets & Contributions"
-          title={<>La preuve <span className="gradient-text">par les actes</span></>}
-          subtitle="Code open-source, talks, articles et réflexions sur l'IA, l'architecture et le leadership tech."
+          label={projects.label}
+          title={<>{projects.titlePrefix}<span className="gradient-text">{projects.titleHighlight}</span></>}
+          subtitle={projects.subtitle}
         />
       </SectionReveal>
 
@@ -23,14 +25,14 @@ export function Projects() {
       <SectionReveal>
         <div className="flex items-center gap-3 mb-6">
           <MessageSquare size={20} className="text-[#D4AF37]" />
-          <h3 className="text-xl font-bold text-[#F1F5F9]">Insights LinkedIn</h3>
+          <h3 className="text-xl font-bold text-[#F1F5F9]">{projects.linkedinInsightsTitle}</h3>
           <a
             href={links.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             className="ml-auto text-sm text-[#D4AF37] hover:text-[#D4AF37] flex items-center gap-1 transition-colors"
           >
-            7 735 abonnés <ExternalLink size={12} />
+            {projects.followersLabel} <ExternalLink size={12} />
           </a>
         </div>
       </SectionReveal>
@@ -53,7 +55,7 @@ export function Projects() {
                 <p className="text-[#94A3B8] text-xs leading-relaxed flex-1 mb-4">{post.excerpt}</p>
                 <div className="flex items-center gap-1.5 text-xs text-[#94A3B8]">
                   <Heart size={12} className="text-[#D4AF37]" />
-                  <span>{post.reactions} réactions</span>
+                  <span>{post.reactions} {projects.reactionsLabel}</span>
                 </div>
               </GlowCard>
             </a>
@@ -65,19 +67,19 @@ export function Projects() {
       <SectionReveal>
         <div className="flex items-center gap-3 mb-6">
           <Icon name="github" size={20} className="text-[#D4AF37]" />
-          <h3 className="text-xl font-bold text-[#F1F5F9]">GitHub Open Source</h3>
+          <h3 className="text-xl font-bold text-[#F1F5F9]">{projects.githubTitle}</h3>
           <a
             href={links.github}
             target="_blank"
             rel="noopener noreferrer"
             className="ml-auto text-sm text-[#D4AF37] hover:text-[#D4AF37] flex items-center gap-1 transition-colors"
           >
-            153 repos <ExternalLink size={12} />
+            {projects.reposLabel} <ExternalLink size={12} />
           </a>
         </div>
       </SectionReveal>
       <div className="grid sm:grid-cols-2 gap-4 mb-14">
-        {projects.map((p, i) => (
+        {items.map((p, i) => (
           <SectionReveal key={p.title} delay={i * 0.08}>
             <GlowCard className="h-full">
               <a href={p.url} target="_blank" rel="noopener noreferrer" className="block group">
@@ -106,10 +108,10 @@ export function Projects() {
       <SectionReveal>
         <div className="flex items-center gap-3 mb-6">
           <Mic size={20} className="text-[#D4AF37]" />
-          <h3 className="text-xl font-bold text-[#F1F5F9]">Talks & Présentations</h3>
+          <h3 className="text-xl font-bold text-[#F1F5F9]">{projects.talksTitle}</h3>
           <a href={links.slideshare} target="_blank" rel="noopener noreferrer"
             className="ml-auto text-sm text-[#D4AF37] hover:text-[#D4AF37] flex items-center gap-1 transition-colors">
-            SlideShare <ExternalLink size={12} />
+            {projects.slideshareLabel} <ExternalLink size={12} />
           </a>
         </div>
       </SectionReveal>
@@ -134,10 +136,10 @@ export function Projects() {
       <SectionReveal>
         <div className="flex items-center gap-3 mb-6">
           <BookOpen size={20} className="text-[#D4AF37]" />
-          <h3 className="text-xl font-bold text-[#F1F5F9]">Articles de blog</h3>
+          <h3 className="text-xl font-bold text-[#F1F5F9]">{projects.blogTitle}</h3>
           <a href={links.blog} target="_blank" rel="noopener noreferrer"
             className="ml-auto text-sm text-[#D4AF37] hover:text-[#D4AF37] flex items-center gap-1 transition-colors">
-            riadhmnasri.fr <ExternalLink size={12} />
+            {projects.blogLabel} <ExternalLink size={12} />
           </a>
         </div>
       </SectionReveal>
