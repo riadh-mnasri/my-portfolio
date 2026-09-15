@@ -1,6 +1,7 @@
 "use client";
 import { useLocale } from "next-intl";
 import { ExternalLink, BookOpen, Mic, MessageSquare, Heart, Eye } from "lucide-react";
+import { Link } from "@/i18n/navigation";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { GlowCard } from "@/components/ui/GlowCard";
@@ -8,7 +9,8 @@ import { Icon } from "@/lib/icons";
 import { getContent } from "@/lib/content";
 
 export function Projects() {
-  const { projects, links } = getContent(useLocale());
+  const locale = useLocale();
+  const { projects, links } = getContent(locale);
   const { items, talks, blogPosts, linkedinPosts } = projects;
 
   return (
@@ -102,6 +104,13 @@ export function Projects() {
             </GlowCard>
           </SectionReveal>
         ))}
+      </div>
+
+      <div className="text-center mb-14">
+        <Link href="/apps" locale={locale}
+          className="inline-flex items-center gap-2 text-sm font-semibold text-[#D4AF37] hover:underline">
+          {projects.catalogLinkLabel}
+        </Link>
       </div>
 
       {/* Talks */}

@@ -1,0 +1,706 @@
+export interface CatalogApp {
+  slug: string;
+  name: string;
+  desc: string;
+  tags: string[];
+  techStack: string[];
+  repoUrl: string;
+  liveUrl?: string;
+}
+
+export interface CatalogCategory {
+  slug: string;
+  label: string;
+  apps: CatalogApp[];
+}
+
+export interface CatalogPageContent {
+  metaTitle: string;
+  metaDescription: string;
+  backLabel: string;
+  label: string;
+  titlePrefix: string;
+  titleHighlight: string;
+  subtitle: string;
+  searchPlaceholder: string;
+  noResults: string;
+  liveLabel: string;
+  codeLabel: string;
+  categories: CatalogCategory[];
+}
+
+const GITHUB_USER = "riadh-mnasri";
+const repo = (slug: string) => `https://github.com/${GITHUB_USER}/${slug}`;
+
+const categoriesFr: CatalogCategory[] = [
+  {
+    slug: "famille",
+    label: "Vie de famille",
+    apps: [
+      {
+        slug: "eat-wise",
+        name: "EatWise",
+        desc: "Application de suggestion de repas qui élimine la charge mentale quotidienne du \"qu'est-ce qu'on mange ce soir\", en production et utilisée au quotidien par une vraie famille.",
+        tags: ["suggestion de repas", "charge mentale", "app familiale", "usage quotidien réel"],
+        techStack: ["Next.js", "TypeScript", "Tailwind"],
+        repoUrl: repo("eat-wise"),
+        liveUrl: "https://eat-wise-tau.vercel.app",
+      },
+      {
+        slug: "fair-spin",
+        name: "FairSpin",
+        desc: "Roue de tirage au sort animée pour trancher équitablement une décision de groupe, réutilisable pour n'importe quel contexte nécessitant un choix aléatoire arbitré.",
+        tags: ["tirage au sort", "roue de décision", "app légère", "UI animée"],
+        techStack: ["Next.js", "TypeScript", "Tailwind"],
+        repoUrl: repo("fair-spin"),
+        liveUrl: "https://fair-spin.vercel.app",
+      },
+      {
+        slug: "homebase",
+        name: "HomeBase",
+        desc: "Organisateur du foyer centralisant inventaire des affaires et suivi des tâches ménagères récurrentes dans une interface unique.",
+        tags: ["inventaire domestique", "tâches ménagères", "organisation du foyer"],
+        techStack: ["Next.js", "TypeScript", "Tailwind"],
+        repoUrl: repo("homebase"),
+        liveUrl: "https://homebase-beryl.vercel.app",
+      },
+      {
+        slug: "course-sync",
+        name: "CourseSync",
+        desc: "Liste de courses partagée en temps réel entre plusieurs membres d'un foyer : un article coché sur un téléphone disparaît instantanément sur l'autre, zéro double-course.",
+        tags: ["temps réel", "Supabase Realtime", "liste partagée", "synchronisation multi-appareil"],
+        techStack: ["Next.js", "TypeScript", "Supabase Realtime"],
+        repoUrl: repo("course-sync"),
+        liveUrl: "https://course-sync-indol.vercel.app",
+      },
+      {
+        slug: "refundly",
+        name: "Refundly",
+        desc: "Suivi partagé et en temps réel des retours de colis en cours, avec rappel visuel des délais qui approchent, pour ne plus en oublier un.",
+        tags: ["suivi retours colis", "temps réel", "rappels d'échéance", "app partagée"],
+        techStack: ["Next.js", "TypeScript", "Supabase Realtime"],
+        repoUrl: repo("refundly"),
+        liveUrl: "https://refundly-iota.vercel.app",
+      },
+    ],
+  },
+  {
+    slug: "education-enfants",
+    label: "Éducation des enfants",
+    apps: [
+      {
+        slug: "studyverse",
+        name: "Studyverse",
+        desc: "Application de motivation scolaire pour un collégien, avec suivi de progression visuel par matière et gamification volontairement sans récompense matérielle, déployée en conditions réelles.",
+        tags: ["motivation scolaire", "gamification éducative", "suivi de progression", "collège"],
+        techStack: ["Next.js", "TypeScript", "Tailwind"],
+        repoUrl: repo("studyverse"),
+        liveUrl: "https://studyverse-gamma.vercel.app",
+      },
+      {
+        slug: "quizzy",
+        name: "Quizzy",
+        desc: "Déclinaison niveau primaire (CM1) du même principe que Studyverse : réviser via des quiz avec un suivi de progression adapté à l'âge, sans mécanique de récompense réelle.",
+        tags: ["quiz éducatif", "primaire", "gamification saine", "app enfant"],
+        techStack: ["Next.js", "TypeScript", "Tailwind"],
+        repoUrl: repo("quizzy"),
+        liveUrl: "https://quizzy-nu-ten.vercel.app",
+      },
+      {
+        slug: "sousou",
+        name: "SouSou",
+        desc: "Application d'éducation financière ludique pour des enfants de 6 à 11 ans, avec une mascotte qui adapte son contenu à trois tranches d'âge dans une seule interface.",
+        tags: ["éducation financière", "app enfant", "mascotte", "contenu multi-âge"],
+        techStack: ["Next.js", "TypeScript", "Tailwind"],
+        repoUrl: repo("sousou"),
+        liveUrl: "https://sousou-iota.vercel.app",
+      },
+    ],
+  },
+  {
+    slug: "echecs",
+    label: "Échecs & technologie",
+    apps: [
+      {
+        slug: "elo-chess-planner",
+        name: "EloChessPlanner",
+        desc: "Outil d'organisation de tournois d'échecs Suisse FIDE : import des classements Elo (chess.com, Lichess, CSV, FFE) et génération automatique de l'appariement round par round, utilisé pour de vrais tournois de club.",
+        tags: ["tournoi d'échecs", "appariement Suisse", "classement Elo", "FFE"],
+        techStack: ["Next.js", "TypeScript", "PostgreSQL"],
+        repoUrl: repo("elo-chess-planner"),
+        liveUrl: "https://elo-chess-planner.vercel.app",
+      },
+      {
+        slug: "openingbook",
+        name: "OpeningBook",
+        desc: "Constructeur de répertoires d'ouvertures d'échecs sous forme de graphe de positions, avec évaluation Stockfish directement dans le navigateur et connexion à l'explorateur de parties Lichess.",
+        tags: ["ouvertures d'échecs", "Stockfish WASM", "graphe de positions", "Lichess"],
+        techStack: ["Next.js", "TypeScript", "Stockfish WASM"],
+        repoUrl: repo("openingbook"),
+        liveUrl: "https://openingbook-tau.vercel.app",
+      },
+      {
+        slug: "chesscoach-ai",
+        name: "ChessCoach.ai",
+        desc: "Coach d'échecs IA qui analyse automatiquement les parties jouées via Stockfish et affiche un tableau de bord des points faibles par ouverture, phase de jeu et type d'erreur.",
+        tags: ["coach échecs IA", "analyse Stockfish", "dashboard de progression", "IA appliquée"],
+        techStack: ["Next.js", "TypeScript", "Stockfish"],
+        repoUrl: repo("chesscoach-ai"),
+        liveUrl: "https://chesscoach-ai-drab.vercel.app",
+      },
+      {
+        slug: "pgnify",
+        name: "PGNify",
+        desc: "Première application mobile du portfolio : scanne une feuille de partie d'échecs manuscrite au téléphone et la convertit en PGN via reconnaissance OCR assistée.",
+        tags: ["mobile", "OCR", "PGN", "React Native"],
+        techStack: ["Expo", "React Native", "chess.js"],
+        repoUrl: repo("pgnify"),
+        liveUrl: "https://pgnify-five.vercel.app",
+      },
+      {
+        slug: "bois-colombes-echecs",
+        name: "Bois-Colombes Échecs",
+        desc: "Refonte complète du site d'un club d'échecs, migré de WordPress vers Next.js avec un contenu piloté par un CMS mixte, pensé pour évoluer par itérations après un MVP.",
+        tags: ["site de club", "migration WordPress", "CMS", "MVP itératif"],
+        techStack: ["Next.js", "TypeScript"],
+        repoUrl: repo("bois-colombes-echecs"),
+        liveUrl: "https://bois-colombes-echecs.vercel.app",
+      },
+    ],
+  },
+  {
+    slug: "finance-risque",
+    label: "Finance & gestion des risques",
+    apps: [
+      {
+        slug: "finance-for-engineers",
+        name: "Finance for Engineers",
+        desc: "Site pédagogique bilingue de 20 articles sur la finance de marché et le risque de contrepartie, avec un glossaire cherchable de 71 termes, pensé pour des ingénieurs plutôt que des financiers de formation.",
+        tags: ["finance de marché", "risque de contrepartie", "contenu pédagogique bilingue", "glossaire"],
+        techStack: ["Next.js", "TypeScript"],
+        repoUrl: repo("finance-for-engineers"),
+        liveUrl: "https://ccr-primer.vercel.app",
+      },
+      {
+        slug: "counterparty-risk-lab",
+        name: "Counterparty Risk Lab",
+        desc: "MVP pédagogique de calcul du risque de contrepartie développé intégralement en TDD, avec une architecture hexagonale visible dans la structure du code.",
+        tags: ["risque de contrepartie", "TDD", "architecture hexagonale", "calcul financier"],
+        techStack: ["TypeScript", "architecture hexagonale"],
+        repoUrl: repo("counterparty-risk-lab"),
+      },
+      {
+        slug: "kotlin-counterparty-risk",
+        name: "kotlin-counterparty-risk",
+        desc: "Librairie open-source Kotlin calculant exposition (EAD), perte attendue (EL) et CVA sur des opérations de prêt de titres, à but pédagogique assumé.",
+        tags: ["librairie Kotlin", "EAD", "CVA", "open-source finance"],
+        techStack: ["Kotlin"],
+        repoUrl: repo("kotlin-counterparty-risk"),
+      },
+    ],
+  },
+  {
+    slug: "architecture-oss",
+    label: "Architecture & outillage open-source",
+    apps: [
+      {
+        slug: "missionmatch",
+        name: "MissionMatch",
+        desc: "Application de référence démontrant DDD, architecture hexagonale, TDD/BDD, événements Kafka entre contextes bornés et infrastructure définie en Terraform, sur un flux métier complet.",
+        tags: ["DDD", "architecture hexagonale", "Kafka", "Terraform", "TDD/BDD"],
+        techStack: ["Kotlin", "Kafka", "Terraform"],
+        repoUrl: repo("missionmatch"),
+      },
+      {
+        slug: "riskbridge",
+        name: "RiskBridge",
+        desc: "POC de système d'information pour le courtage en assurance-crédit : backend Kotlin hexagonal développé en TDD et frontend Angular consommant les mêmes cas d'usage métier, données de démonstration uniquement.",
+        tags: ["monorepo hexagonal", "TDD", "Angular", "assurance-crédit"],
+        techStack: ["Kotlin", "Angular"],
+        repoUrl: repo("riskbridge"),
+      },
+      {
+        slug: "hexray",
+        name: "Hexray",
+        desc: "CLI d'audit d'architecture hexagonale et DDD, capable d'analyser aussi bien du TypeScript que du Kotlin, avec un rapport HTML lisible synthétisé automatiquement.",
+        tags: ["audit d'architecture", "CLI", "hexagonal", "DDD", "rapport automatisé"],
+        techStack: ["TypeScript", "Kotlin"],
+        repoUrl: repo("hexray"),
+      },
+      {
+        slug: "kotlin-chess-tournament",
+        name: "kotlin-chess-tournament",
+        desc: "Librairie open-source Kotlin pour l'appariement Suisse, le calcul de classement Elo et la gestion de tournois, testée en TDD et scaffoldée pour Maven Central.",
+        tags: ["librairie Kotlin", "appariement Suisse", "Elo", "Maven Central"],
+        techStack: ["Kotlin"],
+        repoUrl: repo("kotlin-chess-tournament"),
+      },
+    ],
+  },
+  {
+    slug: "securite",
+    label: "Sécurité",
+    apps: [
+      {
+        slug: "secuscan",
+        name: "SecuScan",
+        desc: "Scanner de vulnérabilités de sécurité pensé comme socle d'une prestation freelance pour PME, avec un CLI intégrant un garde-fou de consentement obligatoire et une architecture hexagonale isolant la logique de scan.",
+        tags: ["scanner de vulnérabilités", "sécurité PME", "CLI", "architecture hexagonale"],
+        techStack: ["TypeScript", "architecture hexagonale"],
+        repoUrl: repo("secuscan"),
+        liveUrl: "https://secuscan-two.vercel.app",
+      },
+    ],
+  },
+  {
+    slug: "freelance-business",
+    label: "Freelance & business",
+    apps: [
+      {
+        slug: "mission-ready",
+        name: "MissionReady",
+        desc: "Application de flashcards en répétition espacée (méthode Leitner) pour s'entraîner aux entretiens techniques freelance, interface entièrement en anglais par choix explicite.",
+        tags: ["répétition espacée", "entretien technique", "flashcards", "freelance"],
+        techStack: ["Next.js", "TypeScript"],
+        repoUrl: repo("mission-ready"),
+        liveUrl: "https://mission-ready-three.vercel.app",
+      },
+      {
+        slug: "tjm2net",
+        name: "TJM2Net",
+        desc: "Simulateur comparant instantanément le salaire net entre un poste en CDI et quatre statuts de freelance différents, déployé en production.",
+        tags: ["simulateur TJM", "freelance vs CDI", "salaire net", "statuts juridiques"],
+        techStack: ["Next.js", "TypeScript"],
+        repoUrl: repo("tjm2net"),
+        liveUrl: "https://tjm2net.vercel.app",
+      },
+      {
+        slug: "promocode",
+        name: "PromoCode",
+        desc: "Générateur de codes de réduction personnalisables, avec interface bilingue français/anglais et une suite de tests Vitest couvrant l'intégralité de la logique de génération.",
+        tags: ["codes promo", "génération de code", "bilingue", "tests Vitest"],
+        techStack: ["Next.js", "TypeScript", "Vitest"],
+        repoUrl: repo("promocode"),
+        liveUrl: "https://promocode-five.vercel.app",
+      },
+    ],
+  },
+  {
+    slug: "langues",
+    label: "Apprentissage des langues",
+    apps: [
+      {
+        slug: "vocably",
+        name: "Vocably",
+        desc: "Application de révision de vocabulaire anglais en répétition espacée avec gamification, déployée en production et utilisable au quotidien.",
+        tags: ["répétition espacée", "vocabulaire anglais", "gamification", "app d'apprentissage"],
+        techStack: ["Next.js", "TypeScript"],
+        repoUrl: repo("vocably"),
+        liveUrl: "https://vocably-sigma.vercel.app",
+      },
+      {
+        slug: "lingopack",
+        name: "Lingopack",
+        desc: "Moteur générique de révision de langues découplé du contenu, livré avec un premier pack couvrant le chinois HSK1 à HSK3 et conçu pour accueillir facilement de nouveaux packs.",
+        tags: ["moteur de révision", "packs de contenu", "chinois HSK", "apprentissage des langues"],
+        techStack: ["Next.js", "TypeScript"],
+        repoUrl: repo("lingopack"),
+        liveUrl: "https://lingopack.vercel.app",
+      },
+    ],
+  },
+  {
+    slug: "outils-dev",
+    label: "Outils pour développeurs",
+    apps: [
+      {
+        slug: "kortex",
+        name: "Kortex",
+        desc: "Application de révision de Kotlin en répétition espacée avec gamification et contenu bilingue, conçue comme modèle réplicable pour d'autres stacks techniques.",
+        tags: ["révision Kotlin", "répétition espacée", "modèle réplicable", "contenu bilingue"],
+        techStack: ["Next.js", "TypeScript"],
+        repoUrl: repo("kortex"),
+        liveUrl: "https://kortex-one.vercel.app",
+      },
+      {
+        slug: "kafkex",
+        name: "Kafkex",
+        desc: "Fork de Kortex pour réviser Apache Kafka avec la même mécanique de répétition espacée et dix modules de contenu déjà écrits, preuve que le moteur Kortex est réutilisable au-delà de Kotlin.",
+        tags: ["révision Apache Kafka", "répétition espacée", "réutilisation de moteur"],
+        techStack: ["Next.js", "TypeScript"],
+        repoUrl: repo("kafkex"),
+        liveUrl: "https://kafkex.vercel.app",
+      },
+      {
+        slug: "go-primer",
+        name: "GoPrimer",
+        desc: "Parcours structuré et bilingue pour apprendre le langage Go depuis zéro, avec des modules progressifs et des exercices pratiques liés à chaque leçon.",
+        tags: ["apprentissage Go", "parcours pédagogique", "exercices pratiques", "bilingue"],
+        techStack: ["Next.js", "TypeScript", "Go"],
+        repoUrl: repo("go-primer"),
+        liveUrl: "https://go-primer.vercel.app",
+      },
+      {
+        slug: "learning-rust",
+        name: "learning-rust",
+        desc: "Répertoire pédagogique de 16 exemples progressifs pour apprendre Rust du zéro absolu jusqu'à l'asynchrone, code clippy-clean et testé du premier au dernier exemple.",
+        tags: ["apprentissage Rust", "async", "clippy-clean", "exemples testés"],
+        techStack: ["Rust"],
+        repoUrl: repo("learning-rust"),
+      },
+    ],
+  },
+];
+
+const categoriesEn: CatalogCategory[] = [
+  {
+    slug: "family",
+    label: "Family life",
+    apps: [
+      {
+        slug: "eat-wise",
+        name: "EatWise",
+        desc: "Meal suggestion app that removes the daily mental load of \"what's for dinner\", in production and used daily by a real family.",
+        tags: ["meal suggestion", "mental load", "family app", "real daily usage"],
+        techStack: ["Next.js", "TypeScript", "Tailwind"],
+        repoUrl: repo("eat-wise"),
+        liveUrl: "https://eat-wise-tau.vercel.app",
+      },
+      {
+        slug: "fair-spin",
+        name: "FairSpin",
+        desc: "Animated spinning wheel to fairly settle a group decision, reusable for any context that needs an arbitrated random choice.",
+        tags: ["random draw", "decision wheel", "lightweight app", "animated UI"],
+        techStack: ["Next.js", "TypeScript", "Tailwind"],
+        repoUrl: repo("fair-spin"),
+        liveUrl: "https://fair-spin.vercel.app",
+      },
+      {
+        slug: "homebase",
+        name: "HomeBase",
+        desc: "Household organizer centralizing a belongings inventory and recurring chore tracking in a single interface.",
+        tags: ["household inventory", "chore tracking", "home organization"],
+        techStack: ["Next.js", "TypeScript", "Tailwind"],
+        repoUrl: repo("homebase"),
+        liveUrl: "https://homebase-beryl.vercel.app",
+      },
+      {
+        slug: "course-sync",
+        name: "CourseSync",
+        desc: "Shared grocery list synced in real time between household members: an item checked on one phone disappears instantly on the other, zero duplicate shopping.",
+        tags: ["real-time sync", "Supabase Realtime", "shared list", "multi-device"],
+        techStack: ["Next.js", "TypeScript", "Supabase Realtime"],
+        repoUrl: repo("course-sync"),
+        liveUrl: "https://course-sync-indol.vercel.app",
+      },
+      {
+        slug: "refundly",
+        name: "Refundly",
+        desc: "Shared, real-time tracking of ongoing package returns, with a visual reminder for approaching deadlines, so none get forgotten.",
+        tags: ["return tracking", "real-time", "deadline reminders", "shared app"],
+        techStack: ["Next.js", "TypeScript", "Supabase Realtime"],
+        repoUrl: repo("refundly"),
+        liveUrl: "https://refundly-iota.vercel.app",
+      },
+    ],
+  },
+  {
+    slug: "kids-education",
+    label: "Kids' education",
+    apps: [
+      {
+        slug: "studyverse",
+        name: "Studyverse",
+        desc: "School motivation app for a middle-schooler, with a visual per-subject progress dashboard and gamification deliberately free of material rewards, deployed in real conditions.",
+        tags: ["school motivation", "educational gamification", "progress tracking", "middle school"],
+        techStack: ["Next.js", "TypeScript", "Tailwind"],
+        repoUrl: repo("studyverse"),
+        liveUrl: "https://studyverse-gamma.vercel.app",
+      },
+      {
+        slug: "quizzy",
+        name: "Quizzy",
+        desc: "Elementary-school variant of the same Studyverse principle: quiz-based revision with age-appropriate progress tracking, no real-reward mechanic.",
+        tags: ["educational quiz", "elementary school", "healthy gamification", "kids app"],
+        techStack: ["Next.js", "TypeScript", "Tailwind"],
+        repoUrl: repo("quizzy"),
+        liveUrl: "https://quizzy-nu-ten.vercel.app",
+      },
+      {
+        slug: "sousou",
+        name: "SouSou",
+        desc: "Playful financial literacy app for 6-to-11-year-olds, with a mascot that adapts its content across three age ranges within a single interface.",
+        tags: ["financial literacy", "kids app", "mascot", "multi-age content"],
+        techStack: ["Next.js", "TypeScript", "Tailwind"],
+        repoUrl: repo("sousou"),
+        liveUrl: "https://sousou-iota.vercel.app",
+      },
+    ],
+  },
+  {
+    slug: "chess",
+    label: "Chess & technology",
+    apps: [
+      {
+        slug: "elo-chess-planner",
+        name: "EloChessPlanner",
+        desc: "Swiss FIDE chess tournament organizer: imports Elo ratings (chess.com, Lichess, CSV, FFE) and generates round-by-round Swiss pairing automatically, used for real club tournaments.",
+        tags: ["chess tournament", "Swiss pairing", "Elo rating", "FFE"],
+        techStack: ["Next.js", "TypeScript", "PostgreSQL"],
+        repoUrl: repo("elo-chess-planner"),
+        liveUrl: "https://elo-chess-planner.vercel.app",
+      },
+      {
+        slug: "openingbook",
+        name: "OpeningBook",
+        desc: "Chess opening repertoire builder using a position graph, with in-browser Stockfish evaluation and a connection to the Lichess game explorer.",
+        tags: ["chess openings", "Stockfish WASM", "position graph", "Lichess"],
+        techStack: ["Next.js", "TypeScript", "Stockfish WASM"],
+        repoUrl: repo("openingbook"),
+        liveUrl: "https://openingbook-tau.vercel.app",
+      },
+      {
+        slug: "chesscoach-ai",
+        name: "ChessCoach.ai",
+        desc: "AI chess coach that automatically analyzes played games via Stockfish and surfaces a weakness dashboard by opening, game phase, and blunder type.",
+        tags: ["AI chess coach", "Stockfish analysis", "progress dashboard", "applied AI"],
+        techStack: ["Next.js", "TypeScript", "Stockfish"],
+        repoUrl: repo("chesscoach-ai"),
+        liveUrl: "https://chesscoach-ai-drab.vercel.app",
+      },
+      {
+        slug: "pgnify",
+        name: "PGNify",
+        desc: "The portfolio's first mobile app: scans a handwritten chess scoresheet from a phone photo and converts it to PGN via assisted OCR recognition.",
+        tags: ["mobile", "OCR", "PGN", "React Native"],
+        techStack: ["Expo", "React Native", "chess.js"],
+        repoUrl: repo("pgnify"),
+        liveUrl: "https://pgnify-five.vercel.app",
+      },
+      {
+        slug: "bois-colombes-echecs",
+        name: "Bois-Colombes Échecs",
+        desc: "Full rebuild of a chess club's website, migrated from WordPress to Next.js with mixed CMS-driven content, designed to evolve iteratively after an MVP.",
+        tags: ["club website", "WordPress migration", "CMS", "iterative MVP"],
+        techStack: ["Next.js", "TypeScript"],
+        repoUrl: repo("bois-colombes-echecs"),
+        liveUrl: "https://bois-colombes-echecs.vercel.app",
+      },
+    ],
+  },
+  {
+    slug: "finance-risk",
+    label: "Finance & risk management",
+    apps: [
+      {
+        slug: "finance-for-engineers",
+        name: "Finance for Engineers",
+        desc: "Bilingual educational site with 20 articles on market finance and counterparty risk, plus a searchable 71-term glossary, written for engineers rather than trained financiers.",
+        tags: ["market finance", "counterparty risk", "bilingual educational content", "glossary"],
+        techStack: ["Next.js", "TypeScript"],
+        repoUrl: repo("finance-for-engineers"),
+        liveUrl: "https://ccr-primer.vercel.app",
+      },
+      {
+        slug: "counterparty-risk-lab",
+        name: "Counterparty Risk Lab",
+        desc: "Educational counterparty-risk calculation MVP built entirely in TDD, with a hexagonal architecture visible directly in the code structure.",
+        tags: ["counterparty risk", "TDD", "hexagonal architecture", "financial computation"],
+        techStack: ["TypeScript", "hexagonal architecture"],
+        repoUrl: repo("counterparty-risk-lab"),
+      },
+      {
+        slug: "kotlin-counterparty-risk",
+        name: "kotlin-counterparty-risk",
+        desc: "Open-source Kotlin library computing exposure (EAD), expected loss (EL) and CVA on securities lending transactions, explicitly educational in scope.",
+        tags: ["Kotlin library", "EAD", "CVA", "open-source finance"],
+        techStack: ["Kotlin"],
+        repoUrl: repo("kotlin-counterparty-risk"),
+      },
+    ],
+  },
+  {
+    slug: "architecture-oss",
+    label: "Architecture & open-source tooling",
+    apps: [
+      {
+        slug: "missionmatch",
+        name: "MissionMatch",
+        desc: "Reference application demonstrating DDD, hexagonal architecture, TDD/BDD, Kafka events between bounded contexts, and Terraform-defined infrastructure, across one complete business flow.",
+        tags: ["DDD", "hexagonal architecture", "Kafka", "Terraform", "TDD/BDD"],
+        techStack: ["Kotlin", "Kafka", "Terraform"],
+        repoUrl: repo("missionmatch"),
+      },
+      {
+        slug: "riskbridge",
+        name: "RiskBridge",
+        desc: "Trade credit insurance brokerage information-system POC: a hexagonal Kotlin backend built in TDD and an Angular frontend consuming the same business use cases, demo data only.",
+        tags: ["hexagonal monorepo", "TDD", "Angular", "trade credit insurance"],
+        techStack: ["Kotlin", "Angular"],
+        repoUrl: repo("riskbridge"),
+      },
+      {
+        slug: "hexray",
+        name: "Hexray",
+        desc: "Hexagonal architecture and DDD audit CLI, able to analyze both TypeScript and Kotlin, with an automatically synthesized readable HTML report.",
+        tags: ["architecture audit", "CLI", "hexagonal", "DDD", "automated report"],
+        techStack: ["TypeScript", "Kotlin"],
+        repoUrl: repo("hexray"),
+      },
+      {
+        slug: "kotlin-chess-tournament",
+        name: "kotlin-chess-tournament",
+        desc: "Open-source Kotlin library for Swiss pairing, Elo rating calculation, and tournament standings, TDD-tested and scaffolded for Maven Central.",
+        tags: ["Kotlin library", "Swiss pairing", "Elo", "Maven Central"],
+        techStack: ["Kotlin"],
+        repoUrl: repo("kotlin-chess-tournament"),
+      },
+    ],
+  },
+  {
+    slug: "security",
+    label: "Security",
+    apps: [
+      {
+        slug: "secuscan",
+        name: "SecuScan",
+        desc: "Security vulnerability scanner designed as the foundation of a freelance SMB offering, with a CLI enforcing a mandatory consent guardrail and a hexagonal architecture isolating scan logic.",
+        tags: ["vulnerability scanner", "SMB security", "CLI", "hexagonal architecture"],
+        techStack: ["TypeScript", "hexagonal architecture"],
+        repoUrl: repo("secuscan"),
+        liveUrl: "https://secuscan-two.vercel.app",
+      },
+    ],
+  },
+  {
+    slug: "freelance-business",
+    label: "Freelance & business",
+    apps: [
+      {
+        slug: "mission-ready",
+        name: "MissionReady",
+        desc: "Spaced-repetition flashcard app (Leitner method) to train for freelance technical interviews, entirely English-language by explicit choice.",
+        tags: ["spaced repetition", "technical interview", "flashcards", "freelance"],
+        techStack: ["Next.js", "TypeScript"],
+        repoUrl: repo("mission-ready"),
+        liveUrl: "https://mission-ready-three.vercel.app",
+      },
+      {
+        slug: "tjm2net",
+        name: "TJM2Net",
+        desc: "Simulator instantly comparing net take-home pay between a permanent position and four different freelance statuses, deployed in production.",
+        tags: ["day-rate simulator", "freelance vs employee", "net income", "legal status"],
+        techStack: ["Next.js", "TypeScript"],
+        repoUrl: repo("tjm2net"),
+        liveUrl: "https://tjm2net.vercel.app",
+      },
+      {
+        slug: "promocode",
+        name: "PromoCode",
+        desc: "Customizable discount code generator, with a bilingual French/English interface and a full Vitest suite covering the generation logic.",
+        tags: ["promo codes", "code generation", "bilingual", "Vitest tests"],
+        techStack: ["Next.js", "TypeScript", "Vitest"],
+        repoUrl: repo("promocode"),
+        liveUrl: "https://promocode-five.vercel.app",
+      },
+    ],
+  },
+  {
+    slug: "languages",
+    label: "Language learning",
+    apps: [
+      {
+        slug: "vocably",
+        name: "Vocably",
+        desc: "English vocabulary spaced-repetition app with gamification, deployed in production and used daily.",
+        tags: ["spaced repetition", "English vocabulary", "gamification", "learning app"],
+        techStack: ["Next.js", "TypeScript"],
+        repoUrl: repo("vocably"),
+        liveUrl: "https://vocably-sigma.vercel.app",
+      },
+      {
+        slug: "lingopack",
+        name: "Lingopack",
+        desc: "Generic language-revision engine decoupled from its content, shipped with a first pack covering Chinese HSK1 to HSK3 and designed to easily onboard new packs.",
+        tags: ["revision engine", "content packs", "Chinese HSK", "language learning"],
+        techStack: ["Next.js", "TypeScript"],
+        repoUrl: repo("lingopack"),
+        liveUrl: "https://lingopack.vercel.app",
+      },
+    ],
+  },
+  {
+    slug: "dev-tools",
+    label: "Developer tools",
+    apps: [
+      {
+        slug: "kortex",
+        name: "Kortex",
+        desc: "Kotlin spaced-repetition revision app with gamification and bilingual content, designed as a replicable model for other tech stacks.",
+        tags: ["Kotlin revision", "spaced repetition", "replicable model", "bilingual content"],
+        techStack: ["Next.js", "TypeScript"],
+        repoUrl: repo("kortex"),
+        liveUrl: "https://kortex-one.vercel.app",
+      },
+      {
+        slug: "kafkex",
+        name: "Kafkex",
+        desc: "Fork of Kortex for revising Apache Kafka with the same spaced-repetition mechanic and ten content modules already written, proof that the Kortex engine is reusable beyond Kotlin.",
+        tags: ["Apache Kafka revision", "spaced repetition", "engine reuse"],
+        techStack: ["Next.js", "TypeScript"],
+        repoUrl: repo("kafkex"),
+        liveUrl: "https://kafkex.vercel.app",
+      },
+      {
+        slug: "go-primer",
+        name: "GoPrimer",
+        desc: "Structured, bilingual learning path for the Go language from scratch, with progressive modules and hands-on exercises tied to each lesson.",
+        tags: ["Go learning", "learning path", "hands-on exercises", "bilingual"],
+        techStack: ["Next.js", "TypeScript", "Go"],
+        repoUrl: repo("go-primer"),
+        liveUrl: "https://go-primer.vercel.app",
+      },
+      {
+        slug: "learning-rust",
+        name: "learning-rust",
+        desc: "Educational repository of 16 progressive examples for learning Rust from absolute zero to async, clippy-clean and tested from the first example to the last.",
+        tags: ["Rust learning", "async", "clippy-clean", "tested examples"],
+        techStack: ["Rust"],
+        repoUrl: repo("learning-rust"),
+      },
+    ],
+  },
+];
+
+export const catalogContent: Record<"fr" | "en", CatalogPageContent> = {
+  fr: {
+    metaTitle: "Catalogue d'apps — Riadh MNASRI",
+    metaDescription:
+      "Catalogue des applications réelles conçues et développées par Riadh MNASRI : échecs, éducation, finance, architecture, sécurité, outils développeur.",
+    backLabel: "← Retour au portfolio",
+    label: "Catalogue complet",
+    titlePrefix: "Toutes ",
+    titleHighlight: "mes apps",
+    subtitle: `${categoriesFr.reduce((n, c) => n + c.apps.length, 0)} projets réels, conçus, développés et pour la plupart déployés en solo, du besoin familial concret à l'architecture logicielle de référence.`,
+    searchPlaceholder: "Rechercher par nom, techno, usage...",
+    noResults: "Aucune app ne correspond à cette recherche.",
+    liveLabel: "Voir la démo",
+    codeLabel: "Code source",
+    categories: categoriesFr,
+  },
+  en: {
+    metaTitle: "App catalog — Riadh MNASRI",
+    metaDescription:
+      "Catalog of real applications designed and built by Riadh MNASRI: chess, education, finance, architecture, security, developer tools.",
+    backLabel: "← Back to portfolio",
+    label: "Full catalog",
+    titlePrefix: "All my ",
+    titleHighlight: "apps",
+    subtitle: `${categoriesEn.reduce((n, c) => n + c.apps.length, 0)} real projects, designed, built and mostly deployed solo, from concrete family needs to reference software architecture.`,
+    searchPlaceholder: "Search by name, tech, use case...",
+    noResults: "No app matches this search.",
+    liveLabel: "View demo",
+    codeLabel: "Source code",
+    categories: categoriesEn,
+  },
+};

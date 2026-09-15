@@ -438,6 +438,7 @@ export const fr: PortfolioContent = {
     reactionsLabel: "réactions",
     githubTitle: "GitHub Open Source",
     reposLabel: "155 repos",
+    catalogLinkLabel: "Voir toutes mes apps →",
     talksTitle: "Talks & Présentations",
     slideshareLabel: "SlideShare",
     blogTitle: "Articles de blog",

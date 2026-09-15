@@ -234,6 +234,7 @@ export interface PortfolioContent {
     reactionsLabel: string;
     githubTitle: string;
     reposLabel: string;
+    catalogLinkLabel: string;
     talksTitle: string;
     slideshareLabel: string;
     blogTitle: string;
