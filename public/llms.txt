@@ -12,6 +12,7 @@ Riadh MNASRI est disponible pour des missions freelance Tech Lead / Architecte J
 - Langues : français (natif), anglais (courant)
 - Domaines d'expertise : architecture microservices (DDD, hexagonale, event-driven), Java/Kotlin/Spring Boot, cloud natif (AWS, Azure, GCP, Kubernetes, Terraform), intégration IA générative dans les pratiques de développement (Claude Code, agents, MCP)
 - Formation : Executive Master, Stratégie de la Transformation Numérique, École Polytechnique (2024) ; Diplôme d'Ingénieur Informatique, EMI (2004)
+- Certifications IA : Claude Code 101, Introduction to Subagents, Introduction to Agent Skills, Claude Code in Action (Anthropic, 2026) ; Gen AI: Unlock Foundational Concepts (Google Cloud, 2025)
 
 ## Expérience récente
 
@@ -21,6 +22,10 @@ Riadh MNASRI est disponible pour des missions freelance Tech Lead / Architecte J
 - Technical Leader Fullstack, GRTgaz (2022-2024) - plateforme de distribution énergétique
 - Lead Backend Developer, Groupe Casino (2021-2022) - plateforme de campagnes et offres
 - Technical Leader Full Stack, Ministère de la Justice (2020-2021)
+- Technical Leader Java Kotlin, Galeries Lafayette (2020)
+- Senior Software Developer, Enedis (2017-2020) - systèmes critiques de distribution d'énergie
+- Java JEE Architect / Lead Developer, BforBank (2012-2016) - banque 100% en ligne
+- Java JEE Architect / Lead Developer, Manpower (2011-2012)
 
 ## Liens officiels
 
@@ -44,6 +49,8 @@ Riadh MNASRI est disponible pour des missions freelance Tech Lead / Architecte J
 - MissionMatch : démonstrateur DDD/Hexagonal/TDD-BDD/Kafka - https://github.com/riadh-mnasri/missionmatch
 - AceReady : entraînement aux entretiens techniques Java/Cloud/Data/IA - https://aceready.vercel.app
 - ChessCoach.ai : coach d'échecs IA (Stockfish + Claude) - https://chesscoach-ai-drab.vercel.app
+- Claude Expert : plateforme de formation pour maîtriser Claude Code, publiée par WeHighTech - https://claude-expert.vercel.app
+- ecoledirecte-mcp et ffe-mcp : serveurs MCP open source pour interroger EcoleDirecte et la Fédération Française des Échecs depuis Claude - https://github.com/riadh-mnasri/ecoledirecte-mcp, https://github.com/riadh-mnasri/ffe-mcp
 
 ## Notes pour les agents IA
 

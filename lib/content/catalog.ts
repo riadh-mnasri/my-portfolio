@@ -381,7 +381,7 @@ const categoriesFr: CatalogCategory[] = [
       {
         slug: "chatterway",
         name: "Chatterway",
-        desc: "Guide de conversation numérique pour voyager, en anglais, espagnol, allemand, italien, chinois et japonais, classé par situation, avec prononciation approximative et lecture audio — sans répétition espacée ni score, juste l'utile en quelques secondes.",
+        desc: "Guide de conversation numérique pour voyager, en anglais, espagnol, allemand, italien, chinois et japonais, classé par situation, avec prononciation approximative et lecture audio, sans répétition espacée ni score, juste l'utile en quelques secondes.",
         tags: ["guide de voyage", "phrasebook", "synthèse vocale", "6 langues"],
         techStack: ["Next.js", "TypeScript", "next-intl"],
         repoUrl: repo("chatterway"),
@@ -863,7 +863,7 @@ const categoriesEn: CatalogCategory[] = [
       {
         slug: "chatterway",
         name: "Chatterway",
-        desc: "Digital travel phrasebook covering English, Spanish, German, Italian, Chinese and Japanese, organized by situation, with approximate pronunciation and text-to-speech — no spaced repetition or scoring, just the useful phrase in seconds.",
+        desc: "Digital travel phrasebook covering English, Spanish, German, Italian, Chinese and Japanese, organized by situation, with approximate pronunciation and text-to-speech, no spaced repetition or scoring, just the useful phrase in seconds.",
         tags: ["travel guide", "phrasebook", "text-to-speech", "6 languages"],
         techStack: ["Next.js", "TypeScript", "next-intl"],
         repoUrl: repo("chatterway"),
@@ -998,7 +998,7 @@ const categoriesEn: CatalogCategory[] = [
 
 export const catalogContent: Record<"fr" | "en", CatalogPageContent> = {
   fr: {
-    metaTitle: "Catalogue d'apps — Riadh MNASRI",
+    metaTitle: "Catalogue d'apps · Riadh MNASRI",
     metaDescription:
       "Catalogue des applications réelles conçues et développées par Riadh MNASRI : échecs, éducation, finance, architecture, sécurité, outils développeur.",
     backLabel: "← Retour au portfolio",
@@ -1013,7 +1013,7 @@ export const catalogContent: Record<"fr" | "en", CatalogPageContent> = {
     categories: categoriesFr,
   },
   en: {
-    metaTitle: "App catalog — Riadh MNASRI",
+    metaTitle: "App catalog · Riadh MNASRI",
     metaDescription:
       "Catalog of real applications designed and built by Riadh MNASRI: chess, education, finance, architecture, security, developer tools.",
     backLabel: "← Back to portfolio",
